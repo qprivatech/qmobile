@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2744"/>
+    </linearGradient>
+    <linearGradient id="shield9" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg9)"/>
+  <rect x="350" y="120" width="100" height="160" rx="12" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.4"/>
+  <rect x="360" y="130" width="80" height="130" rx="6" fill="#0a1628" opacity="0.8"/>
+  <rect x="370" y="145" width="60" height="90" rx="4" fill="#1a2744" opacity="0.6"/>
+  <path d="M380 160 L390 160 M380 170 L420 170 M380 180 L410 180 M380 190 L400 190 M380 200 L415 200 M380 210 L405 210 M380 220 L395 220" stroke="#00d4aa" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  <circle cx="400" cy="260" r="8" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.5"/>
+  <path d="M396 260 L400 264 L404 258" stroke="#00d4aa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 200 L340 200" stroke="#ff5f57" stroke-width="2" opacity="0.4" stroke-dasharray="4 4"/>
+  <rect x="220" y="170" width="60" height="60" rx="8" fill="none" stroke="#ff5f57" stroke-width="2" opacity="0.5"/>
+  <rect x="230" y="180" width="40" height="35" rx="4" fill="#0a1628" opacity="0.8"/>
+  <path d="M240 190 L250 200 L260 185" stroke="#ff5f57" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="250" y="215" text-anchor="middle" fill="#ff5f57" font-family="system-ui, sans-serif" font-size="8" opacity="0.7">FORENSIC</text>
+  <path d="M460 200 L520 200" stroke="#00d4aa" stroke-width="2" opacity="0.4" stroke-dasharray="4 4"/>
+  <circle cx="540" cy="200" r="30" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.3"/>
+  <path d="M530 200 L540 210 L555 190" stroke="#00d4aa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="340" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Adli Cihazlardan Korunma</text>
+  <text x="400" y="365" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Veri Çıkarma Tekniklerine Karşı</text>
+</svg>

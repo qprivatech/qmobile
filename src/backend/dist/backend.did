@@ -1,0 +1,4 @@
+service : {
+  send_contact_email: (name: text, email: text, subject: text, message:
+   text) -> (text);
+}

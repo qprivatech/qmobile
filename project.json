@@ -1,0 +1,18 @@
+{
+  "overview": "Privacy-focused multilingual e-commerce showcase site on Internet Computer with hardened HTTP security headers.",
+  "features": [
+    "Multilingual content (TR/DE/EN)",
+    "Blog with structured data",
+    "Contact form with math CAPTCHA",
+    "Hardened security headers (HSTS preload, CSP hash-based, CORP)",
+    "PWA with service worker"
+  ],
+  "category": "showcase",
+  "tags": [
+    "security",
+    "ecommerce",
+    "multilingual",
+    "pwa"
+  ],
+  "last_updated": "2026-07-07T23:20:14.200Z"
+}

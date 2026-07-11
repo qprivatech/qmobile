@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2744"/>
+    </linearGradient>
+    <linearGradient id="tablet3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg3)"/>
+  <rect x="300" y="100" width="200" height="260" rx="16" fill="none" stroke="#00d4aa" stroke-width="3" opacity="0.6"/>
+  <rect x="310" y="110" width="180" height="230" rx="8" fill="#0a1628" opacity="0.9"/>
+  <rect x="320" y="125" width="160" height="180" rx="4" fill="#1a2744" opacity="0.8"/>
+  <circle cx="400" cy="330" r="12" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.5"/>
+  <path d="M340 150 L360 150 M340 170 L380 170 M340 190 L370 190 M340 210 L350 210" stroke="#00d4aa" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M340 240 L360 240 M340 260 L380 260 M340 280 L370 280" stroke="#ffffff" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  <path d="M430 150 L450 150 M430 170 L460 170 M430 190 L440 190" stroke="#00d4aa" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+  <path d="M430 240 L450 240 M430 260 L460 260" stroke="#ffffff" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
+  <path d="M400 145 L400 285" stroke="#00d4aa" stroke-width="1" opacity="0.2" stroke-dasharray="4 4"/>
+  <path d="M330 220 L470 220" stroke="#00d4aa" stroke-width="1" opacity="0.2" stroke-dasharray="4 4"/>
+  <circle cx="400" cy="220" r="30" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.3"/>
+  <path d="M390 220 L400 210 L410 220 L400 230 Z" fill="#00d4aa" opacity="0.6"/>
+  <text x="400" y="395" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Tablet Gizlilik Ayarları</text>
+  <text x="400" y="420" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Tam Rehber</text>
+</svg>

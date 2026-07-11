@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2744"/>
+    </linearGradient>
+    <linearGradient id="shield1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg1)"/>
+  <circle cx="400" cy="225" r="180" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.1"/>
+  <circle cx="400" cy="225" r="140" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.15"/>
+  <path d="M400 120 L400 80 M400 370 L400 330 M280 225 L240 225 M520 225 L560 225" stroke="#00d4aa" stroke-width="2" opacity="0.3"/>
+  <path d="M400 140 L460 170 L460 240 L400 290 L340 240 L340 170 Z" fill="url(#shield1)" opacity="0.9"/>
+  <path d="M400 160 L440 180 L440 235 L400 270 L360 235 L360 180 Z" fill="#0a1628"/>
+  <rect x="385" y="190" width="30" height="45" rx="4" fill="#00d4aa" opacity="0.8"/>
+  <circle cx="400" cy="180" r="8" fill="#00d4aa" opacity="0.6"/>
+  <path d="M395 210 L400 215 L410 200" stroke="#00d4aa" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="340" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Telefon Güvenliği</text>
+  <text x="400" y="365" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Cihazınızı Koruyun</text>
+</svg>

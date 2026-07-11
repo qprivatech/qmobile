@@ -1,0 +1,28 @@
+{
+  "name": "QMOBILE",
+  "short_name": "QMOBILE",
+  "description": "İsviçre merkezli gizlilik odaklı mobil teknoloji sitesi. Güvenli Pixel telefonlar ve maksimum gizlilik için yapılandırılmış mobil cihazlar.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#120d16",
+  "theme_color": "#120d16",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["privacy", "security", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

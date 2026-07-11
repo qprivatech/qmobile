@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a2744"/>
+    </linearGradient>
+    <linearGradient id="chart7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg7)"/>
+  <rect x="200" y="120" width="400" height="200" rx="8" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.3"/>
+  <rect x="210" y="130" width="380" height="180" rx="4" fill="#0a1628" opacity="0.8"/>
+  <rect x="220" y="140" width="360" height="20" rx="2" fill="#00d4aa" opacity="0.2"/>
+  <circle cx="235" cy="150" r="4" fill="#ff5f57" opacity="0.8"/>
+  <circle cx="248" cy="150" r="4" fill="#ffbd2e" opacity="0.8"/>
+  <circle cx="261" cy="150" r="4" fill="#28c840" opacity="0.8"/>
+  <path d="M230 200 L250 190 L270 210 L290 180 L310 200 L330 170 L350 190 L370 160 L390 180 L410 150 L430 170 L450 140" stroke="#00d4aa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M230 200 L250 190 L270 210 L290 180 L310 200 L330 170 L350 190 L370 160 L390 180 L410 150 L430 170 L450 140 L450 280 L230 280 Z" fill="url(#chart7)" opacity="0.1"/>
+  <rect x="230" y="240" width="40" height="30" rx="2" fill="#00d4aa" opacity="0.3"/>
+  <rect x="280" y="220" width="40" height="50" rx="2" fill="#00d4aa" opacity="0.4"/>
+  <rect x="330" y="250" width="40" height="20" rx="2" fill="#00d4aa" opacity="0.25"/>
+  <rect x="380" y="230" width="40" height="40" rx="2" fill="#00d4aa" opacity="0.35"/>
+  <rect x="430" y="210" width="40" height="60" rx="2" fill="#00d4aa" opacity="0.45"/>
+  <path d="M480 160 L500 160 L500 180 L480 180 Z" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.5"/>
+  <path d="M485 170 L495 170" stroke="#00d4aa" stroke-width="2"/>
+  <text x="400" y="360" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Borsa Uygulamaları Güvenliği</text>
+  <text x="400" y="385" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Yatırımlarınızı Koruyun</text>
+</svg>

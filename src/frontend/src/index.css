@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk";
+    --font-body: "DM Sans";
+    --font-mono: "JetBrains Mono";
+    --radius: 0.625rem;
+
+    --background: 0.99 0.005 260;
+    --foreground: 0.15 0.01 260;
+    --card: 1.0 0.004 260;
+    --card-foreground: 0.15 0.01 260;
+    --popover: 1.0 0.004 260;
+    --popover-foreground: 0.15 0.01 260;
+
+    --primary: 0.45 0.18 240;
+    --primary-foreground: 0.98 0.005 240;
+
+    --secondary: 0.95 0.01 260;
+    --secondary-foreground: 0.25 0.015 260;
+    --muted: 0.94 0.01 260;
+    --muted-foreground: 0.5 0.012 260;
+
+    --accent: 0.58 0.2 170;
+    --accent-foreground: 0.98 0.005 170;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+
+    --border: 0.9 0.008 260;
+    --input: 0.9 0.008 260;
+    --ring: 0.45 0.18 240;
+
+    --chart-1: 0.45 0.18 240;
+    --chart-2: 0.58 0.2 170;
+    --chart-3: 0.5 0.012 55;
+    --chart-4: 0.6 0.16 150;
+    --chart-5: 0.72 0.15 85;
+
+    --sidebar: 0.95 0.01 260;
+    --sidebar-foreground: 0.15 0.01 260;
+    --sidebar-primary: 0.45 0.18 240;
+    --sidebar-primary-foreground: 0.98 0.005 240;
+    --sidebar-accent: 0.94 0.01 260;
+    --sidebar-accent-foreground: 0.25 0.015 260;
+    --sidebar-border: 0.9 0.008 260;
+    --sidebar-ring: 0.45 0.18 240;
+
+    --success: 0.6 0.16 150;
+    --warning: 0.72 0.15 85;
+
+    /* Qmobile accent border colors */
+    --accent-blue: 0.45 0.18 240;
+    --accent-green: 0.58 0.2 170;
+    --accent-black: 0.15 0.01 260;
+    --accent-purple: 0.55 0.2 300;
+
+    /* Qmobile gradients */
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.45 0.18 240),
+      oklch(0.38 0.16 250)
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      oklch(0.99 0.005 260 / 0.0),
+      oklch(0.94 0.01 260 / 0.5)
+    );
+  }
+
+  .dark {
+    --background: 0.16 0.02 300;
+    --foreground: 1 0 0;
+    --card: 0.2 0.02 300;
+    --card-foreground: 1 0 0;
+    --popover: 0.2 0.02 300;
+    --popover-foreground: 1 0 0;
+
+    --primary: 0.62 0.28 25;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.26 0.02 300;
+    --secondary-foreground: 1 0 0;
+    --muted: 0.26 0.02 300;
+    --muted-foreground: 0.74 0 0;
+
+    --accent: 0.62 0.28 25;
+    --accent-foreground: 1 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.3 0.02 300;
+    --input: 0.3 0.02 300;
+    --ring: 0.62 0.28 25;
+
+    --chart-1: 0.62 0.28 25;
+    --chart-2: 0.62 0.22 170;
+    --chart-3: 0.52 0.012 55;
+    --chart-4: 0.6 0.16 150;
+    --chart-5: 0.72 0.15 85;
+
+    --sidebar: 0.2 0.02 300;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.62 0.28 25;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.26 0.02 300;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 0.3 0.02 300;
+    --sidebar-ring: 0.62 0.28 25;
+
+    --success: 0.6 0.16 150;
+    --warning: 0.72 0.15 85;
+
+    /* Qmobile accent border colors dark */
+    --accent-blue: 0.65 0.2 240;
+    --accent-green: 0.62 0.22 170;
+    --accent-black: 0.92 0.01 260;
+    --accent-purple: 0.65 0.2 300;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 10px 40px oklch(0 0 0 / 0.15), 0 2px 8px oklch(0 0 0 / 0.1);
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 1px 3px oklch(0 0 0 / 0.08), 0 1px 2px oklch(0 0 0 / 0.04);
+  }
+
+  /* Qmobile accent border utilities */
+  .border-accent-blue {
+    border-color: oklch(var(--accent-blue));
+  }
+
+  .border-accent-green {
+    border-color: oklch(var(--accent-green));
+  }
+
+  .border-accent-black {
+    border-color: oklch(var(--accent-black));
+  }
+
+  .border-accent-purple {
+    border-color: oklch(var(--accent-purple));
+  }
+
+  .text-accent-blue {
+    color: oklch(var(--accent-blue));
+  }
+
+  .text-accent-green {
+    color: oklch(var(--accent-green));
+  }
+
+  .text-accent-black {
+    color: oklch(var(--accent-black));
+  }
+
+  .text-accent-purple {
+    color: oklch(var(--accent-purple));
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Qmobile accent colors */
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-green: var(--accent-green);
+  --color-accent-black: var(--accent-black);
+  --color-accent-purple: var(--accent-purple);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, oklch(0.62 0.28 25), oklch(0.45 0.24 25));
+}
+
+.gradient-subtle {
+  background: linear-gradient(
+    180deg,
+    oklch(0.99 0.005 260 / 0.0),
+    oklch(0.94 0.01 260 / 0.5)
+  );
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, oklch(0.62 0.28 25), oklch(0.74 0 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-green {
+  box-shadow: 0 0 20px oklch(0.62 0.28 25 / 0.4), 0 0 60px
+    oklch(0.62 0.28 25 / 0.15);
+}

@@ -1,0 +1,47 @@
+// Version: 4.0.0
+type List__716101829<T> =
+  {
+    var blockIndex : Nat__93962160;
+    var blocks : [var [var ?T]];
+    var elementIndex : Nat__93962160
+  };
+type List__852723865<T> = List__716101829<T>;
+type Nat__920180692 = Nat;
+type Nat__93962160 = Nat__920180692;
+type NewActor__717625262 = {};
+type NewActor__935237298 =
+  {
+    var contacts :
+      List__852723865<{
+                        createdAt : Nat;
+                        email : ?Text;
+                        firstName : Text;
+                        id : Nat;
+                        lastName : Text;
+                        phone : Text
+                      }>;
+    var nextId : {var nextId : Nat}
+  };
+type OldActor__657050695 = {};
+type OldActor__684827262 =
+  {
+    var contacts :
+      List__852723865<{
+                        createdAt : Nat;
+                        email : ?Text;
+                        firstName : Text;
+                        id : Nat;
+                        lastName : Text;
+                        phone : Text
+                      }>;
+    var nextId : {var nextId : Nat}
+  };
+{
+  "20260620_000000_InitialContacts" :
+    (old : OldActor__657050695) -> NewActor__935237298;
+  "20260620_000001_DropContacts" :
+    (old : OldActor__684827262) -> NewActor__717625262
+}
+actor  {
+  
+};

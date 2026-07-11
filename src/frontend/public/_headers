@@ -1,0 +1,60 @@
+# QMOBILE security headers
+# Applied to every route served by the asset canister.
+# Real HTTP response headers — take precedence over the <meta http-equiv>
+# tags in index.html and are more reliable across browsers.
+# X-Frame-Options, HSTS, and Permissions-Policy are ONLY set here because
+# they do not work reliably via meta tags.
+#
+# NOTE: CSP style-src 'unsafe-inline' has been removed in favor of a
+# hash-based policy. The csp-hash-build Vite plugin computes SHA-256
+# hashes of the inline styles Vite/Tailwind inject and appends them to
+# style-src and style-src-attr in the dist/_headers copy at build time.
+# This file leaves style-src 'self' (no unsafe-inline) and a separate
+# style-src-attr directive; the plugin fills in the 'sha256-...' tokens.
+
+/*
+  # Strict-Transport-Security — enforce HTTPS for one year, cover subdomains,
+  # and opt into the HSTS preload list.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Clickjacking protection — never allow this site to be framed.
+  # (CSP frame-ancestors 'none' is the modern equivalent; this covers
+  # legacy browsers that do not understand frame-ancestors.)
+  X-Frame-Options: DENY
+
+  # Permissions-Policy — disable sensitive capabilities by default.
+  # The QMOBILE site does not use camera, microphone, geolocation, or
+  # payment APIs, so deny them everywhere.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+  # MIME sniffing protection — browsers must respect declared Content-Type.
+  X-Content-Type-Options: nosniff
+
+  # Referrer-Policy — send full referrer same-origin, origin-only cross-origin.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Cross-Origin-Resource-Policy — restrict resource loading to same origin.
+  # Prevents cross-origin pages from loading this site's resources via
+  # <img>, <script>, <link>, fetch, etc. Complements frame-ancestors 'none'.
+  Cross-Origin-Resource-Policy: same-origin
+
+  # Content-Security-Policy — restrict every fetch directive.
+  #   script-src:  'self' + cdn.caffeine.ai allowlist — no inline, no eval.
+  #   style-src:   'self' only — inline style hashes are appended by the
+  #                csp-hash-build Vite plugin at build time (no unsafe-inline).
+  #   style-src-attr: separate directive for inline style="" attributes.
+  #                Hashes for those attributes are appended by the plugin.
+  #   img-src:     'self' data: blob: — object storage may surface blob URLs.
+  #   font-src:    'self' — fonts are self-hosted from /assets/fonts/*.woff2.
+  #   connect-src: 'self' + II auth (id.ai) + storage gateway (blob.caffeine.ai)
+  #                + analytics (api-gateway.umami.dev) + IC canister hosts
+  #                (*.icp0.io, *.ic0.app, *.raw.ic0.app).
+  #   frame-src:   https://id.ai — Internet Identity may open in an iframe.
+  #   worker-src:  'self' — the service worker (/sw.js) is same-origin.
+  #   manifest-src:'self' — /manifest.json is same-origin.
+  #   object-src:  'none' — no plugins/Flash.
+  #   base-uri:    'self' — no <base> hijacking.
+  #   form-action: 'self' — forms may only post to this origin.
+  #   frame-ancestors 'none' — modern clickjacking protection (X-Frame-Options
+  #                DENY above covers legacy browsers).
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.caffeine.ai; style-src 'self'; style-src-attr 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://id.ai https://blob.caffeine.ai https://api-gateway.umami.dev https://*.icp0.io https://*.ic0.app https://*.raw.ic0.app; frame-src https://id.ai; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';

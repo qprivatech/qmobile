@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg4)"/>
+  <rect x="180" y="140" width="100" height="160" rx="12" fill="none" stroke="#ff5f57" stroke-width="2" opacity="0.5"/>
+  <rect x="190" y="150" width="80" height="130" rx="6" fill="#0a1628" opacity="0.8"/>
+  <circle cx="230" cy="170" r="15" fill="#ff5f57" opacity="0.3"/>
+  <text x="230" y="175" text-anchor="middle" fill="#ff5f57" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">W</text>
+  <rect x="200" y="200" width="60" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
+  <rect x="200" y="210" width="40" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+  <rect x="200" y="220" width="50" height="4" rx="2" fill="#ffffff" opacity="0.25"/>
+  <rect x="200" y="240" width="30" height="8" rx="4" fill="#ff5f57" opacity="0.4"/>
+  <rect x="350" y="140" width="100" height="160" rx="12" fill="none" stroke="#ffbd2e" stroke-width="2" opacity="0.5"/>
+  <rect x="360" y="150" width="80" height="130" rx="6" fill="#0a1628" opacity="0.8"/>
+  <circle cx="400" cy="170" r="15" fill="#ffbd2e" opacity="0.3"/>
+  <text x="400" y="175" text-anchor="middle" fill="#ffbd2e" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">T</text>
+  <rect x="370" y="200" width="60" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
+  <rect x="370" y="210" width="40" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+  <rect x="370" y="220" width="50" height="4" rx="2" fill="#ffffff" opacity="0.25"/>
+  <rect x="370" y="240" width="30" height="8" rx="4" fill="#ffbd2e" opacity="0.4"/>
+  <rect x="520" y="140" width="100" height="160" rx="12" fill="none" stroke="#28c840" stroke-width="2" opacity="0.5"/>
+  <rect x="530" y="150" width="80" height="130" rx="6" fill="#0a1628" opacity="0.8"/>
+  <circle cx="570" cy="170" r="15" fill="#28c840" opacity="0.3"/>
+  <text x="570" y="175" text-anchor="middle" fill="#28c840" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">S</text>
+  <rect x="540" y="200" width="60" height="4" rx="2" fill="#ffffff" opacity="0.3"/>
+  <rect x="540" y="210" width="40" height="4" rx="2" fill="#ffffff" opacity="0.2"/>
+  <rect x="540" y="220" width="50" height="4" rx="2" fill="#ffffff" opacity="0.25"/>
+  <rect x="540" y="240" width="30" height="8" rx="4" fill="#28c840" opacity="0.4"/>
+  <path d="M280 220 L350 220 M450 220 L520 220" stroke="#00d4aa" stroke-width="2" opacity="0.3" stroke-dasharray="4 4"/>
+  <path d="M400 310 L400 330" stroke="#00d4aa" stroke-width="2" opacity="0.5"/>
+  <path d="M390 330 L410 330 L400 345 Z" fill="#00d4aa" opacity="0.5"/>
+  <text x="400" y="380" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Mesajlaşma Uygulamaları</text>
+  <text x="400" y="405" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Karşılaştırması</text>
+</svg>

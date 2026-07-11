@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="eye10" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff5f57"/>
+      <stop offset="100%" style="stop-color:#d43d35"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg10)"/>
+  <ellipse cx="400" cy="200" rx="80" ry="50" fill="none" stroke="#ff5f57" stroke-width="3" opacity="0.6"/>
+  <ellipse cx="400" cy="200" rx="50" ry="30" fill="#0a1628" opacity="0.9"/>
+  <circle cx="400" cy="200" r="20" fill="url(#eye10)" opacity="0.7"/>
+  <circle cx="405" cy="195" r="6" fill="#ffffff" opacity="0.4"/>
+  <path d="M320 200 L280 180 M320 200 L280 220 M480 200 L520 180 M480 200 L520 220" stroke="#ff5f57" stroke-width="2" opacity="0.4"/>
+  <path d="M400 150 L400 130 M400 250 L400 270 M350 200 L330 200 M450 200 L470 200" stroke="#ff5f57" stroke-width="2" opacity="0.3"/>
+  <rect x="250" y="280" width="60" height="40" rx="8" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.4"/>
+  <rect x="260" y="290" width="40" height="25" rx="4" fill="#0a1628" opacity="0.8"/>
+  <path d="M270 300 L280 308 L290 295" stroke="#00d4aa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="490" y="280" width="60" height="40" rx="8" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.4"/>
+  <rect x="500" y="290" width="40" height="25" rx="4" fill="#0a1628" opacity="0.8"/>
+  <path d="M510 300 L520 308 L530 295" stroke="#00d4aa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M310 300 L490 300" stroke="#00d4aa" stroke-width="2" opacity="0.3" stroke-dasharray="4 4"/>
+  <text x="400" y="360" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Uygulama Casusluğunu Önleme</text>
+  <text x="400" y="385" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Rehberi</text>
+</svg>
