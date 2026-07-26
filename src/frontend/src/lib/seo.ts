@@ -223,49 +223,44 @@ export const seoData: Record<string, Record<Lang, SeoMeta>> = {
     tr: {
       title: "Güvenlik | Qmobile",
       description:
-        "Uçtan uca şifreleme, kuantum sonrası kriptografi, merkezi sunucu yok. Q-PWA güvenli mesajlaşma ve askeri düzeyde şifreleme.",
+        "Güvenli şifreleme (E2EE), merkezi sunucu yok. Güvenli mesajlaşma ve askeri düzeyde güvenlik.",
       canonical: `${baseUrl}/security`,
       ogTitle: "Güvenlik | Qmobile",
-      ogDescription:
-        "Uçtan uca şifreleme, kuantum sonrası kriptografi, merkezi sunucu yok.",
+      ogDescription: "Güvenli şifreleme (E2EE), merkezi sunucu yok.",
       ogType: "website",
       ogImage: defaultOgImage,
       twitterCard: "summary_large_image",
       twitterTitle: "Güvenlik | Qmobile",
-      twitterDescription:
-        "Uçtan uca şifreleme, kuantum sonrası kriptografi, merkezi sunucu yok.",
+      twitterDescription: "Güvenli şifreleme (E2EE), merkezi sunucu yok.",
       twitterImage: defaultOgImage,
     },
     de: {
       title: "Sicherheit | Qmobile",
       description:
-        "Ende-zu-Ende-Verschlüsselung, Post-Quantum-Kryptografie, keine zentralen Server. Q-PWA sichere Messaging.",
+        "Sichere Verschlüsselung (E2EE), keine zentralen Server. Sicheres Messaging und Sicherheit auf militärischem Niveau.",
       canonical: `${baseUrl}/security`,
       ogTitle: "Sicherheit | Qmobile",
-      ogDescription:
-        "Ende-zu-Ende-Verschlüsselung, Post-Quantum-Kryptografie, keine zentralen Server.",
+      ogDescription: "Sichere Verschlüsselung (E2EE), keine zentralen Server.",
       ogType: "website",
       ogImage: defaultOgImage,
       twitterCard: "summary_large_image",
       twitterTitle: "Sicherheit | Qmobile",
       twitterDescription:
-        "Ende-zu-Ende-Verschlüsselung, Post-Quantum-Kryptografie, keine zentralen Server.",
+        "Sichere Verschlüsselung (E2EE), keine zentralen Server.",
       twitterImage: defaultOgImage,
     },
     en: {
       title: "Security | Qmobile",
       description:
-        "End-to-end encryption, post-quantum cryptography, no central servers. Q-PWA secure messaging.",
+        "Secure encryption (E2EE), no central servers. Secure messaging and military-grade security.",
       canonical: `${baseUrl}/security`,
       ogTitle: "Security | Qmobile",
-      ogDescription:
-        "End-to-end encryption, post-quantum cryptography, no central servers.",
+      ogDescription: "Secure encryption (E2EE), no central servers.",
       ogType: "website",
       ogImage: defaultOgImage,
       twitterCard: "summary_large_image",
       twitterTitle: "Security | Qmobile",
-      twitterDescription:
-        "End-to-end encryption, post-quantum cryptography, no central servers.",
+      twitterDescription: "Secure encryption (E2EE), no central servers.",
       twitterImage: defaultOgImage,
     },
   },
@@ -614,6 +609,156 @@ export const seoData: Record<string, Record<Lang, SeoMeta>> = {
       twitterTitle: "Cookie Policy | Qmobile",
       twitterDescription:
         "Qmobile cookie policy. Minimum cookie usage, zero tracking.",
+      twitterImage: defaultOgImage,
+    },
+  },
+  agb: {
+    tr: {
+      title: "AGB & Satış Sözleşmesi | Qmobile",
+      description:
+        "Qmobile Genel İş Şartları ve Satış Sözleşmesi. Sözleşme oluşumu, ödeme, teslimat, garanti, iade ve İsviçre hukuku.",
+      canonical: `${baseUrl}/agb`,
+      ogTitle: "AGB & Satış Sözleşmesi | Qmobile",
+      ogDescription:
+        "Qmobile AGB & Satış Sözleşmesi. Sözleşme, ödeme, teslimat, garanti, iade.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "AGB & Satış Sözleşmesi | Qmobile",
+      twitterDescription:
+        "Qmobile AGB & Satış Sözleşmesi. Sözleşme, ödeme, teslimat, garanti, iade.",
+      twitterImage: defaultOgImage,
+    },
+    de: {
+      title: "AGB & Kaufvertrag | Qmobile",
+      description:
+        "Qmobile Allgemeine Geschäftsbedingungen und Kaufvertrag. Vertragsbildung, Zahlung, Lieferung, Gewährleistung, Rückgabe und Schweizer Recht.",
+      canonical: `${baseUrl}/agb`,
+      ogTitle: "AGB & Kaufvertrag | Qmobile",
+      ogDescription:
+        "Qmobile AGB & Kaufvertrag. Vertrag, Zahlung, Lieferung, Gewährleistung, Rückgabe.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "AGB & Kaufvertrag | Qmobile",
+      twitterDescription:
+        "Qmobile AGB & Kaufvertrag. Vertrag, Zahlung, Lieferung, Gewährleistung, Rückgabe.",
+      twitterImage: defaultOgImage,
+    },
+    en: {
+      title: "AGB & Sales Contract | Qmobile",
+      description:
+        "Qmobile General Terms and Conditions and Sales Contract. Contract formation, payment, delivery, warranty, returns and Swiss law.",
+      canonical: `${baseUrl}/agb`,
+      ogTitle: "AGB & Sales Contract | Qmobile",
+      ogDescription:
+        "Qmobile AGB & Sales Contract. Contract, payment, delivery, warranty, returns.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "AGB & Sales Contract | Qmobile",
+      twitterDescription:
+        "Qmobile AGB & Sales Contract. Contract, payment, delivery, warranty, returns.",
+      twitterImage: defaultOgImage,
+    },
+  },
+  salesContract: {
+    tr: {
+      title: "Qmobile – Satış Sözleşmesi (İsviçre Hukuku)",
+      description:
+        "Qmobile Satış Sözleşmesi. Vertragsgegenstand, marka, kullanım, sorumluluk, garanti, teslimat, iade ve İsviçre hukuku çerçevesinde düzenlenmiş tam metin.",
+      canonical: `${baseUrl}/sales-contract`,
+      ogTitle: "Qmobile – Satış Sözleşmesi (İsviçre Hukuku)",
+      ogDescription:
+        "Qmobile Satış Sözleşmesi. Kapsam, kullanım, sorumluluk, garanti, teslimat, iade ve İsviçre hukuku.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "Qmobile – Satış Sözleşmesi (İsviçre Hukuku)",
+      twitterDescription:
+        "Qmobile Satış Sözleşmesi. Kapsam, kullanım, sorumluluk, garanti, teslimat, iade.",
+      twitterImage: defaultOgImage,
+    },
+    de: {
+      title: "Qmobile – Verkaufsvertrag (Schweizer Recht)",
+      description:
+        "Qmobile Verkaufsvertrag. Vertragsgegenstand, Markenhinweis, Nutzung, Haftung, Gewährleistung, Lieferung, Rückgabe und Schweizer Recht – vollständiger Text.",
+      canonical: `${baseUrl}/sales-contract`,
+      ogTitle: "Qmobile – Verkaufsvertrag (Schweizer Recht)",
+      ogDescription:
+        "Qmobile Verkaufsvertrag. Gegenstand, Nutzung, Haftung, Gewährleistung, Lieferung, Rückgabe und Schweizer Recht.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "Qmobile – Verkaufsvertrag (Schweizer Recht)",
+      twitterDescription:
+        "Qmobile Verkaufsvertrag. Gegenstand, Nutzung, Haftung, Gewährleistung, Lieferung, Rückgabe.",
+      twitterImage: defaultOgImage,
+    },
+    en: {
+      title: "Qmobile – Sales Contract (Swiss Law)",
+      description:
+        "Qmobile Sales Contract. Subject matter, brand notice, usage, liability, warranty, delivery, returns and Swiss law – full text.",
+      canonical: `${baseUrl}/sales-contract`,
+      ogTitle: "Qmobile – Sales Contract (Swiss Law)",
+      ogDescription:
+        "Qmobile Sales Contract. Subject, usage, liability, warranty, delivery, returns and Swiss law.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "Qmobile – Sales Contract (Swiss Law)",
+      twitterDescription:
+        "Qmobile Sales Contract. Subject, usage, liability, warranty, delivery, returns.",
+      twitterImage: defaultOgImage,
+    },
+  },
+  order: {
+    tr: {
+      title: "Sipariş Ver | QMOBILE",
+      description:
+        "Güvenli Qmobile Pixel telefonunuzu kişiye özel güvenlik yapılandırması ile sipariş edin.",
+      canonical: `${baseUrl}/order`,
+      ogTitle: "Sipariş Ver | QMOBILE",
+      ogDescription:
+        "Güvenli Qmobile Pixel telefonunuzu kişiye özel güvenlik yapılandırması ile sipariş edin.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "Sipariş Ver | QMOBILE",
+      twitterDescription:
+        "Güvenli Qmobile Pixel telefonunuzu kişiye özel güvenlik yapılandırması ile sipariş edin.",
+      twitterImage: defaultOgImage,
+    },
+    de: {
+      title: "Bestellen | QMOBILE",
+      description:
+        "Bestellen Sie Ihr sicheres Qmobile Pixel-Telefon mit individueller Sicherheitskonfiguration.",
+      canonical: `${baseUrl}/order`,
+      ogTitle: "Bestellen | QMOBILE",
+      ogDescription:
+        "Bestellen Sie Ihr sicheres Qmobile Pixel-Telefon mit individueller Sicherheitskonfiguration.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "Bestellen | QMOBILE",
+      twitterDescription:
+        "Bestellen Sie Ihr sicheres Qmobile Pixel-Telefon mit individueller Sicherheitskonfiguration.",
+      twitterImage: defaultOgImage,
+    },
+    en: {
+      title: "Order | QMOBILE",
+      description:
+        "Order your secure Qmobile Pixel phone with custom security configuration.",
+      canonical: `${baseUrl}/order`,
+      ogTitle: "Order | QMOBILE",
+      ogDescription:
+        "Order your secure Qmobile Pixel phone with custom security configuration.",
+      ogType: "website",
+      ogImage: defaultOgImage,
+      twitterCard: "summary_large_image",
+      twitterTitle: "Order | QMOBILE",
+      twitterDescription:
+        "Order your secure Qmobile Pixel phone with custom security configuration.",
       twitterImage: defaultOgImage,
     },
   },

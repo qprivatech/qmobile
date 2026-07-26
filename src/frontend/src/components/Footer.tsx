@@ -12,6 +12,7 @@ export function Footer() {
       title: t("footer.products"),
       links: [
         { to: "/products", label: t("nav.products") },
+        { to: "/order", label: t("footer.order") },
         { to: "/compare", label: t("nav.compare") },
         { to: "/why", label: t("nav.why") },
       ],
@@ -31,12 +32,15 @@ export function Footer() {
         { to: "/privacy", label: t("footer.privacy") },
         { to: "/terms", label: t("footer.terms") },
         { to: "/cookies", label: t("footer.cookies") },
+        { to: "/agb", label: t("footer.agb") },
+        { to: "/sales-contract", label: t("footer.salesContract") },
       ],
     },
     {
       title: t("footer.support"),
       links: [
         { to: "/blog", label: t("nav.blog") },
+        { to: "/blog/telefon-guvenligi-101", label: t("footer.latestPost") },
         { to: "/faq", label: t("nav.faq") },
       ],
     },
@@ -119,7 +123,7 @@ export function Footer() {
                         window.scrollTo({ top: 0, behavior: "smooth" })
                       }
                       className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-                      data-ocid={`footer.link.${link.to.replace("/", "")}`}
+                      data-ocid={`footer.link.${link.to.replaceAll("/", ".").replace(/^\./, "")}`}
                     >
                       {link.label}
                     </Link>

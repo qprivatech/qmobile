@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgCloud" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="shieldCloud" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgCloud)"/>
+  <circle cx="400" cy="225" r="180" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.1"/>
+  <circle cx="400" cy="225" r="140" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.15"/>
+  <path d="M300 220 Q300 170 350 170 Q360 140 400 140 Q440 140 450 170 Q500 170 500 220 Q500 250 470 250 L330 250 Q300 250 300 220 Z" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.6"/>
+  <path d="M310 215 Q310 175 355 175 Q365 150 400 150 Q435 150 445 175 Q490 175 490 215 Q490 240 465 240 L335 240 Q310 240 310 215 Z" fill="#0a1628" opacity="0.7"/>
+  <path d="M400 180 L460 210 L460 280 L400 330 L340 280 L340 210 Z" fill="url(#shieldCloud)" opacity="0.9"/>
+  <path d="M400 200 L440 220 L440 275 L400 310 L360 275 L360 220 Z" fill="#0a1628"/>
+  <rect x="385" y="230" width="30" height="45" rx="4" fill="#00d4aa" opacity="0.8"/>
+  <circle cx="400" cy="220" r="8" fill="#00d4aa" opacity="0.6"/>
+  <path d="M395 250 L400 255 L410 240" stroke="#00d4aa" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M180 225 L240 225 M560 225 L620 225" stroke="#00d4aa" stroke-width="2" opacity="0.3" stroke-dasharray="4 4"/>
+  <rect x="140" y="200" width="40" height="50" rx="6" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.4"/>
+  <rect x="620" y="200" width="40" height="50" rx="6" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.4"/>
+  <text x="400" y="380" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Bulut Depolama Güvenliği</text>
+  <text x="400" y="405" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Verilerinizi Şifreleyin</text>
+</svg>

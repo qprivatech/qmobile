@@ -50,6 +50,7 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [captchaAnswer, setCaptchaAnswer] = useState("");
   const [captchaError, setCaptchaError] = useState(false);
+  const [contractAccepted, setContractAccepted] = useState(false);
   const [sendError, setSendError] = useState(false);
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -69,6 +70,7 @@ export default function Contact() {
     setMessage("");
     setCaptchaAnswer("");
     setCaptchaError(false);
+    setContractAccepted(false);
     setSendError(false);
     setCaptchaPair(randomCaptchaPair());
   };
@@ -260,6 +262,35 @@ export default function Contact() {
               )}
             </div>
 
+            {/* Sales contract acceptance */}
+            <div className="flex items-start gap-3">
+              <input
+                id="contact-sales-contract"
+                type="checkbox"
+                checked={contractAccepted}
+                onChange={(e) => setContractAccepted(e.target.checked)}
+                disabled={submitting}
+                required
+                className="mt-0.5 h-4 w-4 shrink-0 rounded border border-border bg-background text-primary accent-primary focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-60"
+                data-ocid="contact.sales_contract_checkbox"
+              />
+              <label
+                htmlFor="contact-sales-contract"
+                className="text-sm text-foreground leading-relaxed"
+              >
+                {t("contact.salesContractAccept")}{" "}
+                <a
+                  href="https://qmobile.ch/sales-contract"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                  data-ocid="contact.sales_contract_link"
+                >
+                  ({t("contact.salesContractViewLink")})
+                </a>
+              </label>
+            </div>
+
             {sendError && (
               <p
                 className="text-sm text-destructive"
@@ -274,7 +305,7 @@ export default function Contact() {
               type="submit"
               variant="default"
               className="w-full"
-              disabled={submitting}
+              disabled={submitting || !contractAccepted}
               data-ocid="contact.send_button"
             >
               {submitting ? (

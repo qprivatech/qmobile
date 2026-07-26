@@ -70,6 +70,16 @@ const contactRoute = createRoute({
   path: "/contact",
   component: lazyRouteComponent(() => import("@/pages/Contact")),
 });
+const orderRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/order",
+  component: lazyRouteComponent(() => import("@/pages/Order")),
+});
+const orderConfirmRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/order/confirm/$token",
+  component: lazyRouteComponent(() => import("@/pages/OrderConfirm")),
+});
 const privacyRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/privacy",
@@ -85,6 +95,16 @@ const cookiesRoute = createRoute({
   path: "/cookies",
   component: lazyRouteComponent(() => import("@/pages/Cookies")),
 });
+const agbRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/agb",
+  component: lazyRouteComponent(() => import("@/pages/Agb")),
+});
+const salesContractRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/sales-contract",
+  component: lazyRouteComponent(() => import("@/pages/SalesContract")),
+});
 const blogRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/blog",
@@ -94,6 +114,21 @@ const blogPostRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/blog/$slug",
   component: lazyRouteComponent(() => import("@/pages/BlogPost")),
+});
+const techSpecsPixel8Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/googlepixel8/teknik-ozellikleri",
+  component: lazyRouteComponent(() => import("@/pages/TechSpecsPixel8")),
+});
+const techSpecsPixel9Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/googlepixel9/teknik-ozellikleri",
+  component: lazyRouteComponent(() => import("@/pages/TechSpecsPixel9")),
+});
+const techSpecsPixel10Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/googlepixel10/teknik-ozellikleri",
+  component: lazyRouteComponent(() => import("@/pages/TechSpecsPixel10")),
 });
 
 const routeTree = rootRoute.addChildren([
@@ -106,11 +141,18 @@ const routeTree = rootRoute.addChildren([
   faqRoute,
   aboutRoute,
   contactRoute,
+  orderRoute,
+  orderConfirmRoute,
   privacyRoute,
   termsRoute,
   cookiesRoute,
+  agbRoute,
+  salesContractRoute,
   blogRoute,
   blogPostRoute,
+  techSpecsPixel8Route,
+  techSpecsPixel9Route,
+  techSpecsPixel10Route,
 ]);
 
 export const router = createRouter({ routeTree });

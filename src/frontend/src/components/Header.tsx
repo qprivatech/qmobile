@@ -94,7 +94,7 @@ export function Header() {
           </button>
 
           {/* Order CTA */}
-          <Link to="/contact" data-ocid="header.order_button">
+          <Link to="/order" data-ocid="header.order_button">
             <Button
               variant="default"
               size="sm"
@@ -159,7 +159,7 @@ export function Header() {
               ))}
             </div>
             <Link
-              to="/contact"
+              to="/order"
               className="mt-2 sm:hidden"
               data-ocid="header.mobile_order_button"
             >

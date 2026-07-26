@@ -181,10 +181,12 @@ export default function BlogPost() {
             <p className="text-muted-foreground mb-8">
               {t("blog.notFound.desc")}
             </p>
-            <Button variant="default" data-ocid="blog.back_button">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              {t("blog.backToBlog")}
-            </Button>
+            <Link to="/blog" className="inline-block">
+              <Button variant="default" data-ocid="blog.back_button">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                {t("blog.backToBlog")}
+              </Button>
+            </Link>
           </motion.div>
         </section>
       </>
@@ -293,10 +295,12 @@ export default function BlogPost() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-12 pt-8 border-t border-border"
           >
-            <Button variant="outline" data-ocid="blog.back_to_blog_button">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              {t("blog.backToBlog")}
-            </Button>
+            <Link to="/blog" className="inline-block">
+              <Button variant="outline" data-ocid="blog.back_to_blog_button">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                {t("blog.backToBlog")}
+              </Button>
+            </Link>
           </motion.div>
         </section>
       </article>

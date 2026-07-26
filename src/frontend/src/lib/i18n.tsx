@@ -28,6 +28,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "nav.faq": "SSS",
     "nav.about": "Hakkımızda",
     "nav.contact": "İletişim",
+    "nav.salesContract": "Satış Sözleşmesi",
     "header.order": "Sipariş Ver",
     "footer.about": "Hakkımızda",
     "footer.products": "Ürünler",
@@ -37,7 +38,10 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "footer.privacy": "Gizlilik Politikası",
     "footer.terms": "Kullanım Şartları",
     "footer.cookies": "Çerez Politikası",
+    "footer.agb": "AGB & Satış Sözleşmesi",
+    "footer.salesContract": "Satış Sözleşmesi",
     "footer.contact": "İletişim",
+    "footer.order": "Sipariş Ver",
     "footer.tagline": "İsviçre merkezli. Gizlilik standartları.",
     "footer.rights": "Tüm hakları saklıdır.",
     "privacy.intro":
@@ -50,7 +54,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Verilerinizi yalnızca siparişinizi teslim etmek, sorularınıza yanıt vermek ve yasal yükümlülüklerimizi yerine getirmek için kullanırız. Bilgilerinizi asla reklam amacıyla kullanmayız ve başka şirketlere satmayız.",
     "privacy.securityTitle": "Veri Güvenliği ve Şifreleme",
     "privacy.security":
-      "Tüm verileriniz şifrelenerek saklanır. Bilgilerinize sadece yetkili personelimiz erişebilir. Verilerinizi hiçbir üçüncü tarafla paylaşmayız.",
+      "Tüm verileriniz güvenli şifreleme (E2EE) ile saklanır. Bilgilerinize sadece yetkili personelimiz erişebilir. Verilerinizi hiçbir üçüncü tarafla paylaşmayız.",
     "privacy.rightsTitle": "Haklarınız (FADP / GDPR)",
     "privacy.rights":
       "Verilerinizi istediğiniz zaman görme, düzeltme talep etme ve silinmesini isteme hakkına sahipsiniz. Ayrıca verilerinizin işlenmesine itiraz etme hakkınız da vardır. Bu haklarınızı kullanmak için bizimle iletişime geçmeniz yeterlidir.",
@@ -77,11 +81,11 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "İsviçre içi gönderimler ücretsizdir. Uluslararası gönderimlerde kargo ücreti sipariş sırasında hesaplanır.",
     "terms.returnsTitle": "İade ve Geri Ödeme",
     "terms.returnsText":
-      "Sorunsuz iade garantisi. Açılmamış, orijinal ambalajı bozulmamış cihazlar 7 gün içinde iade edilebilir. İade talebi için önce iletişim formu üzerinden bize ulaşmanız gerekir.",
+      "Sorunsuz iade garantisi. Açılmamış, orijinal ambalajı bozulmamış cihazlar 14 gün içinde iade edilebilir. İade talebi için önce iletişim formu üzerinden bize ulaşmanız gerekir.",
     "terms.returnsText1":
-      "Çizik, düşme, kırılma, fiziksel hasar veya kullanıcı hatası nedeniyle oluşan sorunlar iade kapsamına girmez. Açılmış veya yapılandırılmış cihazlar yalnızca üretim hatası olması durumunda 7 gün içinde iade edilebilir.",
+      "Çizik, düşme, kırılma, fiziksel hasar veya kullanıcı hatası nedeniyle oluşan sorunlar iade kapsamına girmez. Açılmış veya yapılandırılmış cihazlar yalnızca üretim hatası olması durumunda 3 gün içinde iade edilebilir.",
     "terms.returnsText2":
-      "İade onaylandığında, ödeme aynı yöntemle 7 iş günü içinde geri ödenir. Kargo ücretleri iade edilmez.",
+      "İade onaylandığında, ödeme aynı yöntemle 14 iş günü içinde geri ödenir. Kargo ücretleri iade edilmez.",
     "terms.supportTitle": "Destek ve İletişim",
     "terms.supportText":
       "Destek mail ile ulaşın: qmobile.ch@proton.me. En kısa sürede size dönüş yapılacaktır.",
@@ -91,7 +95,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Acil durumlar için lütfen e-posta ile iletişim kurun. Telefon desteği mevcut değildir.",
     "terms.updatesTitle": "Güncelleme Politikası",
     "terms.updatesText":
-      "4 yıl otomatik güvenlik odaklı özel işletim sistemi güncelleme desteği sunuyoruz. Cihazınız otomatik olarak en son güvenlik yamalarını ve özellik güncellemelerini alacaktır.",
+      "1 yıl otomatik güvenlik odaklı özel işletim sistemi güncelleme desteği sunuyoruz. Cihazınız otomatik olarak en son güvenlik yamalarını ve özellik güncellemelerini alacaktır.",
     "terms.updatesText1":
       "Güncellemeler İnternet üzerinden kablosuz olarak (OTA) dağıtılır. Kullanıcı müdahalesi gerekmez.",
     "terms.updatesText2":
@@ -106,7 +110,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Ürünlerinizi güvenli bir şekilde kullanmak ve verilerinizi yedeklemek sizin sorumluluğunuzdadır.",
     "terms.swissLawTitle": "İsviçre Hukuku",
     "terms.swissLaw":
-      "Bu şartlar İsviçre hukukuna tabidir ve bu hukuk uyarınca yorumlanır. Uyuşmazlıklar BASEL, İsviçre mahkemelerinin münhasır yargı yetkisine tabidir.",
+      "Bu şartlar İsviçre hukukuna tabidir ve bu hukuk uyarınca yorumlanır. Uyuşmazlıklar Basel-Stadt, İsviçre mahkemelerinin münhasır yargı yetkisine tabidir.",
     "cookies.intro":
       "Bu Çerez Politikası, Qmobile'ın web sitemizde çerezleri ve benzer teknolojileri nasıl kullandığını açıklar. Gizliliğinize saygı duyuyor ve minimum düzeyde çerez kullanıyoruz.",
     "cookies.whatTitle": "Çerezler Nedir?",
@@ -159,9 +163,8 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "compare.sources.1.title": "AOSP Resmi Dokümantasyon",
     "compare.sources.1.desc":
       "Android Açık Kaynak Projesi resmi belgeleri ve güvenlik yönergeleri.",
-    "compare.sources.2.title": "NIST FIPS 205/206 Standartları",
-    "compare.sources.2.desc":
-      "Post-kuantum kriptografi algoritmaları için NIST standartları.",
+    "compare.sources.2.title": "Güvenlik Standartları",
+    "compare.sources.2.desc": "Güvenli şifreleme standartları için referans.",
     "compare.sources.3.title": "İsviçre FADP Yasası",
     "compare.sources.3.desc":
       "İsviçre Federal Veri Koruma Kanunu ve uyum gereksinimleri.",
@@ -172,17 +175,17 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "compare.sources.5.desc":
       "Üçüncü taraf güvenlik araştırma kuruluşlarının denetim raporları.",
     "contact.captchaPlaceholder": "Güvenlik doğrulamasını tamamlayın",
-    "footer.swissmade": "İsviçre Üretimi",
+    "footer.swissmade": "İsviçre'de modifiye edilmiştir",
     "privacy.hero.badge": "İsviçre Gizlilik Standartları",
     "cookies.zeroTracking": "Sıfır izleme çerezi - gizlilik öncelikli",
     "contact.address": "BASEL, İsviçre",
-    "hero.title": "Qmobile",
+    "hero.title": "Güvenli Pixel Telefonlar",
     "hero.badge": "İsviçre Gizlilik Standartları",
     "hero.trust": "500+ Profesyonel Müşteri",
     "guarantees.new": "Tam Kontrol Sizde Olsun",
     "guarantees.dispatch": "48 Saat İsviçre Kargo",
     "guarantees.shipping": "Ücretsiz Kargo",
-    "guarantees.returns": "7 Gün İade",
+    "guarantees.returns": "14 Gün İade",
     "highlights.title": "Neden Qmobile?",
     "whybuy.badge": "Neden Biz?",
     "whybuy.title": "Neden Qmobile'dan Satın Almalısınız?",
@@ -200,7 +203,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "whybuy.shipping": "Hızlı Kargo",
     "whybuy.shipping.desc": "48 saat içinde İsviçre'den sigortalı kargo.",
     "whybuy.returns": "Kolay İade",
-    "whybuy.returns.desc": "7 gün içinde koşulsuz iade garantisi.",
+    "whybuy.returns.desc": "14 gün iade hakkı.",
     "confidence.title": "Güvenle Satın Alın",
     "confidence.subtitle": "Müşterilerimiz neden bizi tercih ediyor?",
     "confidence.swiss": "İsviçre Gizlilik Standartları",
@@ -208,9 +211,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "confidence.google": "Google'dan Bağımsız",
     "confidence.google.desc":
       "Güvenlik odaklı özel işletim sistemi ile Google hizmetleri ve takipten tam arınma.",
-    "confidence.quantum": "Geleceğe Hazır Şifreleme",
+    "confidence.quantum": "Güvenli şifreleme (E2EE)",
     "confidence.quantum.desc":
-      "Modern şifreleme standartları ile geleceğe hazır güvenlik.",
+      "Güvenli şifreleme (E2EE) ile geleceğe hazır güvenlik.",
     "confidence.expert": "Uzman Kurulum",
     "confidence.expert.desc":
       "30 yıllık güvenlik uzmanları tarafından hazırlanır.",
@@ -231,12 +234,12 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "highlights.sandbox": "Uygulama Kuması",
     "highlights.sandbox.desc":
       "Her uygulama izole ortamda çalışır. Bir uygulama hacklense bile diğerleri güvende.",
-    "highlights.updates": "4 Yıl Güncelleme",
+    "highlights.updates": "1 Yıl Güncelleme",
     "highlights.updates.desc":
-      "Pixel 9 ve 10 için 4 yıl boyunca güvenlik yaması ve sistem güncellemesi.",
+      "Pixel 9 ve 10 için 1 yıl boyunca güvenlik yaması ve sistem güncellemesi.",
     "cta.title": "İletişiminizi güvenle koruyun",
     "cta.limited": "Sınırlı Stok Teklifi",
-    "cta.guarantee": "7 gün iade garantisi • Ücretsiz İsviçre kargosu",
+    "cta.guarantee": "14 gün iade hakkı • Ücretsiz İsviçre kargosu",
     "cta.subtitle":
       "Güvenlik odaklı özel işletim sistemi yüklü Pixel telefonunuzu hemen sipariş edin ve gizliliğinizi kontrol altına alın.",
     "cta.button": "Hemen Sipariş Ver",
@@ -250,8 +253,8 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "products.features.secureOS":
       "Güvenlik odaklı işletim sistemi önceden yüklü",
     "products.features.titan": "Titan M2 güvenlik çipi",
-    "products.features.updates5": "4 yıl güncelleme desteği",
-    "products.features.updates7": "4 yıl güncelleme desteği",
+    "products.features.updates5": "1 yıl güncelleme desteği",
+    "products.features.updates7": "1 yıl güncelleme desteği",
     "products.features.sealed": "Tam Kontrol Sizde Olsun",
     "products.features.ai": "Google Yapay Zeka / Gemini kapalı",
     "products.features.titan3": "Titan M3 güvenlik çipi",
@@ -266,7 +269,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "products.payment": "Güvenli Ödeme",
     "products.trust": "500+ güvenlik profesyoneli tarafından tercih edildi",
     "hero.subtitle":
-      "Profesyonel seviyede gizlilik için Hırsızlardan, meraklı kişilerden, adli cihazlardan, sahte baz istasyonlarından ve uygulama casusluğundan korumak için tasarlanmış ve programlanmış, özel işletim sistemli güvenlik telefonudur.",
+      "Profesyonel seviyede gizlilik için modifiye edilmiş ve özel programlanmış, kendini imha edebilen tek güvenlik telefonudur.",
     "hero.description": "",
     "hero.cta": "Hemen İncele",
     "hero.contact": "Bize Ulaşın",
@@ -286,12 +289,85 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "products.features.faradayPouch.milStd": "MIL-STD uyumlu",
     "products.features.faradayPouch.emp": "EMP korumalı",
     "products.faradayPouch": "Q Faraday Pouch Sinyal Kesici",
+    "products.faradayBox": "Q Faraday Box",
     "products.faradayBadge": "Faraday Koruması",
     "products.pixel8": "Google Pixel 8",
     "products.pixel9": "Google Pixel 9",
     "products.pixel10": "Google Pixel 10",
     "products.price": "Fiyat",
     "products.order": "Sipariş Ver →",
+    "products.whyQmobileButton": "Neden Qmobile",
+    "products.techSpecsButton": "Teknik Özellikler",
+    "products.security.selfDestruct": "Çevrimdışı Kendini İmha",
+    "products.security.killPin": "İntihar PIN'i",
+    "products.security.bfuProtection": "BFU Koruması",
+    "products.security.scrambledPin": "Karışık PIN",
+    "products.security.hardwareVerification": "Donanım Doğrulama",
+    "products.security.antiTracking": "Sıfır Takip",
+    "products.security.e2eEncryption": "Güvenli şifreleme (E2EE) mesajlaşma",
+    "products.security.appEncryption": "Uygulama Kilidi",
+    "products.security.multiProfile": "Çoklu Profil Yönetimi",
+    "products.security.networkSecurity": "Ağ ve Bağlantı Güvenliği",
+    "products.security.usbSecurity": "USB Bağlantı Güvenliği",
+    "products.security.hiddenLocation": "Gizli Konum Ayarı",
+    "products.security.fakeCellTower": "Sahte baz istasyonu önleme",
+    "products.security.categories.physical": "Fiziksel Güvenlik",
+    "products.security.categories.pinAccess": "PIN ve Erişim Güvenliği",
+    "products.security.categories.network": "Bağlantı ve Ağ Güvenliği",
+    "products.security.categories.privacy": "Gizlilik ve Veri Koruma",
+    "products.security.categoriesDesc.physical":
+      "Telefon tehdit anında kendini korur ve verilerini yok eder.",
+    "products.security.categoriesDesc.pinAccess":
+      "Erişim katmanlı PIN ve profil korumasıyla denetlenir.",
+    "products.security.categoriesDesc.network":
+      "Ağ ve fiziksel bağlantı noktaları kilitlenir.",
+    "products.security.categoriesDesc.privacy":
+      "İzleme ve veri sızıntısı önlenir.",
+    "techSpecs.title": "{phone} Teknik Özellikler",
+    "techSpecs.backToProducts": "Ürünlere Geri Dön",
+    "techSpecs.sections.technical": "Teknik Özellikler",
+    "techSpecs.sections.display": "Ekran",
+    "techSpecs.sections.safety": "Genel Ürün Güvenliği",
+    "techSpecs.fields.productType": "Ürün Tipi",
+    "techSpecs.fields.os": "İşletim Sistemi",
+    "techSpecs.fields.processor": "İşlemci",
+    "techSpecs.fields.clockSpeed": "Saat Hızı",
+    "techSpecs.fields.storage": "Depolama",
+    "techSpecs.fields.sdSlot": "SD Kart Yuvası",
+    "techSpecs.fields.ram": "RAM",
+    "techSpecs.fields.frequencyBand": "Frekans Bandı",
+    "techSpecs.fields.sarHead": "SAR Değeri (Kafa)",
+    "techSpecs.fields.sarBody": "SAR Değeri (Vücut)",
+    "techSpecs.fields.sensors": "Sensörler",
+    "techSpecs.fields.simLockFree": "SIM Kilidi Açık",
+    "techSpecs.fields.simSize": "SIM Boyutu",
+    "techSpecs.fields.sarCategory": "SAR Kategorisi",
+    "techSpecs.fields.screenDiagonalCm": "Ekran Boyutu (cm)",
+    "techSpecs.fields.screenDiagonalInch": "Ekran Boyutu (inç)",
+    "techSpecs.fields.resolution": "Çözünürlük",
+    "techSpecs.fields.displayDetails": "Ekran Detayları",
+    "techSpecs.fields.numDisplays": "Ekran Sayısı",
+    "techSpecs.fields.resolutionWidth": "Çözünürlük Genişliği",
+    "techSpecs.fields.resolutionHeight": "Çözünürlük Yüksekliği",
+    "techSpecs.fields.pixelDensity": "Piksel Yoğunluğu",
+    "techSpecs.fields.aspectRatio": "En-Boy Oranı",
+    "techSpecs.fields.colorDisplay": "Renkli Ekran",
+    "techSpecs.fields.antiScratch": "Çizilme Koruması",
+    "techSpecs.fields.curvedDisplay": "Kavisli Ekran",
+    "techSpecs.fields.touchscreen": "Dokunmatik Ekran",
+    "techSpecs.fields.gtin": "GTIN",
+    "techSpecs.fields.manufacturer": "Üretici",
+    "techSpecs.values.yes": "Evet",
+    "techSpecs.values.no": "Hayır",
+    "techSpecs.values.os": "Güvenlik odaklı özel işletim sistemi",
+    "techSpecs.values.sensors":
+      "Yakınlık sensörü, Ortam ışığı sensörü, İvmeölçer, Jiroskop, Manyetometre, Barometre",
+    "techSpecs.values.displayDetailsPixel8":
+      "6,2 inç Actua-Display, OLED, 60-120 Hz Smooth Display, Corning Gorilla Glass Victus",
+    "techSpecs.values.displayDetailsPixel9":
+      "6,3 inç Actua-Display, pOLED, 60-120 Hz Smooth Display, Corning Gorilla Glass Victus 2",
+    "techSpecs.values.displayDetailsPixel10":
+      "6,3 inç (160 mm) Actua-Display, pOLED, 422.2 ppi, Smooth Display 60-120 Hz, Corning Gorilla Glass 7i, 2000 cd/m² HDR, 3000 cd/m² tepe, >2.000.000:1 kontrast, HDR, 24-bit",
     "why.title": "Neden Qmobile?",
     "why.subtitle":
       "Dünyanın en güvenli mobil işletim sistemi çözümü. Verileriniz sizindir, başkasına ait değil.",
@@ -312,15 +388,15 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "why.sandbox": "Uygulama Kuması",
     "why.boot": "Doğrulanmış Önyükleme",
     "why.network": "Ağ Kontrolü",
-    "why.qpwa.e2e": "Q-PWA Uçtan Uca Şifreleme",
+    "why.qpwa.e2e": "Güvenli şifreleme (E2EE)",
     "why.qpwa.e2e.desc":
-      "AES-256-GCM ve ChaCha20-Poly1305 ile mesajlarınız sadece siz ve alıcı arasında kalır. Sunucular dahil hiçkimse içeriği göremez.",
+      "Güvenli şifreleme (E2EE) ile mesajlarınız sadece siz ve alıcı arasında kalır. Sunucular dahil hiçkimse içeriği göremez.",
     "why.qpwa.server": "Q-PWA Merkezi Sunucu Yok",
     "why.qpwa.server.desc":
       "Blockchain tabanlı dağıtık ağ. Meta veri bırakmaz, tek arıza noktası yok. Sansüre dirençli, bağımsız iletişim.",
     "why.bfu": "BFU Koruması",
     "why.bfu.desc":
-      "Cihaz kapalıyken bile şifreleme anahtarları korunur. Cihaz açılmadan verilere erişilemez. Donanım düzeyinde güvenlik.",
+      "Cihaz kapalıyken bile güvenli şifreleme (E2EE) anahtarları korunur. Cihaz açılmadan verilere erişilemez. Donanım düzeyinde güvenlik.",
     "why.scrambledPin": "Karışık PIN",
     "why.scrambledPin.desc":
       "PIN giriş ekranındaki rakamlar her seferinde farklı yerlerde görünür. Yanındaki gözlemcilerden korunma.",
@@ -333,7 +409,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "why.hideLockContent": "Kilit Ekranında Hassas İçeriği Gizleme",
     "why.hideLockContent.desc":
       "Mesaj ve bildirim önizlemelerini kilit ekranında gizler; yalnızca kilit açıldığında gösterir.",
-    "why.appLock": "Uygulamaları Şifreleme (PIN/Parmak izi)",
+    "why.appLock": "Uygulama Kilidi (PIN/Parmak izi)",
     "why.appLock.desc":
       "Tek tek uygulamaları PIN veya parmak izi ile koruma altına alır. Bir uygulama açılsa bile diğerleri güvende kalır.",
     "why.remoteWipe": "Uzaktan Silme ve Bulma",
@@ -386,10 +462,10 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.hero.badge": "Gizlilik Tasarımı",
     "security.hero.feature1": "Titan M2 Güvenlik Çipi",
     "security.hero.feature2": "GrapheneOS Tabanlı İşletim Sistemi",
-    "security.hero.feature3": "Uçtan Uca Şifreleme",
+    "security.hero.feature3": "Güvenli şifreleme (E2EE)",
     "security.trust.title": "Güvenlik Standartları",
     "security.trust.desc":
-      "QMOBILE cihazları Google Pixel 8/9/10 donanımı üzerine kuruludur. Donanım güvenliği Titan M2 çipi ve verified boot ile sağlanır. Yazılım güvenliği GrapheneOS tabanlı güvenlik odaklı özel işletim sistemi ile sağlanır. Mesajlaşma güvenliği Q-PWA ve Session uygulamaları ile uçtan uca şifreleme sağlar. Not: Donanım güvenlik özellikleri Pixel cihazlara aittir. Yazılım güvenlik özellikleri GrapheneOS tabanlı işletim sistemine aittir. Mesajlaşma özellikleri Q-PWA ve Session uygulamaları tarafından sağlanır. Google veya GrapheneOS ile resmi bir bağımız yoktur. Tüm sistem İsviçre gizlilik yasalarına (FADP) ve GDPR e uygundur.",
+      "QMOBILE cihazları Google Pixel 8/9/10 donanımı üzerine kuruludur. Donanım güvenliği Titan M2 çipi ve verified boot ile sağlanır. Yazılım güvenliği GrapheneOS tabanlı güvenlik odaklı özel işletim sistemi ile sağlanır. Mesajlaşma güvenliği Güvenli şifreleme (E2EE) ile mesajlaşma sağlar. Not: Donanım güvenlik özellikleri Pixel cihazlara aittir. Yazılım güvenlik özellikleri GrapheneOS tabanlı işletim sistemine aittir. Mesajlaşma özellikleri Q-PWA ve Session uygulamaları tarafından sağlanır. Google veya GrapheneOS ile resmi bir bağımız yoktur. Tüm sistem İsviçre gizlilik yasalarına (FADP) ve GDPR e uygundur.",
     "security.tables.title": "Donanım ve Yazılım Güvenlik Özellikleri",
     "security.tables.subtitle":
       "Cihazınızın güvenlik katmanlarını detaylı olarak inceleyin. Donanım tabanlı korumalar ve yazılım tabanlı şifreleme yöntemleri ayrı ayrı listelenmiştir.",
@@ -403,7 +479,8 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Verified Boot (Doğrulamalı Önyükleme)",
     "security.hardwareTable.rows.2.desc":
       "Her açılışta OS ve firmware bütünlüğü kriptografik olarak doğrulanır. Geri alma (rollback) koruması ile eski/güvenliksiz sürümlere dönüş engellenir.",
-    "security.hardwareTable.rows.3.feature": "Donanım Tabanlı Şifreleme",
+    "security.hardwareTable.rows.3.feature":
+      "Donanım Tabanlı Güvenli şifreleme (E2EE)",
     "security.hardwareTable.rows.3.desc":
       "UFS inline storage encryption (Pixel 9: Tensor G4, Pixel 10: Tensor G5). Veriler donanım seviyesinde şifrelenir.",
     "security.hardwareTable.rows.4.feature": "Memory Tagging Extension (MTE)",
@@ -413,9 +490,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "StrongBox (Güvenli Anahtar Deposu)",
     "security.hardwareTable.rows.5.desc":
       "Titan M2 üzerinde çalışan güvenli alan. Ödeme uygulamaları ve FIDO kimlik doğrulama anahtarları burada saklanır.",
-    "security.hardwareTable.rows.6.feature": "7 Yıl Güncelleme Garantisi",
+    "security.hardwareTable.rows.6.feature": "1 Yıl Güncelleme Garantisi",
     "security.hardwareTable.rows.6.desc":
-      "Pixel 8/9/10 modelleri için minimum 7 yıl güvenlik güncellemesi garantisi (Pixel 8: ~2030, Pixel 9: ~2031, Pixel 10: ~2032).",
+      "Pixel 8/9/10 modelleri için minimum 1 yıl güvenlik güncellemesi garantisi (Pixel 8: ~2030, Pixel 9: ~2031, Pixel 10: ~2032).",
     "security.softwareTable.title": "Yazılım Güvenlik Özellikleri",
     "security.softwareTable.col.feature": "Özellik",
     "security.softwareTable.col.desc": "Açıklama",
@@ -434,7 +511,8 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.softwareTable.rows.5.feature": "Kilit Ekranı Bildirim Gizleme",
     "security.softwareTable.rows.5.desc":
       "Bildirimler kilit ekranında içerik göstermez. Hassas bilgi gizlenir.",
-    "security.softwareTable.rows.6.feature": "Uygulama Başına Şifreleme",
+    "security.softwareTable.rows.6.feature":
+      "Uygulama Başına Güvenli şifreleme (E2EE)",
     "security.softwareTable.rows.6.desc":
       "Her uygulama ayrı PIN/parmak izi ile korunabilir.",
     "security.softwareTable.rows.7.feature": "Karma PIN Tuş Takımı",
@@ -462,7 +540,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.qpwaTable.title": "Q-PWA Güvenli Mesajlaşma Özellikleri",
     "security.qpwaTable.col.feature": "Özellik",
     "security.qpwaTable.col.desc": "Açıklama",
-    "security.qpwaTable.rows.1.feature": "Uçtan Uca Şifreleme",
+    "security.qpwaTable.rows.1.feature": "Güvenli şifreleme (E2EE)",
     "security.qpwaTable.rows.1.desc":
       "Mesajlar gönderici ve alıcı cihazları arasında şifrelenir. Sunucular içeriği göremez.",
     "security.qpwaTable.rows.2.feature": "Merkezi Sunucu Yok",
@@ -483,21 +561,21 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.sessionTable.title": "Session Mesajlaşma Özellikleri",
     "security.sessionTable.col.feature": "Özellik",
     "security.sessionTable.col.desc": "Açıklama",
-    "security.sessionTable.rows.1.feature": "Uçtan Uca Şifreleme",
+    "security.sessionTable.rows.1.feature": "Güvenli şifreleme (E2EE)",
     "security.sessionTable.rows.1.desc":
-      "Session Protocol (libsodium tabanlı) ile 1-1 mesajlar şifrelenir.",
+      "Güvenli şifreleme (E2EE) ile 1-1 mesajlar şifrelenir.",
     "security.sessionTable.rows.2.feature": "Merkezi Sunucu Yok",
     "security.sessionTable.rows.2.desc":
       "Session Nodes adlı dağıtık ağ. Tek bir entity trafiği okuyamaz veya sansürleyemez.",
     "security.sessionTable.rows.3.feature": "Telefon Numarası Gerekmez",
     "security.sessionTable.rows.3.desc":
-      "Kayıt için hiçbir kişisel bilgi istenmez. Session ID (Ed25519 public key) ile kimlik.",
+      "Kayıt için hiçbir kişisel bilgi istenmez. Güvenli kimlik doğrulama ile kimlik.",
     "security.sessionTable.rows.4.feature": "Onion Routing",
     "security.sessionTable.rows.4.desc":
       "3-hop onion routing ile IP adresi gizlenir. Hiçbir düğüm hem göndericiyi hem alıcıyı bilmez.",
-    "security.sessionTable.rows.5.feature": "Forward Secrecy (V2)",
+    "security.sessionTable.rows.5.feature": "İleri Yönlü Gizlilik",
     "security.sessionTable.rows.5.desc":
-      "Session Protocol V2 ile dönen anahtarlar. Cihaz ele geçerse bile eski mesajlar çözülemez.",
+      "İleri yönlü gizlilik ile dönen anahtarlar. Cihaz ele geçerse bile eski mesajlar çözülemez.",
     "security.sessionTable.rows.6.feature": "Açık Kaynak",
     "security.sessionTable.rows.6.desc":
       "Tamamen açık kaynak, bağımsız denetlenebilir.",
@@ -532,9 +610,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "services.online.desc":
       "Web tabanlı güvenli mesajlaşma, e-posta şifreleme, VPN kurulumu ve çevrimiçi kimlik koruması danışmanlığı.",
     "services.online.price": "250 CHF/saat",
-    "services.encryption": "Şifreleme Yöntem ve Çözümleri",
+    "services.encryption": "Güvenli şifreleme (E2EE) Çözümleri",
     "services.encryption.desc":
-      "Uçtan uca şifreleme kurulumu, post-kuantum kriptografi danışmanlığı, anahtar yönetimi ve veri şifreleme stratejileri.",
+      "Uçtan uca şifreleme kurulumu, güvenli şifreleme danışmanlığı, anahtar yönetimi ve veri şifreleme stratejileri.",
     "services.encryption.price": "400 CHF/saat",
     "services.process.title": "Nasıl Çalışır?",
     "services.process.subtitle":
@@ -562,31 +640,31 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Güvenlik odaklı özel işletim sistemimiz varsayılan olarak Google Play Hizmetleri içermez. Kumlanmış Google Play veya F-Droid, Aurora Store gibi alternatif mağazaları kullanabilirsiniz. Güvenliğinizden ödün vermeden uygulama erişimi sağlarsınız.",
     "faq.q4": "Güncelleme desteği ne kadar sürer?",
     "faq.a4":
-      "Pixel 8 için 5 yıl, Pixel 9 ve 10 için 4 yıl güvenlik ve işletim sistemi güncellemesi Google'dan, artı güvenlik odaklı özel işletim sistemine özel yamalar gelir. Uzun vadeli yatırım güvencesi.",
+      "Pixel 8 için 5 yıl, Pixel 9 ve 10 için 4 yıl güvenlik ve işletim sistemi güncellemesi Google'dan gelir; ayrıca güvenlik odaklı özel işletim sistemi için 1 yıl yazılım desteği sunulur. Uzun vadeli yatırım güvencesi.",
     "faq.q5": "Cihazlar sıfır ve kapalı kutu mu?",
     "faq.a5":
-      "Evet. Tüm cihazlar sıfır, orijinal ambalajında kapalı kutudur. Mümkün olduğunda mühürü kırmadan güvenlik odaklı özel işletim sistemi kurulumu yapılır; aksi halde tam şeffaflık sağlanır.",
+      "Evet. Tüm cihazlar sıfır ve orijinal ambalajındadır. Mümkün olduğunda mühürü kırmadan güvenlik odaklı özel işletim sistemi kurulumu yapılır; aksi halde tam şeffaflık sağlanır ve eksiksiz belge sunulur.",
     "faq.q6": "Yurtdışına gönderim yapıyor musunuz?",
     "faq.a6":
       "İsviçre'den çoğu Avrupa ülkesine gönderim yapıyoruz. Özel destinasyon talepleri için bizimle iletişime geçin. Hızlı ve sigortalı kargo.",
     "faq.q7": "İade politikası nedir?",
     "faq.a7":
-      "Açılmamış cihazlar için 7 gün iade garantisi. Açılmış cihazlar, kusur olması durumunda 7 gün içinde iade edilebilir. Müşteri memnuniyeti önceliğimizdir.",
+      "Açılmamış cihazlar için 14 gün iade hakkı. Açılmış cihazlar, kusur olması durumunda 14 gün içinde iade edilebilir. Müşteri memnuniyeti önceliğimizdir.",
     "faq.q8": "Garanti kapsamı var mı?",
     "faq.a8":
-      "Standart Google üretici garantisi geçerlidir. Ayrıca güvenlik odaklı özel işletim sistemi ile ilgili teknik destek ve kurulum sonrası danışmanlık hizmeti sunuyoruz.",
+      "Modifikasyon nedeniyle Google'ın resmi üretici garantisi geçerli değildir. Güvenlik odaklı özel işletim sistemi için teknik destek ve kurulum sonrası danışmanlık hizmeti sunuyoruz. Destek için bizimle e-posta ile iletişime geçin.",
     "faq.q9": "Q güvenli mesajlaşma nedir?",
     "faq.a9":
-      "Q-PWA, Qmobile tarafından geliştirilen uçtan uca şifrelemeli güvenli mesajlaşma uygulamasıdır. AES-256-GCM ve ChaCha20-Poly1305 ile mesajlarınızı korur. Bu uygulama Pixel telefonunuza ayrıca kurulur.",
+      "Mesajlarınız güvenli şifreleme (E2EE) ile korunur. Mesajlar gönderici ve alıcı cihazları arasında şifrelenir, hiçbir sunucu içeriği göremez.",
     "faq.q10": "Q-PWA şifrelemesi nasıl çalışır?",
     "faq.a10":
-      "Q-PWA uygulaması, AES-256-GCM ve ChaCha20-Poly1305 gibi modern şifreleme standartlarını kullanır. Bu algoritmalar, mesajlarınızın güvenliğini sağlar ve geleceğe hazır bir güvenlik sunar.",
+      "Uygulamamız güvenli şifreleme (E2EE) standartlarını kullanır. Mesajlarınız uçtan uca şifrelenir ve sadece siz ve alıcı tarafından okunabilir.",
     "faq.q11": "Q mesajlaşma E2E şifrelemeli mi?",
     "faq.a11":
-      "Evet, Q-PWA uygulaması uçtan uca (E2E) şifreleme kullanır. Mesajlarınız yalnızca siz ve alıcı tarafından okunabilir. Sunucular dahil hiçbir üçüncü taraf içeriği göremez. Her oturum için benzersiz anahtarlar oluşturulur.",
+      "Evet, uygulamamız güvenli şifreleme (E2EE) kullanır. Mesajlar gönderici cihazında şifrelenir ve sadece alıcı cihazında çözülür.",
     "faq.q12": "Q mesajlaşma WhatsApp/Signal'dan farkı nedir?",
     "faq.a12":
-      "Q-PWA, merkezi sunucu kullanmaz (blockchain/P2P mimari), post-kuantum şifreleme sunar ve meta veri bırakmaz. WhatsApp ve Signal merkezi sunuculara bağımlıdır ve meta verileri depolar. Q-PWA ayrıca anonim giriş imkanı sunar.",
+      "Evet, güvenli şifreleme (E2EE) çözümleri sunuyoruz. Mesajlaşma ve veri aktarımı en yüksek güvenlik standartlarıyla korunur.",
     "faq.q13": "Banka uygulamaları çalışır mı?",
     "faq.a13":
       "Evet, çoğu banka uygulaması güvenlik odaklı özel işletim sistemimiz üzerinde sandboxed Google Play ile çalışır. Bazı uygulamalar SafetyNet/Play Integrity kontrolü yapabilir; bu durumda alternatif erişim yöntemleri (web tarayıcı, QR kod ile giriş) önerilir. Kurulum öncesinde belirli uygulamaları test edebiliriz.",
@@ -596,23 +674,47 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "faq.q15": "Danışmanlık hizmetleri neleri kapsar?",
     "faq.a15":
       "Teknik danışmanlık: cihaz kurulumu, güvenlik odaklı özel işletim sistemi yapılandırması, uygulama izinleri ve ağ güvenliği. Güvenlik danışmanlığı: tehdit modellemesi, olay müdahale planlaması. Güvenli iletişim: uçtan uca şifrelemeli mesajlaşma ve e-posta kurulumu. Tüm hizmetler tehdit profilinize göre özelleştirilir.",
+    "faq.q16": "Cayma hakkı neden dışlanıyor?",
+    "faq.a16":
+      "Ürün kişiselleştirilmiş olduğu için — güvenlik yazılımıyla yapılandırılmıştır. İsviçre OR Art. 40a ff. uyarınca cayma hakkı dışlanır.",
+    "faq.q17": "İade koşulları nelerdir?",
+    "faq.a17":
+      "Ürün 3 gün içinde iade edilebilir. Çizik, kırık veya kullanım belirtisi olmamalıdır. İade formu ve kimlik formu doldurulmalıdır.",
+    "faq.q18": "Garanti süresi ne kadar?",
+    "faq.a18":
+      "1 yıl yazılım desteği ve donanım için yasal 2 yıl garanti (OR Art. 210).",
+    "faq.q19": "Hangi mahkeme yetkilidir?",
+    "faq.a19": "Basel-Stadt mahkemeleri yetkilidir.",
+    "faq.q20": "Ürün kişiselleştirilmiş mi?",
+    "faq.a20":
+      "Evet, ürün güvenlik yazılımıyla yapılandırılmıştır ve kişiselleştirilmiştir.",
+    "faq.q21": "Google garantisi geçerli mi?",
+    "faq.a21":
+      "Hayır, modifikasyon nedeniyle Google üretici garantisi geçerli değildir.",
+    "faq.q22": "Üçüncü parti app uyumluluğu garanti ediliyor mu?",
+    "faq.a22": "Hayır, üçüncü parti uygulamaların uyumluluğu garanti edilmez.",
+    "faq.q23": "Veri toplama var mı?",
+    "faq.a23": "Hayır, Qmobile veri toplamaz.",
+    "faq.q24": "Sorumluluk sınırları nelerdir?",
+    "faq.a24":
+      "Sorumluluk, İsviçre yasaları çerçevesinde sınırlandırılmıştır. Ayrıntılar için AGB sayfasına bakın.",
     "about.title": "Hakkımızda",
     "about.subtitle":
-      "İsviçre merkezli güvenlik ve gizlilik teknolojisi uzmanları",
+      "İsviçre merkezli gizlilik ve güvenli iletişim teknolojisi",
     "about.intro":
-      "Qmobile, İsviçre merkezli bir gizlilik teknolojisi şirketidir. Google Pixel telefonlara güvenlik odaklı özel işletim sistemi kurulumu, teknik güvenlik danışmanlığı ve güvenli iletişim çözümleri sunarız.",
+      "Qmobile, İsviçre merkezli bir gizlilik ve güvenli iletişim teknoloji şirketidir. Amacımız, kullanıcıların dijital dünyada tam kontrol sahibi olmasını sağlamak ve iletişimlerini en yüksek güvenlik standartlarıyla korumaktır. Gizlilik bizim için bir özellik değil, bir zorunluluktur. Bu yaklaşımımız, İsviçre'nin sıkı veri koruma yasalarıyla tamamen uyumludur.",
     "about.swiss.title": "İsviçre Merkezli Güvenlik",
     "about.swiss.text":
-      "İsviçre'nin sıkı veri koruma yasaları ve tarafsız konumu, müşterilerimize en üst düzey gizlilik güvencesi sağlar. Merkezimiz BASEL'dedir.",
-    "about.tech.title": "Teknik Danışmanlık",
+      "Bu yaklaşımımız, İsviçre'nin sıkı veri koruma yasalarıyla tamamen uyumludur. Merkezimiz BASEL'dedir.",
+    "about.tech.title": "Bağımsızlık",
     "about.tech.text":
-      "Uzman ekibimiz, cihaz sertleştirme, ağ güvenliği, uygulama kuması ve sistem optimizasyonu konularında kurumsal ve bireysel danışmanlık verir.",
-    "about.security.title": "Güvenlik Danışmanlığı",
+      "Google veya işletim sistemi sağlayıcılarıyla resmi bir bağımız yoktur. Tüm güvenlik teknolojilerimiz bağımsız olarak geliştirilir ve modifiye edilir.",
+    "about.security.title": "Şeffaflık",
     "about.security.text":
-      "Dijital varlıklarınızı korumak için kapsamlı güvenlik denetimi, tehdit analizi ve özel güvenlik stratejileri geliştiriyoruz.",
-    "about.comm.title": "Güvenli İletişim Danışmanlığı",
+      "Açık kaynak yazılımlara inanıyor, veri madenciliğine karşı duruyoruz. Gizlilik politikamız net, anlaşılır ve kullanıcı odaklıdır.",
+    "about.comm.title": "Gizlilik",
     "about.comm.text":
-      "Uçtan uca şifreleme, güvenli e-posta, anonim mesajlaşma ve post-kuantum şifreleme çözümleri ile iletişim güvenliğinizi sağlıyoruz.",
+      "Müşteri verileri hiçbir şekilde üçüncü taraflarla paylaşılmaz. Cihazlar İsviçre'de modifiye edilir ve gizlilik standartlarına uygun şekilde teslim edilir.",
     "about.lang.title": "Çok Dilli Destek",
     "about.lang.text":
       "Türkçe, Almanca ve İngilizce dil desteği ile İsviçre, Avrupa ve dünya genelindeki müşterilerimize hizmet veriyoruz.",
@@ -621,10 +723,16 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Gizlilik teknolojisi konusunda tutkulu, deneyimli bir ekibiz.",
     "about.expertise.title": "Uzmanlık",
     "about.expertise.text":
-      "10+ yıllık sektör deneyimine sahip ekibimiz, mobil güvenlik, işletim sistemi sertleştirme ve güvenli iletişim alanlarında derin bilgi birikimine sahiptir.",
+      "Şeffaflık, bağımsızlık ve gizlilik ilkeleri çerçevesinde, İsviçre'nin katı veri koruma yasalarıyla tam uyumlu çözümler sunuyoruz.",
     "about.values.title": "Değerlerimiz",
     "about.values.text":
-      "Şeffaflık, bağımsızlık ve müşteri gizliliği bizim temel ilkelerimizdir. Açık kaynak yazılımlara inanıyor, veri madenciliğine karşı duruyoruz.",
+      "Şeffaflık, bağımsızlık ve gizlilik bizim temel ilkelerimizdir.",
+    "about.credentials.title": "Sertifikalar ve Uzmanlık",
+    "about.credentials.subtitle":
+      "Uluslararası standartlara uygun, sertifikalı uzmanlarla hizmet veriyoruz.",
+    "about.credentials.certTitle": "Profesyonel Sertifikalar",
+    "about.credentials.certText":
+      "30 yıllık güvenlik uzmanları tarafından hazılandı. On yıllarca süren deneyimimizle en zorlu güvenlik senaryolarını bile çözüyoruz.",
     "about.stats.models": "Pixel Modeli",
     "about.stats.based": "İsviçre Merkezli",
     "about.stats.privacy": "Gizlilik Odaklı",
@@ -680,7 +788,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.feature5.title": "Kilit Ekranı Bildirim Gizleme",
     "security.feature5.desc":
       "Bildirimler kilit ekranında içerik göstermez. Hassas bilgi gizlenir.",
-    "security.feature6.title": "Uygulama Başına Şifreleme",
+    "security.feature6.title": "Uygulama Başına Güvenli şifreleme (E2EE)",
     "security.feature6.desc":
       "Her uygulama ayrı PIN/parmak izi ile korunabilir.",
     "security.feature7.title": "Karma PIN Tuş Takımı",
@@ -717,7 +825,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Özel bir PIN girildiğinde cihaz normal açılış gibi görünür ancak tüm veriler sessizce silinir.",
     "home.top5.feature2.title": "BFU Koruması",
     "home.top5.feature2.desc":
-      "Cihaz kapalıyken bile şifreleme anahtarları korunur. Cihaz açılmadan verilere erişilemez.",
+      "Cihaz kapalıyken bile güvenli şifreleme (E2EE) anahtarları korunur. Cihaz açılmadan verilere erişilemez.",
     "home.top5.feature3.title": "Karışık PIN",
     "home.top5.feature3.desc":
       "PIN giriş ekranındaki rakamlar her seferinde farklı yerlerde görünür. Yanındaki gözlemcilerden korunma.",
@@ -734,14 +842,93 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "contact.successMessage":
       "Mesajınız alındı. En kısa sürede size yanıt vereceğiz.",
     "contact.email.value": "qmobile.ch@proton.me",
-    "contact.phone.value": "+41 44 123 45 67",
+    "contact.phone.value": "+41 61 123 45 67",
+    "contact.salesContractAccept":
+      "Satış sözleşmesini okudum ve kabul ediyorum.",
+    "contact.salesContractViewLink": "Satış sözleşmesini görüntüle",
+    "order.title": "Sipariş Özeti",
+    "order.subtitle":
+      "Güvenli Qmobile cihazınızı kişiye özel yapılandırma ile sipariş edin.",
+    "order.product": "Ürün",
+    "order.model": "Model",
+    "order.price": "Fiyat",
+    "order.deliveryTime": "Teslim süresi",
+    "order.deliveryValue":
+      "7–14 gün (kişiye özel güvenlik yapılandırması nedeniyle)",
+    "order.quantity": "Miktar",
+    "order.customerInfo": "Müşteri Bilgileri",
+    "order.fullName": "Ad Soyad",
+    "order.fullNamePlaceholder": "Adınız ve soyadınız",
+    "order.email": "E-posta",
+    "order.phone": "Telefon (opsiyonel)",
+    "order.phonePlaceholder": "+41...",
+    "order.streetNo": "Sokak + No",
+    "order.streetNoPlaceholder": "Bahnhofstrasse 1",
+    "order.postalCode": "Posta kodu",
+    "order.postalCodePlaceholder": "8001",
+    "order.city": "Şehir",
+    "order.cityPlaceholder": "Zürich",
+    "order.securityConfig": "Güvenlik Yapılandırması",
+    "order.securityProfile": "Güvenlik profili",
+    "order.securityProfileSelect": "Seçiniz…",
+    "order.securityStandard": "Standart güvenlik profili",
+    "order.securityStandardDesc":
+      "Temel güvenlik sertifikaları ve hardened OS yapılandırması.",
+    "order.securityHigh": "Yüksek güvenlik profili",
+    "order.securityHighDesc":
+      "Gelişmiş ağ izolasyonu, uygulama kilitleme ve izleme koruması.",
+    "order.securityCustom": "Tam özelleştirilmiş güvenlik profili",
+    "order.securityCustomDesc":
+      "Kişiye özel yapılandırma — ek talepleriniz için bizimle görüşülür.",
+    "order.securityNotes": "Özel güvenlik notları (opsiyonel)",
+    "order.securityNotesPlaceholder": "Ek güvenlik talepleriniz...",
+    "order.legalConsent": "Yasal Onaylar",
+    "order.contractAccept": "Satış sözleşmesini okudum ve kabul ediyorum.",
+    "order.contractViewLink": "(Satış sözleşmesini görüntüle)",
+    "order.privacyAccept": "Gizlilik politikasını okudum ve kabul ediyorum.",
+    "order.privacyViewLink": "(Gizlilik politikasını görüntüle)",
+    "order.withdrawalNotice":
+      "Qmobile cihazı, kişiye özel güvenlik yazılımı yapılandırmasıyla teslim edilen modifiye bir üründür. Bu nedenle, İsviçre Borçlar Kanunu (OR 40a) uyarınca cayma hakkı dışlanmıştır.",
+    "order.placeOrder": "Siparişi ver",
+    "order.sending": "Gönderiliyor...",
+    "order.successMessage":
+      "Teşekkürler! Form gönderildi. En kısa sürede buraya yazdığınız maile cevap vereceğiz.",
+    "order.errorMessage": "Sipariş gönderilemedi. Lütfen tekrar deneyin.",
+    "order.total": "Toplam",
+    "order.captcha": "Güvenlik doğrulaması",
+    "order.captchaPlaceholder": "Cevabı girin",
+    "order.requiredField": "Bu alan zorunludur",
+    "order.invalidEmail": "Geçerli bir e-posta girin",
+    "orderConfirm.title": "Sipariş Onayı",
+    "orderConfirm.subtitle":
+      "Siparişinizi onaylamak için lütfen aşağıdaki özeti kontrol edin ve onaylayın.",
+    "orderConfirm.summaryHeading": "Sipariş Özeti",
+    "orderConfirm.product": "Ürün",
+    "orderConfirm.quantity": "Miktar",
+    "orderConfirm.name": "Ad Soyad",
+    "orderConfirm.email": "E-posta",
+    "orderConfirm.phone": "Telefon",
+    "orderConfirm.address": "Adres",
+    "orderConfirm.securityProfile": "Güvenlik profili",
+    "orderConfirm.confirmButton": "Siparişi Onayla",
+    "orderConfirm.confirming": "Onaylanıyor...",
+    "orderConfirm.successTitle": "Siparişiniz Onaylandı",
+    "orderConfirm.successMessage":
+      "Siparişiniz onaylandı. En kısa sürede sizinle iletişime geçeceğiz.",
+    "orderConfirm.errorNotFound": "Sipariş bulunamadı. Onay linki geçersiz.",
+    "orderConfirm.errorExpired":
+      "Onay linkinin süresi dolmuş. Link 7 gün geçerlidir.",
+    "orderConfirm.errorAlreadyConfirmed": "Bu sipariş zaten onaylanmış.",
+    "orderConfirm.errorGeneric":
+      "Onay sırasında bir hata oluştu. Lütfen tekrar deneyin.",
+    "orderConfirm.backHome": "Ana Sayfaya Dön",
     "header.swissBadge": "CH",
     "theme.light": "Açık tema",
     "theme.dark": "Koyu tema",
     "home.problems.title": "Standart Mesajlaşmanın Çözemediği Üç Sorun",
     "home.problems.subtitle":
       "Günümüz mesajlaşma uygulamaları güvenlik ve gizlilikte ciddi açıklar barındırıyor.",
-    "home.problems.sms.title": "SMS: Sıfır Şifreleme",
+    "home.problems.sms.title": "SMS: Sıfır Güvenli şifreleme (E2EE)",
     "home.problems.sms.desc":
       "SMS mesajları düz metin olarak iletilir. Operatörler, hükümetler ve kötü niyetli aktörler tarafından kolayca okunabilir, kaydedilebilir ve manipüle edilebilir.",
     "home.problems.whatsapp.title": "WhatsApp ve Telegram: Metadata Toplama",
@@ -752,12 +939,137 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Signal güvenli olsa da merkezi sunuculara bağımlıdır. Sunucular sansura açıktır ve teknik arızalara karşı hassastır. Merkezi otorite güven gerektirir.",
     "home.problems.solution.title": "Qprivate Üçünü de Çözer",
     "home.problems.solution.desc":
-      "Kuantum sonrası şifreleme + Sıfır metadata + Blockchain altyapısı. Qprivate Web Mesaj telefonunuza kurulur.",
+      "Güvenli şifreleme (E2EE) + Sıfır metadata + Blockchain altyapısı. Qprivate Web Mesaj telefonunuza kurulur.",
     "home.problems.install": "Qprivate Web Mesaj telefonunuza kurulur",
     "header.toggleMenu": "Menüyü aç/kapat",
     "blog.notFound": "Blog yazısı bulunamadı.",
     "blog.backToBlog": "Blog'a Dön",
     "legalNotice.title": "Yasal Bildirim",
+    "agb.title": "AGB & Satış Sözleşmesi",
+    "agb.intro":
+      "Bu Genel İş Şartları ve Satış Sözleşmesi (AGB), Qmobile'dan yapılan tüm satın alımlara uygulanır ve İsviçre Borçlar Kanunu (OR), İsviçre Federal Hukuku ve İsviçre Veri Koruma Kanunu (DSG) çerçevesinde düzenlenmiştir. Aşağıdaki bölümler sözleşmenin kurulması, ödeme, teslimat, garanti, sorumluluk, cayma hakkı, veri koruma ve uygulanacak hukuku kapsar. Ayrıntılı satış sözleşmesi şartlarını görmek için Satış Sözleşmesi sayfasını inceleyebilirsiniz. Sipariş vererek bu şartları kabul etmiş sayılırsınız.",
+    "agb.viewSalesContract": "Satış Sözleşmesini Görüntüle",
+    "agb.sections.scope.title": "Kapsam",
+    "agb.sections.scope.body":
+      "Bu Genel İş Şartları (AGB), Qmobile tarafından sunulan tüm ürün ve hizmetlere uygulanır; özellikle Google Pixel donanımı üzerine kurulu, güvenlik odaklı özel işletim sistemli cihazların satışı, teslimatı ve kullanımını kapsar.\n\nBu şartlar, tüketiciler ve tüccarlar için ayrım gözetmeksizin geçerlidir; tüketici için zorunlu hükümler saklıdır.\n\nSipariş vererek veya ürünü kullanarak bu şartları kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız lütfen sipariş vermeyiniz.\n\nQmobile, Google LLC veya GrapheneOS Projesi ile resmi bir ortaklık, yetkilendirme veya ticari ilişki içinde değildir. Cihaz, Qmobile markası altında bir güvenlik ürünü olarak sunulur; özel uygulamalar ve diğer yazılım bileşenlerine ilişkin tüm telif hakları ve fikri mülkiyet hakları Qmobile'a aittir.\n\nAlıcı, yazılımı geri mühendislik yapmamak, kopyalamamak, dağıtmamak veya üçüncü kişilere satmamakla yükümlüdür.",
+    "agb.sections.contractFormation.title": "Sözleşmenin Kurulması",
+    "agb.sections.contractFormation.body":
+      "Web sitemiz üzerinden verilen siparişler, satış sözleşmesinin kurulması için bir teklif niteliği taşır. Teklifin kabulü, siparişinizin alındığına dair otomatik onay e-postası ile bildirilir.\n\nSözleşme, siparişinizin onaylandığına dair ayrı bir gönderim onayı ile tam olarak kurulmuş sayılır. Bu ana kadar siparişinizi iptal etme hakkınız saklıdır.\n\nStok tükenmesi veya teknik nedenlerle siparişinizi yerine getiremediğimiz takdirde, size derhal bilgi veririz ve varsa ödediğiniz tutarı iade ederiz.",
+    "agb.sections.pricesPayment.title": "Fiyatlar ve Ödeme",
+    "agb.sections.pricesPayment.body":
+      "Belirtilen tüm fiyatlar İsviçre Frankı (CHF) cinsindendir ve katma değer vergesi (KDV) dahildir; aksi belirtilmedikçe nakliye masrafları ayrıca faturalandırılır.\n\nKredi kartı, banka havalesi ve web sitesinde belirtilen diğer ödeme yöntemlerini kabul ediyoruz. Tüm ödemeler sipariş onayından sonra derhal ödenmelidir.\n\nÖdeme zamanında yapılmazsa, siparişinizin işleme alınması gecikebilir veya iptal edilebilir. Bu durumda size ayrıca bilgi verilir.\n\nFiyat hataları veya yazım yanlışları durumunda siparişi iptal etme hakkımız saklıdır; bu durumda size derhal bilgi verilir ve ödediğiniz tutar iade edilir.",
+    "agb.sections.delivery.title": "Teslimat",
+    "agb.sections.delivery.body":
+      "Teslimat süreleri sipariş onayından sonra belirtilen iş günü içinde geçerlidir. Stok durumuna göre teslimat süresi değişebilir; bu durumda size ayrıca bilgi verilir.\n\nKısmi teslimat yapma hakkımız saklıdır. Kısmi teslimat durumunda, ilgili gönderim masrafları tarafımızca karşılanır.\n\nTeslimat, kargo şirketi tarafından adresinize yapılır. Teslimat sırasında adresinizde bulunmamanız durumunda kargo şirketi size ulaşır.\n\nTeslimat adresinin doğru ve eksiksiz olması müşterinin sorumluluğundadır. Yanlış adresten kaynaklı gecikmelerden Qmobile sorumlu değildir.\n\nCihaz, modifiye yazılımla teslim edilir.",
+    "agb.sections.warranty.title": "Garanti ve Ayıplı Teslimat",
+    "agb.sections.warranty.body":
+      "İsviçre Borçlar Kanunu kapsamındaki yasal garanti hakları aynen uygulanır. Ürünlerdeki ayıplar için yasal süre içinde talepte bulunabilirsiniz.\n\nAyıp tespiti durumunda, öncelikle ücretsiz onarım veya değişim talep etme hakkınız vardır. Bu mümkün değilse, sözleşmeden dönme veya bedelden indirim talep edebilirsiniz.\n\nGaranti talepleri için lütfen bizimle iletişime geçin. Ürünü orijinal ambalajı ile birlikte iade etmeniz gerekebilir.\n\nCihaz üzerinde yapılan güvenlik odaklı özel işletim sistemi değişiklikleri nedeniyle Google'ın resmi üretici garantisi geçersiz hale gelir; donanım kusurları Qmobile'ın kendi garanti koşullarına tabidir.\n\nQmobile, cihaz için 1 yıl yazılım desteği sunar. Yazılım modifikasyonları nedeniyle oluşan üçüncü taraf hizmetleriyle (ör. bankacılık uygulamaları, Google Play Services vb.) uyumluluk sorunlarından Qmobile sorumlu değildir.",
+    "agb.sections.liability.title": "Sorumluluk",
+    "agb.sections.liability.body":
+      "Qmobile, ürünlerin kullanımından kaynaklanan dolaylı, tesadüfi veya sonuçsal zararlardan sorumlu değildir. Maksimum yükümlülüğümüz, satın alınan ürünün bedeli ile sınırlıdır.\n\nBu sınırlandırma, yasaların izin verdiği ölçüde geçerlidir. Zorunlu yasal haklarınız (örneğin tüketici hakları) bu sınırlandırmadan etkilenmez.\n\nQmobile, veri kaybı, güvenlik ihlalleri, üçüncü kişilerin saldırıları veya kullanıcı hatalarından kaynaklanan zararlardan sorumlu değildir. Ürünlerinizi güvenli bir şekilde kullanmak ve verilerinizi yedeklemek sizin sorumluluğunuzdadır.\n\nQmobile, açık kaynak bileşenlerinden kaynaklanan hatalardan sorumlu değildir.\n\nQmobile, resmi makamların erişim talepleri veya üçüncü kişilerin teknik müdahaleleri nedeniyle oluşan zararlardan sorumlu değildir.",
+    "agb.sections.withdrawalRight.title": "İade ve Cayma Hakkı",
+    "agb.sections.withdrawalRight.body":
+      "Sorunsuz iade garantisi. Açılmamış, orijinal ambalajı bozulmamış cihazlar 14 gün içinde iade edilebilir. İade talebi için önce iletişim formu üzerinden bize ulaşmanız gerekir. Çizik, düşme, kırılma, fiziksel hasar veya kullanıcı hatası nedeniyle oluşan sorunlar iade kapsamına girmez. Açılmış veya yapılandırılmış cihazlar yalnızca üretim hatası olması durumunda 3 gün içinde iade edilebilir. İade onaylandığında, ödeme aynı yöntemle 14 iş günü içinde geri ödenir. Kargo ücretleri iade edilmez.\n\nQMOBILE cihazı, müşteriye özel olarak yapılandırılmış güvenlik yazılımı ile donatılmış bir Google Pixel cihazıdır. Cihazın kutusunun açılması, çalıştırılması ve güvenlik yazılımı yapılandırmasının tamamlanması durumunda cihaz kullanılmış ve bireyselleştirilmiş sayılır; bu nedenle İsviçre Borçlar Kanunu (OR) madde 40a ff. kapsamındaki kişiselleştirilmiş ürünler istisnası uyarınca cayma hakkı dışlanır.\n\nYukarıdaki istisna, üretim hataları için yasal garanti haklarınızı etkilemez; bu haklar saklıdır.\n\nBootloader kilidinin açılması, başka bir işletim sisteminin kurulması, rooting veya güvenlik yapılandırmalarında yapılan değişiklikler kalan tüm garanti haklarını geçersiz kılar.",
+    "agb.sections.dataProtection.title": "Veri Koruma",
+    "agb.sections.dataProtection.body":
+      "Müşterinin kişisel verileri (ad, adres, telefon numarası, e-posta vb.) yalnızca siparişin teslim edilmesi ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlenir; reklam amacıyla kullanılmaz ve üçüncü taraflarla paylaşılmaz.\n\nVeri işleme, İsviçre Veri Koruma Kanunu (DSG) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında yürütülür.\n\nVerilerinizi istediğiniz zaman görme, düzeltme ve silinmesini talep etme hakkına sahipsiniz. Bu haklarınızı kullanmak için bizimle iletişime geçmeniz yeterlidir.\n\nCihaz üzerindeki kişisel verilerin güvenliği kullanıcı sorumluluğundadır; doğru şifreleme, VPN kullanımı ve diğer güvenlik ayarları kullanıcıya aittir.\n\nÖzel iletişim için kurulan uygulamalar güvenli şifreleme (E2EE) kullanır; eski mesaj içeriklerine erişim mümkün olmayabilir.",
+    "agb.sections.applicableLaw.title": "Uygulanacak Hukuk ve Yetkili Mahkeme",
+    "agb.sections.applicableLaw.body":
+      "Bu sözleşme İsviçre Federal Hukuku ve İsviçre Borçlar Kanunu'na (OR) tabidir. İsviçre hukukunun zorunlu hükümleri saklıdır.\n\nTaraflar arasındaki uyuşmazlıklarda, Zivilgericht Basel-Stadt münhasır yetkili mahkeme olarak belirlenmiştir. Tüketici için zorunlu yargı yetkisi saklıdır.",
+    "agb.sections.severability.title": "Kısmi Geçersizlik",
+    "agb.sections.severability.body":
+      "Bu sözleşmenin herhangi bir hükmünün geçersiz veya uygulanamaz olması halinde, kalan hükümlerin geçerliliği etkilenmez.\n\nTaraflar, geçersiz hükmün yerine, amacına ve ekonomik anlamına en yakın geçerli bir hükmü kabul etmiş sayılırlar. Aynı ilke, sözleşmede boşluk bulunması halinde de uygulanır.",
+    "salesContract.title":
+      "Qmobile – Hizmet ve Ürün Satış Sözleşmesi (İsviçre Hukuku)",
+    "salesContract.subtitle":
+      "Modifiye edilmiş bir güvenlik cihazının satışı ve kullanımına ilişkin sözleşme",
+    "salesContract.parties.seller": "Satıcı:",
+    "salesContract.parties.sellerName": "Qmobile",
+    "salesContract.parties.sellerAddress": "Basel – İsviçre",
+    "salesContract.parties.sellerPhone": "Tel: +41 61 123 45 67",
+    "salesContract.parties.sellerWebsite": "https://qmobile.ch",
+    "salesContract.parties.buyer": "Alıcı:",
+    "salesContract.parties.buyerDesc":
+      "Cihazı satın alan gerçek veya tüzel kişi.",
+    "salesContract.articles.1.title": "Sözleşmenin Konusu",
+    "salesContract.articles.1.body":
+      "Bu sözleşme, satıcı tarafından modifiye edilmiş bir güvenlik cihazının satışı, teslimatı ve kullanım koşullarını düzenler; cihaz, Google Pixel donanım cihazı ile GrapheneOS ve satıcı tarafından geliştirilen özel uygulamalar ve diğer yazılım bileşenlerinden oluşur.",
+    "salesContract.articles.2.title": "Hukuki Durum ve Marka Bildirimi",
+    "salesContract.articles.2.clauses.1":
+      "Satıcı, Google LLC veya GrapheneOS Projesi ile resmi bir ortaklık, yetkilendirme veya ticari ilişki içinde değildir.",
+    "salesContract.articles.2.clauses.2":
+      "Cihaz, satıcı tarafından Qmobile markası altında bir güvenlik ürünü olarak sunulur.",
+    "salesContract.articles.2.clauses.3":
+      "Özel uygulamalar ve diğer yazılım bileşenlerine ilişkin tüm telif hakları ve fikri mülkiyet hakları satıcıya aittir.",
+    "salesContract.articles.2.clauses.4":
+      "Alıcı, yazılımı geri mühendislik yapmamak, kopyalamamak, dağıtmamak veya üçüncü kişilere satmamakla yükümlüdür.",
+    "salesContract.articles.3.title": "Ürün Uyarlaması ve Teknik Sorumluluk",
+    "salesContract.articles.3.clauses.1":
+      "Satıcı, cihaz üzerinde güvenlik açısından ilgili yazılım uyarlamalarını yapar.",
+    "salesContract.articles.3.clauses.2":
+      "Cihaz üzerinde yapılan sistem değişiklikleri, modifikasyonlar ve ayarlar nedeniyle Google'ın resmi garantisi geçersiz hale gelir.",
+    "salesContract.articles.3.clauses.3":
+      "Donanım kusurları, satıcı tarafından belirlenen garanti koşullarına tabidir.",
+    "salesContract.articles.3.clauses.4":
+      "Üçüncü taraf uygulamalarıyla (ör. bankacılık uygulamaları, Google Play Services vb.) uyumluluk garanti edilmez.",
+    "salesContract.articles.4.title": "Kullanım Koşulları",
+    "salesContract.articles.4.clauses.1":
+      "Alıcı, cihazı yalnızca yasal amaçlarla kullanmakla yükümlüdür.",
+    "salesContract.articles.4.clauses.2":
+      "Güvenlik yazılımının kullanımından doğan sorumluluk tamamen alıcıya aittir.",
+    "salesContract.articles.4.clauses.3":
+      "Alıcı tarafından yapılan yazılım değişiklikleri (bootloader kilidinin açılması, başka işletim sistemlerinin kurulması, rooting vb.) garanti ve teknik desteği tamamen geçersiz kılar.",
+    "salesContract.articles.4.clauses.4":
+      "Satıcı, kullanıcı hatalarından veya üçüncü kişilerin saldırılarından kaynaklanan zararlardan sorumlu değildir.",
+    "salesContract.articles.5.title": "Sorumluluk Reddi",
+    "salesContract.articles.5.clauses.1":
+      "Satıcı, veri kaybı, güvenlik ihlalleri, şifre çözme, üçüncü kişilerin saldırıları veya kullanıcı hatalarından sorumlu değildir.",
+    "salesContract.articles.5.clauses.2":
+      "Satıcı, açık kaynak bileşenlerinden kaynaklanan hatalardan sorumlu değildir.",
+    "salesContract.articles.5.clauses.3":
+      "Satıcı, resmi makamların erişim talepleri veya üçüncü kişilerin teknik müdahaleleri nedeniyle oluşan zararlardan sorumlu değildir.",
+    "salesContract.articles.5.clauses.4":
+      "Satıcının toplam yükümlülüğü, etkilenen ürün için ödenen satın alma bedeli ile sınırlıdır. Bu sınırlandırma, yasaların izin verdiği ölçüde geçerlidir; zorunlu yasal haklarınız (örneğin tüketici hakları) bu sınırlandırmadan etkilenmez.",
+    "salesContract.articles.5.clauses.5":
+      "Cihazın satın alınmasıyla alıcı bu sorumluluk reddini kabul eder.",
+    "salesContract.articles.6.title": "Garanti ve Destek",
+    "salesContract.articles.6.clauses.1":
+      "Satıcı, cihaz için 1 yıl yazılım desteği sunar.",
+    "salesContract.articles.6.clauses.2":
+      "Satıcı, yazılım modifikasyonları nedeniyle oluşan üçüncü taraf hizmetleriyle uyumluluk sorunlarından sorumlu değildir.",
+    "salesContract.articles.7.title":
+      "Teslimat, İade ve Cayma Hakkının Dışlanması",
+    "salesContract.articles.7.clauses.1":
+      "QMOBILE cihazı, müşteriye özel olarak uyarlanmış bireyselleştirilmiş güvenlik yazılımı yapılandırmasıyla teslim edilir.",
+    "salesContract.articles.7.clauses.2":
+      "Sorunsuz iade garantisi. Açılmamış, orijinal ambalajı bozulmamış cihazlar 14 gün içinde iade edilebilir. İade talebi için önce iletişim formu üzerinden bize ulaşmanız gerekir. Çizik, düşme, kırılma, fiziksel hasar veya kullanıcı hatası nedeniyle oluşan sorunlar iade kapsamına girmez. Açılmış veya yapılandırılmış cihazlar yalnızca üretim hatası olması durumunda 3 gün içinde iade edilebilir. İade onaylandığında, ödeme aynı yöntemle 14 iş günü içinde geri ödenir. Kargo ücretleri iade edilmez.",
+    "salesContract.articles.7.clauses.3":
+      "Cihazın kutusunun açılması, çalıştırılması ve güvenlik yazılımı yapılandırmasının tamamlanması cihazı bireyselleştirir ve kullanılmış sayılmasına neden olur; bu nedenle İsviçre Borçlar Kanunu (OR) madde 40a ve devamı kapsamındaki kişiselleştirilmiş ürünler istisnası uyarınca cayma hakkı dışlanmıştır.",
+    "salesContract.articles.7.clauses.4":
+      "Üretim hatalarında yasal garanti hakları saklıdır.",
+    "salesContract.articles.7.softwareChanges":
+      "Bootloader kilidinin açılması veya rooting, kalan tüm garantiyi geçersiz kılar.",
+    "salesContract.articles.8.title": "Veri Koruma",
+    "salesContract.articles.8.clauses.1":
+      "Satıcı, alıcının kişisel verilerini (ad, adres, telefon numarası, e-posta vb.) yalnızca siparişin teslim edilmesi ve yasal yükümlülüklerin yerine getirilmesi amacıyla işler; reklam amacıyla kullanmaz ve üçüncü taraflarla paylaşmaz.",
+    "salesContract.articles.8.clauses.2":
+      "Özel iletişim için kurulan uygulamalar güvenli şifreleme (E2EE) kullanır; eski mesaj içeriklerine erişim mümkün olmayabilir.",
+    "salesContract.articles.8.clauses.3":
+      "Cihaz üzerindeki kişisel verilerinin güvenliğinden alıcı sorumludur. Doğru şifreleme, VPN kullanımı ve diğer güvenlik ayarları alıcının sorumluluğundadır.",
+    "salesContract.articles.9.title": "Uygulanacak Hukuk ve Yetkili Mahkeme",
+    "salesContract.articles.9.clauses.1":
+      "Bu sözleşme İsviçre Federal Hukuku (Bundesrecht) ve İsviçre Borçlar Kanunu'na (OR) tabidir.",
+    "salesContract.articles.9.clauses.2":
+      "Tüm uyuşmazlıklarda münhasır olarak Basel-Stadt Kantonu mahkemeleri (Zivilgericht Basel-Stadt) yetkilidir.",
+    "salesContract.articles.9.clauses.3":
+      "Tüketici için zorunlu yargı yetkisi saklıdır; bu, zorunlu tüketici koruma hükümleri uyarınca tüketiciye tanınan yargı yetkisi hakkını etkilemez.",
+    "salesContract.articles.10.title": "Hukuki Uyum",
+    "salesContract.articles.10.body":
+      "Bu sözleşme, İsviçre Federal Hukuku (Bundesrecht), İsviçre Borçlar Kanunu (OR), İsviçre Veri Koruma Kanunu (DSG) ve İsviçre Tüketici Korunması / UWG çerçevesinde hazırlanmıştır.",
+    "salesContract.articles.11.title": "Yürürlüğe Giriş",
+    "salesContract.articles.11.body":
+      "Cihazın satın alınmasıyla alıcı, bu sözleşmenin koşullarını kabul eder.",
+    "salesContract.backToAgb": "AGB Sayfasına Dön",
     "legalNotice.p1":
       "Qmobile, Google Pixel donanımı üzerine kurulu, güvenlik odaklı özel işletim sistemli bir güvenlik telefonudur. Özel güvenlik ayarları kişi isteğine göre yapılır.",
     "legalNotice.p2":
@@ -765,26 +1077,25 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "legalNotice.p3":
       "Google veya işletim sistemi sağlayıcısı ile resmi bir bağımız yoktur.",
     "legalNotice.p4":
-      "Tüm şifreleme teknolojisi İsviçre gizlilik yasalarına uygundur.",
-    "swissCompliance.title": "İsviçre Gizlilik Standartları",
+      "Tüm güvenli şifreleme (E2EE) teknolojisi İsviçre gizlilik yasalarına uygundur.",
+    "swissCompliance.title": "İsviçre Gizlilik Yasaları",
     "swissCompliance.intro":
-      "İsviçre, dünyadaki en sıkı gizlilik kurallarına sahip ülkelerden biridir. Bu kurallar şunu zorunlu kılar:",
-    "swissCompliance.rule1":
-      "Telefonunuz hiçbir veriyi yurtdışına göndermemeli",
-    "swissCompliance.rule2":
-      "Metadata (kim, ne zaman, nerede konuştu) toplanmamalı",
+      "İsviçre, dünyadaki en katı gizlilik yasalarına sahip ülkelerden biridir. Bu yasalar gereği:",
+    "swissCompliance.rule1": "Telefonlar yurtdışına veri göndermemeli",
+    "swissCompliance.rule2": "Metadata (kim, ne zaman, nerede) toplanmamalı",
     "swissCompliance.rule3": "Uygulamalar arka planda veri toplamamalı",
-    "swissCompliance.rule4":
-      "Cihaz üzerinde saklanan bilgiler dışarıdan erişilememeli",
-    "swissCompliance.rule5": "Şifreleme en yüksek seviyede olmalı",
+    "swissCompliance.rule4": "Cihazdaki bilgiler dışarıdan erişilememeli",
+    "swissCompliance.rule5":
+      "Uçtan uca şifreleme (E2EE) en yüksek seviyede olmalı",
     "swissCompliance.rule6":
       "Kullanıcı verileri şirket tarafından bile görülememeli",
     "swissCompliance.rule7":
       "Devlet veya üçüncü taraflar veri talep ettiğinde erişim mümkün olmamalı",
     "swissCompliance.market":
-      "Piyasadaki çoğu güvenlik telefonu bu kurallara göre tasarlanmadığı için İsviçre'de tam gizlilik uyumlu sayılmaz.",
+      "Bu standartlar, Qmobile'ın tüm yazılım ve güvenlik ayarlarının temelini oluşturur.",
     "swissCompliance.qmobile":
-      "Qmobile Telefon ayarlarini ve yazılımı İsviçre'nin gizlilik standartlarına göre özel olarak programlar. Bu yüzden gizlilik ve güvenlik isteyen kisiler tarafından tercih edilir.",
+      "Gizlilik bizim için bir özellik değil, bir zorunluluktur.",
+    "footer.latestPost": "Son Blog Yazısı",
     "footer.disclaimer":
       "Google veya işletim sistemi sağlayıcısı ile resmi bir bağımız yoktur.",
   },
@@ -799,12 +1110,16 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "nav.faq": "FAQ",
     "nav.about": "Über uns",
     "nav.contact": "Kontakt",
+    "nav.salesContract": "Verkaufsvertrag",
     "header.order": "Bestellen",
     "footer.about": "Über uns",
     "footer.privacy": "Datenschutz",
     "footer.terms": "Nutzungsbedingungen",
     "footer.cookies": "Cookie-Richtlinie",
+    "footer.agb": "AGB & Kaufvertrag",
+    "footer.salesContract": "Verkaufsvertrag",
     "footer.contact": "Kontakt",
+    "footer.order": "Bestellen",
     "footer.products": "Produkte",
     "footer.company": "Unternehmen",
     "footer.legal": "Rechtliches",
@@ -848,11 +1163,11 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Der Versand innerhalb der Schweiz ist kostenlos. Für internationale Sendungen werden die Versandkosten bei der Bestellung berechnet.",
     "terms.returnsTitle": "Rückgabe und Erstattung",
     "terms.returnsText":
-      "Hassle-free Rückgabe innerhalb von 7 Tagen. Ungeöffnete Geräte in Originalverpackung können innerhalb von 7 Tagen zurückgegeben werden. Für eine Rückgabe müssen Sie uns zunächst über das Kontaktformular erreichen.",
+      "Garantie für unkomplizierte Rückgabe. Ungeöffnete Geräte in unbeschädigter Originalverpackung können innerhalb von 14 Tagen zurückgegeben werden. Für eine Rückgabe müssen Sie uns zunächst über das Kontaktformular erreichen.",
     "terms.returnsText1":
-      "Kratzer, Sturzschäden, Bruch, physische Beschädigungen oder durch Benutzerfehler verursachte Probleme fallen nicht unter die Rückgaberecht. Geöffnete oder konfigurierte Geräte können nur bei Herstellungsfehlern innerhalb von 7 Tagen zurückgegeben werden.",
+      "Kratzer, Sturzschäden, Bruch, physische Beschädigungen oder durch Benutzerfehler verursachte Probleme fallen nicht unter die Rückgabe. Geöffnete oder konfigurierte Geräte können nur bei Herstellungsfehlern innerhalb von 3 Tagen zurückgegeben werden.",
     "terms.returnsText2":
-      "Nach Genehmigung der Rückgabe wird die Zahlung innerhalb von 7 Werktagen über dieselbe Methode zurückerstattet. Versandkosten werden nicht erstattet.",
+      "Nach Genehmigung der Rückgabe wird die Zahlung innerhalb von 14 Werktagen über dieselbe Methode zurückerstattet. Versandkosten werden nicht erstattet.",
     "terms.supportTitle": "Support und Kontakt",
     "terms.supportText":
       "Kein 7/24 Support. Support per E-Mail: qmobile.ch@proton.me. Wir werden uns so schnell wie möglich bei Ihnen melden.",
@@ -862,7 +1177,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Für Notfälle kontaktieren Sie uns bitte per E-Mail. Telefon-Support ist nicht verfügbar.",
     "terms.updatesTitle": "Update-Richtlinie",
     "terms.updatesText":
-      "Wir bieten 4 Jahre automatische Update-Unterstützung für das sicherheitsorientierte spezielle Betriebssystem. Ihr Gerät erhält automatisch die neuesten Sicherheitspatches und Funktionsupdates.",
+      "Wir bieten 1 Jahr automatische Update-Unterstützung für das sicherheitsorientierte spezielle Betriebssystem. Ihr Gerät erhält automatisch die neuesten Sicherheitspatches und Funktionsupdates.",
     "terms.updatesText1":
       "Updates werden Over-the-Air (OTA) über das Internet verteilt. Kein Benutzereingriff erforderlich.",
     "terms.updatesText2":
@@ -877,7 +1192,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Die sichere Nutzung der Produkte und die Datensicherung liegen in Ihrer Verantwortung.",
     "terms.swissLawTitle": "Schweizer Recht",
     "terms.swissLaw":
-      "Diese Bedingungen unterliegen dem Schweizer Recht und werden nach diesem ausgelegt. Streitigkeiten unterliegen der ausschließlichen Zuständigkeit der Gerichte in BASEL, Schweiz.",
+      "Diese Bedingungen unterliegen dem Schweizer Recht und werden nach diesem ausgelegt. Streitigkeiten unterliegen der ausschließlichen Zuständigkeit der Gerichte in Basel-Stadt, Schweiz.",
     "cookies.intro":
       "Diese Cookie-Richtlinie erklärt, wie Qmobile Cookies und ähnliche Technologien auf unserer Website verwendet. Wir respektieren Ihre Privatsphäre und verwenden nur ein Minimum an Cookies.",
     "cookies.whatTitle": "Was sind Cookies?",
@@ -912,17 +1227,17 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "header.brand": "Qmobile",
     "header.tagline": "Die Kontrolle über Ihre Privatsphäre liegt bei Ihnen.",
     slogan: "Die Kontrolle über Ihre Privatsphäre.",
-    "footer.swissmade": "Schweizer Herstellung",
+    "footer.swissmade": "In der Schweiz modifiziert",
     "privacy.hero.badge": "Schweizer Datenschutzstandards",
     "cookies.zeroTracking": "Null Tracking-Cookie - Datenschutz priorisiert",
     "contact.address": "BASEL, Schweiz",
-    "hero.title": "Qmobile",
+    "hero.title": "Sichere Pixel-Telefone",
     "hero.badge": "Schweizer Datenschutzstandards",
     "hero.trust": "500+ Professionelle Kunden",
     "guarantees.new": "Volle Kontrolle bei Ihnen",
     "guarantees.dispatch": "48 Std Schweizer Versand",
     "guarantees.shipping": "Kostenloser Versand",
-    "guarantees.returns": "7 Tage Rückgabe",
+    "guarantees.returns": "14 Tage Rückgabe",
     "highlights.title": "Warum Qmobile?",
     "whybuy.badge": "Warum wir?",
     "whybuy.title": "Warum bei Qmobile kaufen?",
@@ -941,7 +1256,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "whybuy.shipping.desc":
       "Versicherter Versand aus der Schweiz innerhalb von 48 Stunden.",
     "whybuy.returns": "Einfache Rückgabe",
-    "whybuy.returns.desc": "30 Tage Rückgabegarantie ohne Bedingungen.",
+    "whybuy.returns.desc": "14 Tage Rückgaberecht.",
     "confidence.title": "Mit Vertrauen kaufen",
     "confidence.subtitle": "Warum Kunden uns wählen?",
     "confidence.swiss": "Schweizer Datenschutzstandards",
@@ -949,9 +1264,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "confidence.google": "Unabhängig von Google",
     "confidence.google.desc":
       "Sicherheitsorientiertes spezielles Betriebssystem für vollständige Freiheit von Google-Diensten und Tracking.",
-    "confidence.quantum": "Zukunftssichere Verschlüsselung",
+    "confidence.quantum": "Sichere Verschlüsselung (E2EE)",
     "confidence.quantum.desc":
-      "Zukunftssichere Sicherheit mit modernen Verschlüsselungsstandards.",
+      "Zukunftssichere Sicherheit mit sicherer Verschlüsselung (E2EE).",
     "confidence.expert": "Experteneinrichtung",
     "confidence.expert.desc": "Von 30 Jahren Sicherheitsexperten vorbereitet.",
     "highlights.subtitle":
@@ -972,11 +1287,11 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "highlights.sandbox": "App-Sandboxing",
     "highlights.sandbox.desc":
       "Jede App läuft isoliert. Selbst bei einem Hack bleiben andere Apps sicher.",
-    "highlights.updates": "4 Jahre Updates",
+    "highlights.updates": "1 Jahr Updates",
     "highlights.updates.desc":
-      "Für Pixel 9 und 10: 4 Jahre Sicherheitspatches und Systemupdates.",
+      "Für Pixel 9 und 10: 1 Jahr Sicherheitspatches und Systemupdates.",
     "cta.title": "Sichern Sie Ihre Kommunikation",
-    "cta.guarantee": "7 Tage Rückgaberecht • Kostenloser Schweizer Versand",
+    "cta.guarantee": "14 Tage Rückgaberecht • Kostenloser Schweizer Versand",
     "cta.subtitle":
       "Bestellen Sie noch heute Ihr Pixel-Telefon mit sicherheitsorientiertem speziellem Betriebssystem und übernehmen Sie die Kontrolle über Ihre Privatsphäre.",
     "cta.button": "Jetzt bestellen",
@@ -991,8 +1306,8 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "products.features.secureOS":
       "Sicherheitsorientiertes Betriebssystem vorinstalliert",
     "products.features.titan": "Titan M2 Sicherheitschip",
-    "products.features.updates5": "4 Jahre Update-Support",
-    "products.features.updates7": "4 Jahre Update-Support",
+    "products.features.updates5": "1 Jahr Update-Support",
+    "products.features.updates7": "1 Jahr Update-Support",
     "products.features.sealed": "Volle Kontrolle bei Ihnen",
     "products.features.ai": "Google KI / Gemini deaktiviert",
     "products.features.titan3": "Titan M3 Sicherheitschip",
@@ -1007,7 +1322,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "products.payment": "Sichere Zahlung",
     "products.trust": "Von 500+ Sicherheitsprofis bevorzugt",
     "hero.subtitle":
-      "Ein Sicherheitstelefon mit speziellem Betriebssystem, das entwickelt und programmiert wurde, um professionelle Privatsphäre vor Dieben, neugierigen Personen, forensischen Geräten, gefälschten Basisstationen und App-Spionage zu schützen.",
+      "Das einzige Sicherheitstelefon, das für professionelle Privatsphäre modifiziert und speziell programmiert wurde und sich selbst zerstören kann.",
     "hero.description": "",
     "hero.cta": "Jetzt entdecken",
     "hero.contact": "Kontaktieren Sie uns",
@@ -1028,12 +1343,88 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "products.features.faradayPouch.milStd": "MIL-STD konform",
     "products.features.faradayPouch.emp": "EMP-geschützt",
     "products.faradayPouch": "Q Faraday Pouch Signalblocker",
+    "products.faradayBox": "Q Faraday Box",
     "products.faradayBadge": "Faraday Schutz",
     "products.pixel8": "Google Pixel 8",
     "products.pixel9": "Google Pixel 9",
     "products.pixel10": "Google Pixel 10",
     "products.price": "Preis",
     "products.order": "Jetzt bestellen →",
+    "products.whyQmobileButton": "Warum Qmobile",
+    "products.techSpecsButton": "Technische Daten",
+    "products.security.selfDestruct": "Offline-Selbstzerstörung",
+    "products.security.killPin": "Kill-PIN",
+    "products.security.bfuProtection": "BFU-Schutz",
+    "products.security.scrambledPin": "Gemischte PIN",
+    "products.security.hardwareVerification": "Hardware-Verifizierung",
+    "products.security.antiTracking": "Null-Tracking",
+    "products.security.e2eEncryption":
+      "Sichere Verschlüsselung (E2EE) Nachrichten",
+    "products.security.appEncryption": "App-Verschlüsselung",
+    "products.security.multiProfile": "Mehrfachprofil-Verwaltung",
+    "products.security.networkSecurity": "Netzwerk- und Verbindungssicherheit",
+    "products.security.usbSecurity": "USB-Verbindungssicherheit",
+    "products.security.hiddenLocation": "Versteckte Standorteinstellung",
+    "products.security.fakeCellTower": "Fake-Basisstation-Prävention",
+    "products.security.categories.physical": "Physische Sicherheit",
+    "products.security.categories.pinAccess": "PIN- und Zugriffssicherheit",
+    "products.security.categories.network":
+      "Verbindungs- und Netzwerksicherheit",
+    "products.security.categories.privacy": "Datenschutz und Datenschutz",
+    "products.security.categoriesDesc.physical":
+      "Das Telefon schützt sich selbst bei Bedrohung und zerstört seine Daten.",
+    "products.security.categoriesDesc.pinAccess":
+      "Der Zugriff wird durch mehrstufige PIN- und Profilschutz kontrolliert.",
+    "products.security.categoriesDesc.network":
+      "Netzwerk- und physische Verbindungspunkte werden gesperrt.",
+    "products.security.categoriesDesc.privacy":
+      "Tracking und Datenlecks werden verhindert.",
+    "techSpecs.title": "{phone} Technische Daten",
+    "techSpecs.backToProducts": "Zurück zu den Produkten",
+    "techSpecs.sections.technical": "Technische Merkmale",
+    "techSpecs.sections.display": "Display",
+    "techSpecs.sections.safety": "Allgemeine Produktsicherheit",
+    "techSpecs.fields.productType": "Produkttyp",
+    "techSpecs.fields.os": "Betriebssystem",
+    "techSpecs.fields.processor": "Prozessor",
+    "techSpecs.fields.clockSpeed": "Taktfrequenz",
+    "techSpecs.fields.storage": "Speicher",
+    "techSpecs.fields.sdSlot": "SD-Kartenslot",
+    "techSpecs.fields.ram": "RAM",
+    "techSpecs.fields.frequencyBand": "Frequenzband",
+    "techSpecs.fields.sarHead": "SAR-Wert (Kopf)",
+    "techSpecs.fields.sarBody": "SAR-Wert (Körper)",
+    "techSpecs.fields.sensors": "Sensoren",
+    "techSpecs.fields.simLockFree": "SIM-Lock frei",
+    "techSpecs.fields.simSize": "SIM-Größe",
+    "techSpecs.fields.sarCategory": "SAR-Kategorie",
+    "techSpecs.fields.screenDiagonalCm": "Bildschirmdiagonale (cm)",
+    "techSpecs.fields.screenDiagonalInch": "Bildschirmdiagonale (Zoll)",
+    "techSpecs.fields.resolution": "Auflösung",
+    "techSpecs.fields.displayDetails": "Display-Details",
+    "techSpecs.fields.numDisplays": "Anzahl Displays",
+    "techSpecs.fields.resolutionWidth": "Auflösung Breite",
+    "techSpecs.fields.resolutionHeight": "Auflösung Höhe",
+    "techSpecs.fields.pixelDensity": "Pixeldichte",
+    "techSpecs.fields.aspectRatio": "Seitenverhältnis",
+    "techSpecs.fields.colorDisplay": "Farbdisplay",
+    "techSpecs.fields.antiScratch": "Kratzschutz",
+    "techSpecs.fields.curvedDisplay": "Gebogenes Display",
+    "techSpecs.fields.touchscreen": "Touchscreen",
+    "techSpecs.fields.gtin": "GTIN",
+    "techSpecs.fields.manufacturer": "Hersteller",
+    "techSpecs.values.yes": "Ja",
+    "techSpecs.values.no": "Nein",
+    "techSpecs.values.os":
+      "Sicherheitsorientiertes benutzerdefiniertes Betriebssystem",
+    "techSpecs.values.sensors":
+      "Näherungssensor, Umgebungslicht-Sensor, Beschleunigungsmesser, Gyrometer, Magnetometer, Barometer",
+    "techSpecs.values.displayDetailsPixel8":
+      "6,2 Zoll Actua-Display, OLED, 60-120 Hz Smooth Display, Corning Gorilla Glass Victus",
+    "techSpecs.values.displayDetailsPixel9":
+      "6,3 Zoll Actua-Display, pOLED, 60-120 Hz Smooth Display, Corning Gorilla Glass Victus 2",
+    "techSpecs.values.displayDetailsPixel10":
+      "6,3 Zoll (160 mm) Actua-Display, pOLED, 422.2 ppi, Smooth Display 60-120 Hz, Corning Gorilla Glass 7i, 2000 cd/m² HDR, 3000 cd/m² Peak, >2.000.000:1 Kontrast, HDR, 24-bit",
     "why.title": "Warum ein sicherheitsorientiertes Betriebssystem?",
     "why.subtitle":
       "Das sicherste mobile Betriebssystem der Welt. Ihre Daten gehören Ihnen, niemandem sonst.",
@@ -1053,9 +1444,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "why.sandbox": "App-Sandboxing",
     "why.boot": "Verifizierter Boot",
     "why.network": "Netzwerkkontrolle",
-    "why.qpwa.e2e": "Q-PWA Ende-zu-Ende-Verschlüsselung",
+    "why.qpwa.e2e": "Sichere Verschlüsselung (E2EE)",
     "why.qpwa.e2e.desc":
-      "Mit AES-256-GCM und ChaCha20-Poly1305 bleiben Ihre Nachrichten nur zwischen Ihnen und dem Empfänger. Niemand, einschließlich Server, kann den Inhalt sehen.",
+      "Mit sicherer Verschlüsselung (E2EE) bleiben Ihre Nachrichten nur zwischen Ihnen und dem Empfänger. Niemand, einschließlich Server, kann den Inhalt sehen.",
     "why.qpwa.server": "Q-PWA Kein zentraler Server",
     "why.qpwa.server.desc":
       "Blockchain-basiertes verteiltes Netzwerk. Keine Metadaten, kein einzelner Ausfallpunkt. Zensurresistente, unabhängige Kommunikation.",
@@ -1128,10 +1519,10 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.hero.badge": "Datenschutz durch Design",
     "security.hero.feature1": "Titan M2 Sicherheitschip",
     "security.hero.feature2": "GrapheneOS-basiertes Betriebssystem",
-    "security.hero.feature3": "Ende-zu-Ende-Verschlüsselung",
+    "security.hero.feature3": "Sichere Verschlüsselung (E2EE)",
     "security.trust.title": "Sicherheitsstandards",
     "security.trust.desc":
-      "QMOBILE-Geräte basieren auf Google Pixel 8/9/10-Hardware. Die Hardwaresicherheit wird durch den Titan M2-Chip und Verified Boot gewährleistet. Die Softwaresicherheit wird durch ein auf GrapheneOS basierendes, sicherheitsfokussiertes benutzerdefiniertes Betriebssystem bereitgestellt. Die Messaging-Sicherheit wird durch die Q-PWA- und Session-Apps mit Ende-zu-Ende-Verschlüsselung gewährleistet. Hinweis: Die Hardwaresicherheitsfunktionen gehören zu den Pixel-Geräten. Die Softwaresicherheitsfunktionen gehören zum auf GrapheneOS basierenden Betriebssystem. Die Messaging-Funktionen werden durch die Q-PWA- und Session-Apps bereitgestellt. Wir haben keine offizielle Verbindung zu Google oder GrapheneOS. Das gesamte System entspricht den Schweizer Datenschutzgesetzen (FADP) und der DSGVO.",
+      "QMOBILE-Geräte basieren auf Google Pixel 8/9/10-Hardware. Die Hardwaresicherheit wird durch den Titan M2-Chip und Verified Boot gewährleistet. Die Softwaresicherheit wird durch ein auf GrapheneOS basierendes, sicherheitsfokussiertes benutzerdefiniertes Betriebssystem bereitgestellt. Die Messaging-Sicherheit wird durch Sichere Verschlüsselung (E2EE) für Messaging gewährleistet. Hinweis: Die Hardwaresicherheitsfunktionen gehören zu den Pixel-Geräten. Die Softwaresicherheitsfunktionen gehören zum auf GrapheneOS basierenden Betriebssystem. Die Messaging-Funktionen werden durch die Q-PWA- und Session-Apps bereitgestellt. Wir haben keine offizielle Verbindung zu Google oder GrapheneOS. Das gesamte System entspricht den Schweizer Datenschutzgesetzen (FADP) und der DSGVO.",
     "security.tables.title": "Hardware- und Software-Sicherheitsmerkmale",
     "security.tables.subtitle":
       "Überprüfen Sie die Sicherheitsschichten Ihres Geräts im Detail. Hardwarebasierte Schutzmaßnahmen und softwarebasierte Verschlüsselungsmethoden sind separat aufgeführt.",
@@ -1154,9 +1545,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "StrongBox (Sicherer Schlüsselspeicher)",
     "security.hardwareTable.rows.5.desc":
       "Sicherer Bereich auf dem Titan M2. Zahlungs-Apps und FIDO-Authentifizierungsschlüssel werden hier gespeichert.",
-    "security.hardwareTable.rows.6.feature": "7 Jahre Update-Garantie",
+    "security.hardwareTable.rows.6.feature": "1 Jahr Update-Garantie",
     "security.hardwareTable.rows.6.desc":
-      "Mindestens 7 Jahre Sicherheitsupdates für Pixel 8/9/10 (Pixel 8: ~2030, Pixel 9: ~2031, Pixel 10: ~2032).",
+      "Mindestens 1 Jahr Sicherheitsupdates für Pixel 8/9/10 (Pixel 8: ~2030, Pixel 9: ~2031, Pixel 10: ~2032).",
     "security.softwareTable.title": "Software-Sicherheitsmerkmale",
     "security.softwareTable.col.feature": "Merkmal",
     "security.softwareTable.col.desc": "Beschreibung",
@@ -1204,7 +1595,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.qpwaTable.title": "Q-PWA Sichere Messaging-Funktionen",
     "security.qpwaTable.col.feature": "Funktion",
     "security.qpwaTable.col.desc": "Beschreibung",
-    "security.qpwaTable.rows.1.feature": "Ende-zu-Ende-Verschlüsselung",
+    "security.qpwaTable.rows.1.feature": "Sichere Verschlüsselung (E2EE)",
     "security.qpwaTable.rows.1.desc":
       "Nachrichten werden zwischen Sender- und Empfängergeräten verschlüsselt. Server können den Inhalt nicht sehen.",
     "security.qpwaTable.rows.2.feature": "Kein zentraler Server",
@@ -1225,21 +1616,21 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.sessionTable.title": "Session Messaging-Funktionen",
     "security.sessionTable.col.feature": "Funktion",
     "security.sessionTable.col.desc": "Beschreibung",
-    "security.sessionTable.rows.1.feature": "Ende-zu-Ende-Verschlüsselung",
+    "security.sessionTable.rows.1.feature": "Sichere Verschlüsselung (E2EE)",
     "security.sessionTable.rows.1.desc":
-      "1-1-Nachrichten werden mit dem Session Protocol (libsodium-basiert) verschlüsselt.",
+      "1-1-Nachrichten werden mit Sichere Verschlüsselung (E2EE) verschlüsselt.",
     "security.sessionTable.rows.2.feature": "Kein zentraler Server",
     "security.sessionTable.rows.2.desc":
       "Verteiltes Netzwerk namens Session Nodes. Keine einzelne Entität kann den Verkehr lesen oder zensieren.",
     "security.sessionTable.rows.3.feature": "Keine Telefonnummer erforderlich",
     "security.sessionTable.rows.3.desc":
-      "Bei der Registrierung werden keine persönlichen Daten angefordert. Identität über Session ID (Ed25519 Public Key).",
+      "Bei der Registrierung werden keine persönlichen Daten angefordert. Identität über Sichere Identitätsauthentifizierung.",
     "security.sessionTable.rows.4.feature": "Onion Routing",
     "security.sessionTable.rows.4.desc":
       "3-Hop-Onion-Routing verbirgt die IP-Adresse. Kein Knoten kennt sowohl Sender als auch Empfänger.",
-    "security.sessionTable.rows.5.feature": "Forward Secrecy (V2)",
+    "security.sessionTable.rows.5.feature": "Forward Secrecy",
     "security.sessionTable.rows.5.desc":
-      "Rotierende Schlüssel mit Session Protocol V2. Selbst bei Kompromittierung des Geräts können alte Nachrichten nicht entschlüsselt werden.",
+      "Rotierende Schlüssel mit Forward Secrecy. Selbst bei Kompromittierung des Geräts können alte Nachrichten nicht entschlüsselt werden.",
     "security.sessionTable.rows.6.feature": "Open Source",
     "security.sessionTable.rows.6.desc":
       "Vollständig Open Source, unabhängig auditierbar.",
@@ -1274,9 +1665,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "services.online.desc":
       "Web-basiertes sicheres Messaging, E-Mail-Verschlüsselung, VPN-Einrichtung und Online-Identitätsschutz-Beratung.",
     "services.online.price": "250 CHF/Stunde",
-    "services.encryption": "Verschlüsselungsmethoden & Lösungen",
+    "services.encryption": "Sichere Verschlüsselung (E2EE) Lösungen",
     "services.encryption.desc":
-      "Ende-zu-Ende-Verschlüsselungs-Einrichtung, Post-Quantum-Kryptografie-Beratung, Schlüsselmanagement und Datenverschlüsselungsstrategien.",
+      "Ende-zu-Ende-Verschlüsselungs-Einrichtung, Sichere Verschlüsselungsberatung, Schlüsselmanagement und Datenverschlüsselungsstrategien.",
     "services.encryption.price": "400 CHF/Stunde",
     "services.process.title": "Wie funktioniert es?",
     "services.process.subtitle":
@@ -1304,7 +1695,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Unser sicherheitsorientiertes spezielles Betriebssystem enthält standardmäßig keine Google Play-Dienste. Sie können Sandboxed Google Play oder alternative Stores wie F-Droid und Aurora Store nutzen. App-Zugang ohne Sicherheitskompromisse.",
     "faq.q4": "Wie lange dauert der Update-Support?",
     "faq.a4":
-      "Pixel 8 erhält 5 Jahre, Pixel 9 und 10 erhalten 4 Jahre Sicherheits- und OS-Updates von Google, plus spezifische Patches für das sicherheitsorientierte spezielle Betriebssystem. Langfristige Investitionssicherheit.",
+      "Pixel 8 erhält 5 Jahre, Pixel 9 und 10 erhalten 4 Jahre Sicherheits- und OS-Updates von Google, plus 1 Jahr Software-Support für das sicherheitsorientierte spezielle Betriebssystem. Langfristige Investitionssicherheit.",
     "faq.q5": "Sind die Geräte neu und originalverpackt?",
     "faq.a5":
       "Ja. Alle Geräte sind neu und in Originalverpackung. Wenn möglich, wird das sicherheitsorientierte spezielle Betriebssystem installiert, ohne die Versiegelung zu brechen; ansonsten wird vollständige Transparenz gewährleistet.",
@@ -1313,22 +1704,22 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Wir versenden aus der Schweiz in die meisten europäischen Länder. Kontaktieren Sie uns für spezifische Ziele. Schneller und versicherter Versand.",
     "faq.q7": "Wie ist die Rückgabepolitik?",
     "faq.a7":
-      "7 Tage Rückgabegarantie für ungeöffnete Geräte. Geöffnete Geräte können innerhalb von 7 Tagen bei Mängeln zurückgegeben werden. Kundenzufriedenheit hat Priorität.",
+      "14 Tage Rückgaberecht für ungeöffnete Geräte. Geöffnete Geräte können innerhalb von 14 Tagen bei Mängeln zurückgegeben werden. Kundenzufriedenheit hat Priorität.",
     "faq.q8": "Wie ist der Support?",
     "faq.a8":
       "Wir bieten technischen Support und Post-Installations-Beratung für das sicherheitsorientierte spezielle Betriebssystem an. Kontaktieren Sie uns per E-Mail für Unterstützung.",
     "faq.q9": "Was ist Q sicheres Messaging?",
     "faq.a9":
-      "Q-PWA ist eine von Qmobile entwickelte sichere Messaging-App mit Ende-zu-Ende-Verschlüsselung. Sie schützt Ihre Nachrichten mit AES-256-GCM und ChaCha20-Poly1305. Diese App wird separat auf Ihr Pixel-Telefon installiert.",
+      "Ihre Nachrichten werden durch sichere Verschlüsselung (E2EE) geschützt. Nachrichten werden zwischen Sender- und Empfängergerät verschlüsselt, kein Server sieht den Inhalt.",
     "faq.q10": "Wie funktioniert die Q-PWA Verschlüsselung?",
     "faq.a10":
-      "Die Q-PWA App verwendet moderne Verschlüsselungsstandards wie AES-256-GCM und ChaCha20-Poly1305. Diese Algorithmen gewährleisten die Sicherheit Ihrer Nachrichten und bieten zukunftssichere Sicherheit.",
+      "Unsere App verwendet sichere Verschlüsselung (E2EE)-Standards. Ihre Nachrichten werden Ende-zu-Ende verschlüsselt und können nur von Ihnen und dem Empfänger gelesen werden.",
     "faq.q11": "Ist Q Messaging E2E verschlüsselt?",
     "faq.a11":
-      "Ja, die Q-PWA App verwendet Ende-zu-Ende-Verschlüsselung. Ihre Nachrichten können nur von Ihnen und dem Empfänger gelesen werden. Kein Dritter, einschließlich Server, kann den Inhalt sehen. Einzigartige Schlüssel werden pro Sitzung generiert.",
+      "Ja, unsere App verwendet sichere Verschlüsselung (E2EE). Nachrichten werden auf dem Sendergerät verschlüsselt und nur auf dem Empfängergerät entschlüsselt.",
     "faq.q12": "Wie unterscheidet sich Q Messaging von WhatsApp/Signal?",
     "faq.a12":
-      "Q-PWA verwendet keine zentralen Server (Blockchain/P2P-Architektur), bietet Post-Quantum-Verschlüsselung und hinterlässt keine Metadaten. WhatsApp und Signal sind auf zentrale Server angewiesen und speichern Metadaten. Q-PWA bietet auch anonyme Anmeldung.",
+      "Ja, wir bieten sichere Verschlüsselung (E2EE)-Lösungen. Messaging und Datenübertragung werden mit den höchsten Sicherheitsstandards geschützt.",
     "faq.q13": "Funktionieren Bank-Apps?",
     "faq.a13":
       "Ja, die meisten Bank-Apps funktionieren auf unserem sicherheitsorientierten speziellen Betriebssystem mit Sandboxed Google Play. Einige Apps prüfen SafetyNet/Play Integrity; in diesem Fall empfehlen wir alternative Zugangswege (Webbrowser, QR-Code-Login). Vor der Installation können wir spezifische Apps testen.",
@@ -1338,23 +1729,48 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "faq.q15": "Was umfassen die Beratungsleistungen?",
     "faq.a15":
       "Technische Beratung: Geräteeinrichtung, Konfiguration des sicherheitsorientierten speziellen Betriebssystems, App-Berechtigungen und Netzwerksicherheit. Sicherheitsberatung: Bedrohungsmodellierung, Vorfallreaktionsplanung. Sichere Kommunikation: Ende-zu-Ende-verschlüsselte Messaging- und E-Mail-Einrichtung. Alle Leistungen werden auf Ihr Bedrohungsprofil zugeschnitten.",
+    "faq.q16": "Warum ist das Widerrufsrecht ausgeschlossen?",
+    "faq.a16":
+      "Da das Produkt personalisiert ist — mit Sicherheitssoftware konfiguriert — ist das Widerrufsrecht gemäss Schweizer OR Art. 40a ff. ausgeschlossen.",
+    "faq.q17": "Was sind die Rückgabebedingungen?",
+    "faq.a17":
+      "Das Produkt kann innerhalb von 3 Tagen zurückgegeben werden. Keine Kratzer, Brüche oder Gebrauchsspuren. Ein Rückgabeformular und ein Identitätsformular müssen ausgefüllt werden.",
+    "faq.q18": "Wie lange ist die Garantiedauer?",
+    "faq.a18":
+      "1 Jahr Software-Support und 2 Jahre gesetzliche Garantie für Hardware (OR Art. 210).",
+    "faq.q19": "Welches Gericht ist zuständig?",
+    "faq.a19": "Die Gerichte von Basel-Stadt sind zuständig.",
+    "faq.q20": "Ist das Produkt personalisiert?",
+    "faq.a20":
+      "Ja, das Produkt ist mit Sicherheitssoftware konfiguriert und personalisiert.",
+    "faq.q21": "Ist die Google-Garantie gültig?",
+    "faq.a21":
+      "Nein, aufgrund der Modifikation ist die Google-Herstellergarantie nicht gültig.",
+    "faq.q22": "Wird die Kompatibilität mit Drittanbieter-Apps garantiert?",
+    "faq.a22":
+      "Nein, die Kompatibilität von Drittanbieter-Apps wird nicht garantiert.",
+    "faq.q23": "Werden Daten gesammelt?",
+    "faq.a23": "Nein, Qmobile sammelt keine Daten.",
+    "faq.q24": "Was sind die Haftungsbeschränkungen?",
+    "faq.a24":
+      "Die Haftung ist im Rahmen der Schweizer Gesetze begrenzt. Details siehe AGB-Seite.",
     "about.title": "Über uns",
     "about.subtitle":
-      "Schweizer Experten für Sicherheits- und Datenschutztechnologie",
+      "Schweizer Datenschutz- und sichere Kommunikationstechnologie",
     "about.intro":
-      "Qmobile ist ein in der Schweiz ansässiges Datenschutztechnologieunternehmen. Wir bieten Installation von sicherheitsorientiertem speziellem Betriebssystem auf Google Pixel-Telefonen, technische Sicherheitsberatung und sichere Kommunikationslösungen.",
+      "Qmobile ist ein in der Schweiz ansässiges Unternehmen für Datenschutz- und sichere Kommunikationstechnologie. Unser Ziel ist es, Nutzern die volle Kontrolle in der digitalen Welt zu geben und ihre Kommunikation nach den höchsten Sicherheitsstandards zu schützen. Datenschutz ist für uns kein Feature, sondern eine Notwendigkeit. Dieser Ansatz entspricht vollständig den strengen Schweizer Datenschutzgesetzen.",
     "about.swiss.title": "Schweizer Sicherheit",
     "about.swiss.text":
-      "Die strengen Datenschutzgesetze der Schweiz und ihre neutrale Position bieten unseren Kunden den höchsten Datenschutz. Unser Hauptsitz ist in BASEL.",
-    "about.tech.title": "Technische Beratung",
+      "Dieser Ansatz entspricht vollständig den strengen Schweizer Datenschutzgesetzen. Unser Hauptsitz ist in BASEL.",
+    "about.tech.title": "Unabhängigkeit",
     "about.tech.text":
-      "Unser Expertenteam bietet Unternehmen und Privatpersonen Beratung zu Gerätehärtung, Netzwerksicherheit, App-Sandboxing und Systemoptimierung.",
-    "about.security.title": "Sicherheitsberatung",
+      "Wir haben keine offizielle Verbindung zu Google oder den Betriebssystem-Anbietern. Alle unsere Sicherheitstechnologien werden unabhängig entwickelt und modifiziert.",
+    "about.security.title": "Transparenz",
     "about.security.text":
-      "Wir entwickeln umfassende Sicherheitsaudits, Bedrohungsanalysen und maßgeschneiderte Sicherheitsstrategien zum Schutz Ihrer digitalen Assets.",
-    "about.comm.title": "Sichere Kommunikationsberatung",
+      "Wir glauben an Open-Source-Software und lehnen Datenmining ab. Unsere Datenschutzrichtlinie ist klar, verständlich und nutzerorientiert.",
+    "about.comm.title": "Datenschutz",
     "about.comm.text":
-      "Wir sichern Ihre Kommunikation mit Ende-zu-Ende-Verschlüsselung, sicherer E-Mail, anonymem Messaging und Post-Quantum-Verschlüsselungslösungen.",
+      "Kundendaten werden in keinem Fall mit Dritten geteilt. Geräte werden in der Schweiz modifiziert und datenschutzkonform geliefert.",
     "about.lang.title": "Mehrsprachiger Support",
     "about.lang.text":
       "Wir bieten Support auf Türkisch, Deutsch und Englisch an und bedienen Kunden in der Schweiz, Europa und weltweit.",
@@ -1363,10 +1779,10 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Ein leidenschaftliches, erfahrenes Team im Bereich Datenschutztechnologie.",
     "about.expertise.title": "Expertise",
     "about.expertise.text":
-      "Unser Team verfügt über mehr als 10 Jahre Branchenerfahrung in den Bereichen mobile Sicherheit, Betriebssystem-Härtung und sichere Kommunikation.",
+      "Im Rahmen der Grundsätze Transparenz, Unabhängigkeit und Datenschutz bieten wir Lösungen, die vollständig den strengen Schweizer Datenschutzgesetzen entsprechen.",
     "about.values.title": "Unsere Werte",
     "about.values.text":
-      "Transparenz, Unabhängigkeit und Kundendatenschutz sind unsere Grundprinzipien. Wir setzen auf Open-Source-Software und lehnen Datenmining ab.",
+      "Transparenz, Unabhängigkeit und Datenschutz sind unsere Grundprinzipien.",
     "about.credentials.title": "Zertifizierungen und Expertise",
     "about.credentials.subtitle":
       "Wir bedienen uns mit international standardisierten, zertifizierten Experten.",
@@ -1482,14 +1898,98 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "contact.successMessage":
       "Ihre Nachricht wurde empfangen. Wir werden uns in Kürze bei Ihnen melden.",
     "contact.email.value": "qmobile.ch@proton.me",
-    "contact.phone.value": "+41 44 123 45 67",
+    "contact.phone.value": "+41 61 123 45 67",
+    "contact.salesContractAccept":
+      "Ich habe den Kaufvertrag gelesen und akzeptiere ihn.",
+    "contact.salesContractViewLink": "Kaufvertrag anzeigen",
+    "order.title": "Bestellübersicht",
+    "order.subtitle":
+      "Bestellen Sie Ihr sicheres Qmobile-Gerät mit individueller Konfiguration.",
+    "order.product": "Produkt",
+    "order.model": "Modell",
+    "order.price": "Preis",
+    "order.deliveryTime": "Lieferzeit",
+    "order.deliveryValue":
+      "7–14 Tage (aufgrund der individuellen Sicherheitskonfiguration)",
+    "order.quantity": "Menge",
+    "order.customerInfo": "Kundeninformationen",
+    "order.fullName": "Name",
+    "order.fullNamePlaceholder": "Vor- und Nachname",
+    "order.email": "E-Mail",
+    "order.phone": "Telefon (optional)",
+    "order.phonePlaceholder": "+41...",
+    "order.streetNo": "Strasse + Nr.",
+    "order.streetNoPlaceholder": "Bahnhofstrasse 1",
+    "order.postalCode": "PLZ",
+    "order.postalCodePlaceholder": "8001",
+    "order.city": "Stadt",
+    "order.cityPlaceholder": "Zürich",
+    "order.securityConfig": "Sicherheitskonfiguration",
+    "order.securityProfile": "Sicherheitsprofil",
+    "order.securityProfileSelect": "Auswählen…",
+    "order.securityStandard": "Standard-Sicherheitsprofil",
+    "order.securityStandardDesc":
+      "Grundlegende Sicherheitszertifikate und gehärtete OS-Konfiguration.",
+    "order.securityHigh": "Hohes Sicherheitsprofil",
+    "order.securityHighDesc":
+      "Erweiterte Netzwerkisolation, App-Sperre und Tracking-Schutz.",
+    "order.securityCustom": "Vollständig angepasstes Sicherheitsprofil",
+    "order.securityCustomDesc":
+      "Vollständig angepasste Konfiguration — individuelle Anforderungen werden besprochen.",
+    "order.securityNotes": "Spezielle Sicherheitsnotizen (optional)",
+    "order.securityNotesPlaceholder": "Zusätzliche Sicherheitsanforderungen...",
+    "order.legalConsent": "Rechtliche Zustimmung",
+    "order.contractAccept":
+      "Ich habe den Kaufvertrag gelesen und akzeptiere ihn.",
+    "order.contractViewLink": "(Kaufvertrag anzeigen)",
+    "order.privacyAccept":
+      "Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.",
+    "order.privacyViewLink": "(Datenschutzerklärung anzeigen)",
+    "order.withdrawalNotice":
+      "Das Qmobile-Gerät ist ein modifiziertes Produkt, das mit einer individuellen Sicherheitssoftware-Konfiguration geliefert wird. Daher ist das Widerrufsrecht gemäss Schweizer Obligationenrecht (OR 40a) ausgeschlossen.",
+    "order.placeOrder": "Bestellung aufgeben",
+    "order.sending": "Wird gesendet...",
+    "order.successMessage":
+      "Vielen Dank! Das Formular wurde gesendet. Wir werden in kürzester Zeit an die von Ihnen angegebene E-Mail-Adresse antworten.",
+    "order.errorMessage":
+      "Bestellung konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+    "order.total": "Total",
+    "order.captcha": "Sicherheitsüberprüfung",
+    "order.captchaPlaceholder": "Antwort eingeben",
+    "order.requiredField": "Dieses Feld ist erforderlich",
+    "order.invalidEmail": "Gültige E-Mail eingeben",
+    "orderConfirm.title": "Bestellbestätigung",
+    "orderConfirm.subtitle":
+      "Bitte prüfen Sie die folgende Zusammenfassung und bestätigen Sie Ihre Bestellung.",
+    "orderConfirm.summaryHeading": "Bestellübersicht",
+    "orderConfirm.product": "Produkt",
+    "orderConfirm.quantity": "Menge",
+    "orderConfirm.name": "Name",
+    "orderConfirm.email": "E-Mail",
+    "orderConfirm.phone": "Telefon",
+    "orderConfirm.address": "Adresse",
+    "orderConfirm.securityProfile": "Sicherheitsprofil",
+    "orderConfirm.confirmButton": "Bestellung bestätigen",
+    "orderConfirm.confirming": "Wird bestätigt...",
+    "orderConfirm.successTitle": "Ihre Bestellung wurde bestätigt",
+    "orderConfirm.successMessage":
+      "Ihre Bestellung wurde bestätigt. Wir werden uns in Kürze mit Ihnen in Verbindung setzen.",
+    "orderConfirm.errorNotFound":
+      "Bestellung nicht gefunden. Bestätigungslink ungültig.",
+    "orderConfirm.errorExpired":
+      "Der Bestätigungslink ist abgelaufen. Der Link ist 7 Tage gültig.",
+    "orderConfirm.errorAlreadyConfirmed":
+      "Diese Bestellung wurde bereits bestätigt.",
+    "orderConfirm.errorGeneric":
+      "Bei der Bestätigung ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "orderConfirm.backHome": "Zurück zur Startseite",
     "header.swissBadge": "CH",
     "theme.light": "Helles Design",
     "theme.dark": "Dunkles Design",
     "home.problems.title": "Drei Probleme, die Standard-Messaging nicht löst",
     "home.problems.subtitle":
       "Heutige Messaging-Apps haben ernsthafte Sicherheits- und Datenschutzlücken.",
-    "home.problems.sms.title": "SMS: Null Verschlüsselung",
+    "home.problems.sms.title": "SMS: Null Sichere Verschlüsselung (E2EE)",
     "home.problems.sms.desc":
       "SMS-Nachrichten werden als Klartext übertragen. Betreiber, Regierungen und böswillige Akteure können sie leicht lesen, aufzeichnen und manipulieren.",
     "home.problems.whatsapp.title": "WhatsApp & Telegram: Metadatensammlung",
@@ -1500,7 +2000,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Signal ist sicher, aber abhängig von zentralen Servern. Server sind zensuranfällig und anfällig für technische Ausfälle. Zentrale Autorität erfordert Vertrauen.",
     "home.problems.solution.title": "Qprivate löst alle drei",
     "home.problems.solution.desc":
-      "Post-Quantum-Verschlüsselung + Null Metadaten + Blockchain-Infrastruktur. Qprivate Web Message wird auf Ihr Telefon installiert.",
+      "Sichere Verschlüsselung (E2EE) + Null Metadaten + Blockchain-Infrastruktur. Qprivate Web Message wird auf Ihr Telefon installiert.",
     "home.problems.install":
       "Qprivate Web Message wird auf Ihr Telefon installiert",
     "header.toggleMenu": "Menü öffnen/schließen",
@@ -1524,9 +2024,8 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "compare.sources.1.title": "AOSP Offizielle Dokumentation",
     "compare.sources.1.desc":
       "Offizielle Dokumente und Sicherheitsrichtlinien des Android Open Source Project.",
-    "compare.sources.2.title": "NIST FIPS 205/206 Standards",
-    "compare.sources.2.desc":
-      "NIST-Standards für Post-Quantum-Kryptografie-Algorithmen.",
+    "compare.sources.2.title": "Sicherheitsstandards",
+    "compare.sources.2.desc": "Referenz für sichere Verschlüsselungsstandards.",
     "compare.sources.3.title": "Schweizer FADP-Gesetz",
     "compare.sources.3.desc":
       "Schweizer Bundesgesetz über den Datenschutz und Compliance-Anforderungen.",
@@ -1539,6 +2038,132 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "contact.captchaPlaceholder":
       "Bitte vervollständigen Sie die Sicherheitsüberprüfung",
     "legalNotice.title": "Rechtlicher Hinweis",
+    "agb.title": "AGB & Kaufvertrag",
+    "agb.intro":
+      "Diese Allgemeinen Geschäftsbedingungen und Kaufvertrag (AGB) gelten für alle Käufe bei Qmobile und sind nach Schweizer Obligationenrecht (OR), Schweizer Bundesrecht und Schweizer Datenschutzgesetz (DSG) verfasst. Die nachfolgenden Abschnitte regeln Vertragsabschluss, Zahlung, Lieferung, Gewährleistung, Haftung, Widerrufsrecht, Datenschutz und anwendbares Recht. Die detaillierten Vertragsbedingungen finden Sie auf der Verkaufsvertrag-Seite. Mit Ihrer Bestellung akzeptieren Sie diese Bedingungen.",
+    "agb.viewSalesContract": "Verkaufsvertrag ansehen",
+    "agb.sections.scope.title": "Geltungsbereich",
+    "agb.sections.scope.body":
+      "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle von Qmobile angebotenen Produkte und Dienstleistungen; insbesondere für den Verkauf, die Lieferung und die Nutzung von auf Google Pixel-Hardware basierenden Geräten mit sicherheitsorientiertem speziellem Betriebssystem.\n\nDiese Bedingungen gelten sowohl für Verbraucher als auch für Unternehmer; zwingende Verbraucherschutzbestimmungen bleiben vorbehalten.\n\nMit Ihrer Bestellung oder Nutzung des Produkts akzeptieren Sie diese Bedingungen. Wenn Sie diesen Bedingungen nicht zustimmen, bestellen Sie bitte nicht.\n\nQmobile steht in keiner offiziellen Partnerschaft, Autorisierung oder geschäftlichen Beziehung zu Google LLC oder dem GrapheneOS Projekt. Das Gerät wird von Qmobile als Sicherheitsprodukt unter der Marke Qmobile bereitgestellt. Alle Urheberrechte und geistigen Eigentumsrechte an den Spezialanwendungen und weiteren Softwarekomponenten gehören Qmobile.\n\nDer Käufer darf die Software nicht rückentwickeln, kopieren, verbreiten oder an Dritte weiterverkaufen.",
+    "agb.sections.contractFormation.title": "Vertragsabschluss",
+    "agb.sections.contractFormation.body":
+      "Bestellungen über unsere Website stellen ein Angebot zum Abschluss eines Kaufvertrags dar. Die Annahme des Angebots wird durch eine automatische Bestellbestätigung per E-Mail bestätigt.\n\nDer Vertrag kommt mit einer separaten Versandbestätigung endgültig zustande. Bis zu diesem Zeitpunkt behalten Sie sich das Recht vor, Ihre Bestellung zu stornieren.\n\nSollten wir Ihre Bestellung aufgrund von Lagerbestandsmangel oder technischen Gründen nicht erfüllen können, informieren wir Sie unverzüglich und erstatten gegebenenfalls den gezahlten Betrag.",
+    "agb.sections.pricesPayment.title": "Preise und Zahlung",
+    "agb.sections.pricesPayment.body":
+      "Alle angegebenen Preise sind in Schweizer Franken (CHF) und enthalten die Mehrwertsteuer (MWST); sofern nicht anders angegeben, werden Versandkosten separat in Rechnung gestellt.\n\nWir akzeptieren Kreditkarte, Banküberweisung und andere auf der Website angegebene Zahlungsmethoden. Alle Zahlungen sind nach der Bestellbestätigung sofort fällig.\n\nBei verspäteter Zahlung kann die Bearbeitung Ihrer Bestellung verzögert oder storniert werden. In diesem Fall werden Sie separat informiert.\n\nBei Preisfehlern oder Tippfehlern behalten wir uns das Recht vor, die Bestellung zu stornieren; in diesem Fall werden Sie unverzüglich informiert und der gezahlte Betrag wird erstattet.",
+    "agb.sections.delivery.title": "Lieferung",
+    "agb.sections.delivery.body":
+      "Lieferzeiten gelten ab Bestellbestätigung in den angegebenen Werktagen. Je nach Lagerbestand kann die Lieferzeit variieren; in diesem Fall werden Sie separat informiert.\n\nWir behalten uns das Recht auf Teillieferungen vor. Bei Teillieferungen werden die entsprechenden Versandkosten von uns getragen.\n\nDie Lieferung erfolgt durch das Versandunternehmen an Ihre Adresse. Wenn Sie bei der Lieferung nicht anwesend sind, meldet sich das Versandunternehmen bei Ihnen.\n\nDie Richtigkeit und Vollständigkeit der Lieferadresse liegt in der Verantwortung des Kunden. Qmobile haftet nicht für Verzögerungen aufgrund fehlerhafter Adressen.\n\nDas Gerät wird mit modifizierter Software ausgeliefert.",
+    "agb.sections.warranty.title": "Gewährleistung und Mängelhaftung",
+    "agb.sections.warranty.body":
+      "Die gesetzlichen Gewährleistungsrechte nach dem Schweizer Obligationenrecht gelten uneingeschränkt. Für Mängel an Produkten können Sie innerhalb der gesetzlichen Frist Ansprüche geltend machen.\n\nBei Mängelfeststellung haben Sie zunächst das Recht auf kostenlose Reparatur oder Ersatz. Ist dies nicht möglich, können Sie vom Vertrag zurücktreten oder eine Preisminderung verlangen.\n\nBitte kontaktieren Sie uns für Gewährleistungsansprüche. Möglicherweise müssen Sie das Produkt in der Originalverpackung zurücksenden.\n\nAufgrund der am Gerät vorgenommenen Änderungen des sicherheitsorientierten speziellen Betriebssystems erlischt die offizielle Herstellergarantie von Google; Hardwaremängel unterliegen den von Qmobile festgelegten Garantiebedingungen.\n\nQmobile bietet 1 Jahr Software-Support für das Gerät. Qmobile haftet nicht für Kompatibilitätsprobleme mit Drittanbieterdiensten aufgrund der Softwaremodifikationen.",
+    "agb.sections.liability.title": "Haftung",
+    "agb.sections.liability.body":
+      "Qmobile haftet nicht für indirekte, zufällige oder Folgeschäden, die aus der Nutzung unserer Produkte entstehen. Die maximale Haftung ist auf den Kaufpreis des betreffenden Produkts beschränkt.\n\nDiese Beschränkung gilt im gesetzlich zulässigen Umfang. Ihre zwingenden gesetzlichen Rechte (z. B. Verbraucherrechte) werden durch diese Beschränkung nicht beeinträchtigt.\n\nQmobile haftet nicht für Datenverlust, Sicherheitsverletzungen, Entschlüsselung, Angriffe Dritter oder Benutzerfehler. Die sichere Nutzung der Produkte und die Datensicherung liegen in Ihrer Verantwortung.\n\nQmobile haftet nicht für Fehler, die aus Open-Source-Komponenten entstehen. Qmobile haftet nicht für Schäden, die durch behördliche Zugriffsanfragen oder technische Eingriffe Dritter entstehen.",
+    "agb.sections.withdrawalRight.title": "Rückgabe und Widerrufsrecht",
+    "agb.sections.withdrawalRight.body":
+      "Garantie für unkomplizierte Rückgabe. Ungeöffnete Geräte in unbeschädigter Originalverpackung können innerhalb von 14 Tagen zurückgegeben werden. Für eine Rückgabe müssen Sie uns zunächst über das Kontaktformular erreichen. Kratzer, Sturzschäden, Bruch, physische Beschädigungen oder durch Benutzerfehler verursachte Probleme fallen nicht unter die Rückgabe. Geöffnete oder konfigurierte Geräte können nur bei Herstellungsfehlern innerhalb von 3 Tagen zurückgegeben werden. Nach Genehmigung der Rückgabe wird die Zahlung innerhalb von 14 Werktagen über dieselbe Methode zurückerstattet. Versandkosten werden nicht erstattet.\n\nDas QMOBILE-Gerät ist ein Google-Pixel-Gerät, das mit einer kundenspezifisch konfigurierten Sicherheitssoftware ausgestattet ist. Sobald das Gerät ausgepackt, eingeschaltet und die Konfiguration der Sicherheitssoftware abgeschlossen ist, gilt das Gerät als gebraucht und individualisiert; das Widerrufsrecht ist daher gemäss der Ausnahme für personalisierte Produkte in Art. 40a ff. OR ausgeschlossen.\n\nDer vorstehende Ausschluss berührt Ihre gesetzlichen Gewährleistungsrechte bei Herstellungsfehlern nicht; diese Rechte bleiben vorbehalten.\n\nBootloader-Entsperrung, Installation eines anderen Betriebssystems, Rooting oder Änderungen an Sicherheitskonfigurationen machen sämtliche verbleibende Gewährleistungsrechte ungültig.",
+    "agb.sections.dataProtection.title": "Datenschutz",
+    "agb.sections.dataProtection.body":
+      "Die personenbezogenen Daten des Kunden (Name, Adresse, Telefonnummer, E-Mail usw.) werden ausschließlich zur Lieferung der Bestellung und zur Erfüllung gesetzlicher Pflichten verarbeitet; sie werden nicht für Werbezwecke verwendet und nicht an Dritte weitergegeben.\n\nDie Datenverarbeitung erfolgt im Einklang mit dem Schweizer Datenschutzgesetz (DSG) und der Datenschutz-Grundverordnung (DSGVO) der Europäischen Union.\n\nSie haben das Recht, Ihre Daten jederzeit einzusehen, Korrekturen zu verlangen oder deren Löschung zu beantragen. Um diese Rechte auszuüben, kontaktieren Sie uns einfach.\n\nFür private Kommunikation installierte Anwendungen verwenden sichere Verschlüsselung (E2EE); ein Zugriff auf ältere Nachrichteninhalte ist möglicherweise nicht möglich.\n\nDie Sicherheit der persönlichen Daten auf dem Gerät liegt in der Verantwortung des Nutzers; korrekte Verschlüsselung, VPN-Nutzung und weitere Sicherheitseinstellungen obliegen dem Nutzers.",
+    "agb.sections.applicableLaw.title": "Anwendbares Recht und Gerichtsstand",
+    "agb.sections.applicableLaw.body":
+      "Dieser Vertrag unterliegt Schweizer Bundesrecht und dem Schweizer Obligationenrecht (OR). Zwingende Bestimmungen des Schweizer Rechts bleiben vorbehalten.\n\nFür Streitigkeiten zwischen den Parteien wird das Zivilgericht Basel-Stadt als ausschließlich zuständiges Gericht bestimmt. Der zwingende Gerichtsstand für Verbraucher bleibt vorbehalten.",
+    "agb.sections.severability.title": "Salvatorische Klausel",
+    "agb.sections.severability.body":
+      "Sollte eine Bestimmung dieses Vertrags ungültig oder undurchführbar sein, bleibt die Gültigkeit der übrigen Bestimmungen unberührt.\n\nDie Parteien gelten als vereinbarend, anstelle der ungültigen Bestimmung eine gültige Bestimmung zu akzeptieren, die deren Zweck und wirtschaftlicher Bedeutung am nächsten kommt. Dasselbe gilt im Falle einer Lücke im Vertrag.",
+    "salesContract.title":
+      "Qmobile – Dienstleistungs- und Produktverkaufsvertrag (Schweizer Recht)",
+    "salesContract.subtitle":
+      "Vertrag über den Verkauf und die Nutzung eines modifizierten Sicherheitsgeräts",
+    "salesContract.parties.seller": "Verkäufer:",
+    "salesContract.parties.sellerName": "Qmobile",
+    "salesContract.parties.sellerAddress": "Basel – Schweiz",
+    "salesContract.parties.sellerPhone": "Tel: +41 61 123 45 67",
+    "salesContract.parties.sellerWebsite": "https://qmobile.ch",
+    "salesContract.parties.buyer": "Käufer:",
+    "salesContract.parties.buyerDesc":
+      "Die natürliche oder juristische Person, die das Gerät erwirbt.",
+    "salesContract.articles.1.title": "Vertragsgegenstand",
+    "salesContract.articles.1.body":
+      "Dieser Vertrag regelt den Verkauf, die Lieferung und die Nutzungsbedingungen eines vom Verkäufer modifizierten Sicherheitsgeräts, bestehend aus einem Google Pixel-Hardwaregerät mit GrapheneOS, sowie den vom Verkäufer entwickelten Spezialanwendungen und weiteren Softwarekomponenten.",
+    "salesContract.articles.2.title": "Rechtlicher Status und Markenhinweis",
+    "salesContract.articles.2.clauses.1":
+      "Der Verkäufer steht in keiner offiziellen Partnerschaft, Autorisierung oder geschäftlichen Beziehung zu Google LLC oder dem GrapheneOS Projekt.",
+    "salesContract.articles.2.clauses.2":
+      "Das Gerät wird vom Verkäufer als Sicherheitsprodukt unter der Marke Qmobile bereitgestellt.",
+    "salesContract.articles.2.clauses.3":
+      "Alle Urheberrechte und geistigen Eigentumsrechte an den Spezialanwendungen und weiteren Softwarekomponenten gehören dem Verkäufer.",
+    "salesContract.articles.2.clauses.4":
+      "Der Käufer darf die Software nicht rückentwickeln, kopieren, verbreiten oder an Dritte weiterverkaufen.",
+    "salesContract.articles.3.title":
+      "Produktanpassung und technische Verantwortung",
+    "salesContract.articles.3.clauses.1":
+      "Der Verkäufer nimmt sicherheitsrelevante Softwareanpassungen am Gerät vor.",
+    "salesContract.articles.3.clauses.2":
+      "Die offizielle Garantie von Google wird aufgrund der am Gerät vorgenommenen Systemänderungen, Modifikationen und Einstellungen ungültig.",
+    "salesContract.articles.3.clauses.3":
+      "Hardwaredefekte unterliegen den vom Verkäufer festgelegten Garantiebedingungen.",
+    "salesContract.articles.3.clauses.4":
+      "Kompatibilität mit Drittanbieter Apps (z. B. Banking Apps, Google Play Services usw.) wird nicht garantiert.",
+    "salesContract.articles.4.title": "Nutzungsbedingungen",
+    "salesContract.articles.4.clauses.1":
+      "Der Käufer verpflichtet sich, das Gerät ausschließlich für rechtmäßige Zwecke zu verwenden.",
+    "salesContract.articles.4.clauses.2":
+      "Die Verantwortung für die Nutzung der Sicherheitssoftware liegt vollständig beim Käufer.",
+    "salesContract.articles.4.clauses.3":
+      "Vom Käufer vorgenommene Softwareänderungen (Bootloader Entsperrung, Installation anderer Betriebssysteme, Rooting usw.) machen Garantie und technischen Support vollständig ungültig.",
+    "salesContract.articles.4.clauses.4":
+      "Der Verkäufer haftet nicht für Schäden, die durch Benutzerfehler oder Angriffe Dritter entstehen.",
+    "salesContract.articles.5.title": "Haftungsausschluss",
+    "salesContract.articles.5.clauses.1":
+      "Der Verkäufer haftet nicht für Datenverlust, Sicherheitsverletzungen, Entschlüsselung, Angriffe Dritter oder Benutzerfehler.",
+    "salesContract.articles.5.clauses.2":
+      "Der Verkäufer haftet nicht für Fehler, die aus Open Source Komponenten entstehen.",
+    "salesContract.articles.5.clauses.3":
+      "Der Verkäufer haftet nicht für Schäden, die durch behördliche Zugriffsanfragen oder technische Eingriffe Dritter entstehen.",
+    "salesContract.articles.5.clauses.4":
+      "Die Gesamthaftung des Verkäufers ist auf den für das betreffende Produkt gezahlten Kaufpreis beschränkt. Diese Beschränkung gilt im gesetzlich zulässigen Umfang; Ihre zwingenden gesetzlichen Rechte (z. B. Verbraucherrechte) werden durch diese Beschränkung nicht beeinträchtigt.",
+    "salesContract.articles.5.clauses.5":
+      "Mit dem Kauf des Geräts akzeptiert der Käufer diesen Haftungsausschluss.",
+    "salesContract.articles.6.title": "Garantie und Support",
+    "salesContract.articles.6.clauses.1":
+      "Der Verkäufer bietet 1 Jahr Software Support für das Gerät.",
+    "salesContract.articles.6.clauses.2":
+      "Der Verkäufer haftet nicht für Kompatibilitätsprobleme mit Drittanbieterdiensten aufgrund der Softwaremodifikationen.",
+    "salesContract.articles.7.title":
+      "Lieferung, Rückgabe und Ausschluss des Widerrufsrechts",
+    "salesContract.articles.7.clauses.1":
+      "Das QMOBILE-Gerät wird mit einer individuell angepassten, auf den Kunden zugeschnittenen Sicherheitssoftwarekonfiguration geliefert.",
+    "salesContract.articles.7.clauses.2":
+      "Garantie für unkomplizierte Rückgabe. Ungeöffnete Geräte in unbeschädigter Originalverpackung können innerhalb von 14 Tagen zurückgegeben werden. Für eine Rückgabe müssen Sie uns zunächst über das Kontaktformular erreichen. Kratzer, Sturzschäden, Bruch, physische Beschädigungen oder durch Benutzerfehler verursachte Probleme fallen nicht unter die Rückgabe. Geöffnete oder konfigurierte Geräte können nur bei Herstellungsfehlern innerhalb von 3 Tagen zurückgegeben werden. Nach Genehmigung der Rückgabe wird die Zahlung innerhalb von 14 Werktagen über dieselbe Methode zurückerstattet. Versandkosten werden nicht erstattet.",
+    "salesContract.articles.7.clauses.3":
+      "Das Auspacken, Einschalten und Abschliessen der Sicherheitssoftwarekonfiguration individualisiert das Gerät und führt dazu, dass es als gebraucht gilt; das Widerrufsrecht ist daher gemäss der im Schweizer OR vorgesehenen Ausnahme für personalisierte Waren in Art. 40a ff. OR ausgeschlossen.",
+    "salesContract.articles.7.clauses.4":
+      "Bei Herstellungsfehlern bleiben die gesetzlichen Gewährleistungsrechte vorbehalten.",
+    "salesContract.articles.7.softwareChanges":
+      "Das Entsperren des Bootloaders oder Rooten lässt jede verbleibende Garantie erlöschen.",
+    "salesContract.articles.8.title": "Datenschutz",
+    "salesContract.articles.8.clauses.1":
+      "Der Verkäufer verarbeitet die personenbezogenen Daten des Käufers (Name, Adresse, Telefonnummer, E-Mail usw.) ausschließlich zur Erfüllung der Bestellung und zur Einhaltung gesetzlicher Verpflichtungen; die Daten werden nicht für Werbung verwendet und nicht an Dritte weitergegeben.",
+    "salesContract.articles.8.clauses.2":
+      "Für private Kommunikation installierte Anwendungen verwenden sichere Verschlüsselung (E2EE); ein Zugriff auf ältere Nachrichteninhalte ist möglicherweise nicht möglich.",
+    "salesContract.articles.8.clauses.3":
+      "Der Käufer ist selbst für die Sicherheit seiner persönlichen Daten auf dem Gerät verantwortlich. Die korrekte Verschlüsselung, VPN-Nutzung und weitere Sicherheitseinstellungen liegen in der Verantwortung des Käufers.",
+    "salesContract.articles.9.title": "Anwendbares Recht und Gerichtsstand",
+    "salesContract.articles.9.clauses.1":
+      "Dieser Vertrag unterliegt dem Schweizer Bundesrecht (Bundesrecht) und dem Obligationenrecht (OR).",
+    "salesContract.articles.9.clauses.2":
+      "Für alle Streitigkeiten sind ausschließlich die Gerichte des Kantons Basel-Stadt (Zivilgericht Basel-Stadt) zuständig.",
+    "salesContract.articles.9.clauses.3":
+      "Der verbraucherschutzrechtliche Gerichtsstand bleibt vorbehalten.",
+    "salesContract.articles.10.title": "Rechtliche Konformität",
+    "salesContract.articles.10.body":
+      "Dieser Vertrag wurde in Übereinstimmung mit Schweizer Bundesrecht (Bundesrecht), Schweizer Obligationenrecht (OR), Schweizer Datenschutzgesetz (DSG) und Schweizer Konsumentenschutz / UWG erstellt.",
+    "salesContract.articles.11.title": "Inkrafttreten",
+    "salesContract.articles.11.body":
+      "Mit dem Kauf des Geräts akzeptiert der Käufer die Bedingungen dieses Vertrages.",
+    "salesContract.backToAgb": "Zurück zur AGB",
     "legalNotice.p1":
       "Qmobile ist ein auf Google Pixel Hardware basierendes Sicherheits-Smartphone mit einem sicherheitsorientierten benutzerdefinierten Betriebssystem. Spezielle Sicherheitseinstellungen werden nach individuellen Wünschen vorgenommen.",
     "legalNotice.p2":
@@ -1546,28 +2171,29 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "legalNotice.p3":
       "Es besteht keine offizielle Verbindung zu Google oder dem Betriebssystem-Anbieter.",
     "legalNotice.p4":
-      "Die gesamte Verschlüsselungstechnologie entspricht den Schweizer Datenschutzgesetzen.",
-    "swissCompliance.title": "Schweizer Datenschutzstandards",
+      "Die gesamte sichere Verschlüsselung (E2EE)-Technologie entspricht den Schweizer Datenschutzgesetzen.",
+    "swissCompliance.title": "Schweizer Datenschutzgesetze",
     "swissCompliance.intro":
-      "Die Schweiz gehört zu den Ländern mit den strengsten Datenschutzvorschriften weltweit. Diese Vorschriften schreiben Folgendes vor:",
+      "Die Schweiz gehört zu den Ländern mit den strengsten Datenschutzgesetzen weltweit. Diese Gesetze schreiben Folgendes vor:",
     "swissCompliance.rule1":
-      "Ihr Telefon darf keine Daten ins Ausland übermitteln",
+      "Telefone dürfen keine Daten ins Ausland übermitteln",
     "swissCompliance.rule2":
-      "Metadaten (wer, wann und wo kommuniziert hat) dürfen nicht erfasst werden",
+      "Metadaten (wer, wann, wo) dürfen nicht erfasst werden",
     "swissCompliance.rule3":
       "Anwendungen dürfen keine Daten im Hintergrund sammeln",
     "swissCompliance.rule4":
-      "Auf dem Gerät gespeicherte Informationen dürfen nicht von außen zugänglich sein",
+      "Informationen auf dem Gerät dürfen nicht von außen zugänglich sein",
     "swissCompliance.rule5":
-      "Die Verschlüsselung muss auf dem höchsten Niveau erfolgen",
+      "Ende-zu-Ende-Verschlüsselung (E2EE) muss auf dem höchsten Niveau erfolgen",
     "swissCompliance.rule6":
       "Nutzerdaten dürfen nicht einmal durch das Unternehmen eingesehen werden",
     "swissCompliance.rule7":
       "Wenn Behörden oder Dritte Daten anfordern, darf kein Zugriff möglich sein",
     "swissCompliance.market":
-      "Da die meisten auf dem Markt erhältlichen Sicherheits-Smartphones nicht nach diesen Vorschriften konzipiert wurden, gelten sie in der Schweiz nicht als vollständig datenschutzkonform.",
+      "Diese Standards bilden die Grundlage für die gesamte Software und alle Sicherheitseinstellungen von Qmobile.",
     "swissCompliance.qmobile":
-      "Qmobile programmiert die Telefoneinstellungen und die Software speziell nach den Schweizer Datenschutzstandards. Deshalb wird es von Personen bevorzugt, die Privatsphäre und Sicherheit wünschen.",
+      "Datenschutz ist für uns kein Feature, sondern eine Notwendigkeit.",
+    "footer.latestPost": "Neuester Blogbeitrag",
     "footer.disclaimer":
       "Keine offizielle Verbindung zu Google oder dem Betriebssystem-Anbieter.",
   },
@@ -1582,12 +2208,16 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "nav.faq": "FAQ",
     "nav.about": "About",
     "nav.contact": "Contact",
+    "nav.salesContract": "Sales Contract",
     "header.order": "Order Now",
     "footer.about": "About",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Use",
     "footer.cookies": "Cookie Policy",
+    "footer.agb": "AGB & Sales Contract",
+    "footer.salesContract": "Sales Contract",
     "footer.contact": "Contact",
+    "footer.order": "Order",
     "footer.products": "Products",
     "footer.company": "Company",
     "footer.legal": "Legal",
@@ -1604,7 +2234,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "We use your data only to deliver your order, answer your questions, and fulfill our legal obligations. We never use your information for advertising purposes and do not sell it to other companies.",
     "privacy.securityTitle": "Data Security and Encryption",
     "privacy.security":
-      "All your data is stored in encrypted form. Only our authorized staff can access your information. We never share your data with any third parties.",
+      "All your data is stored with secure encryption (E2EE). Only our authorized staff can access your information. We never share your data with any third parties.",
     "privacy.rightsTitle": "Your Rights (FADP / GDPR)",
     "privacy.rights":
       "You have the right to view your data at any time, request corrections, or ask for it to be deleted. You also have the right to object to the processing of your data. To exercise these rights, simply contact us.",
@@ -1631,9 +2261,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Shipping within Switzerland is free. International shipping costs are calculated at checkout.",
     "terms.returnsTitle": "Returns and Refunds",
     "terms.returnsText":
-      "7-day hassle-free returns. Unopened devices in original packaging may be returned within 7 days. To request a return, you must first contact us via the contact form.",
+      "Hassle-free return guarantee. Unopened devices with intact original packaging may be returned within 14 days. To request a return, you must first contact us via the contact form.",
     "terms.returnsText1":
-      "Scratches, drop damage, breakage, physical damage, or problems caused by user error are not covered by returns. Opened or configured devices may be returned within 14 days only in case of manufacturing defects.",
+      "Scratches, drop damage, breakage, physical damage, or problems caused by user error are not covered by returns. Opened or configured devices may be returned within 3 days only in case of manufacturing defects.",
     "terms.returnsText2":
       "Once the return is approved, the payment is refunded within 14 business days via the same method. Shipping costs are not refunded.",
     "terms.supportTitle": "Support and Contact",
@@ -1645,7 +2275,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "For emergencies, please contact us via email. Phone support is not available.",
     "terms.updatesTitle": "Update Policy",
     "terms.updatesText":
-      "We offer 4 years of automatic security-focused custom operating system update support. Your device will automatically receive the latest security patches and feature updates.",
+      "We offer 1 year of automatic security-focused custom operating system update support. Your device will automatically receive the latest security patches and feature updates.",
     "terms.updatesText1":
       "Updates are distributed Over-the-Air (OTA) via the Internet. No user intervention required.",
     "terms.updatesText2":
@@ -1660,7 +2290,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Safe use of the products and data backup are your responsibility.",
     "terms.swissLawTitle": "Swiss Law",
     "terms.swissLaw":
-      "These terms are governed by and construed in accordance with Swiss law. Disputes are subject to the exclusive jurisdiction of the courts in BASEL, Switzerland.",
+      "These terms are governed by and construed in accordance with Swiss law. Disputes are subject to the exclusive jurisdiction of the courts in Basel-Stadt, Switzerland.",
     "cookies.intro":
       "This Cookie Policy explains how Qmobile uses cookies and similar technologies on our website. We respect your privacy and use only the minimum necessary cookies.",
     "cookies.whatTitle": "What Are Cookies?",
@@ -1695,16 +2325,94 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "header.brand": "Qmobile",
     "header.tagline": "Privacy control in your hands.",
     slogan: "Privacy control in your hands.",
-    "footer.swissmade": "Swiss Made",
+    "footer.swissmade": "Modified in Switzerland",
     "privacy.hero.badge": "Swiss Privacy Standards",
     "cookies.zeroTracking": "Zero tracking cookies - privacy first",
     "contact.address": "BASEL, Switzerland",
-    "hero.title": "Qmobile",
+    "hero.title": "Secure Pixel Phones",
     "hero.subtitle":
-      "A security phone with a special operating system designed and programmed to protect professional-level privacy from thieves, curious individuals, forensic devices, fake base stations, and app espionage.",
+      "The only security phone modified and specially programmed for professional-level privacy, capable of self-destructing.",
     "hero.description": "",
     "hero.cta": "Explore Now",
     "hero.contact": "Get in Touch",
+    "guarantees.new": "Full Control in Your Hands",
+    "guarantees.dispatch": "48 Hour Swiss Shipping",
+    "guarantees.shipping": "Free Shipping",
+    "guarantees.returns": "14 Day Return",
+    "highlights.title": "Why Qmobile?",
+    "whybuy.badge": "Why Us?",
+    "whybuy.title": "Why Buy from Qmobile?",
+    "whybuy.subtitle": "Swiss-based, professional service, maximum security.",
+    "whybuy.swiss": "Swiss-Based",
+    "whybuy.swiss.desc":
+      "Headquartered in BASEL, full compliance with Swiss data protection laws.",
+    "whybuy.setup": "Professional Setup",
+    "whybuy.setup.desc":
+      "Security-focused special operating system and security settings configured by our expert team.",
+    "whybuy.support": "Technical Support",
+    "whybuy.support.desc":
+      "Technical support and consultation after installation.",
+    "whybuy.shipping": "Fast Shipping",
+    "whybuy.shipping.desc":
+      "Insured shipping from Switzerland within 48 hours.",
+    "whybuy.returns": "Easy Returns",
+    "whybuy.returns.desc": "14 day return right.",
+    "confidence.title": "Buy with Confidence",
+    "confidence.subtitle": "Why customers choose us?",
+    "confidence.swiss": "Swiss Privacy Standards",
+    "confidence.swiss.desc":
+      "FADP and GDPR compliant, highest data protection.",
+    "confidence.google": "Independent from Google",
+    "confidence.google.desc":
+      "Security-focused special operating system for complete freedom from Google services and tracking.",
+    "confidence.quantum": "Secure encryption (E2EE)",
+    "confidence.quantum.desc":
+      "Future-proof security with secure encryption (E2EE).",
+    "confidence.expert": "Expert Setup",
+    "confidence.expert.desc": "Prepared by 30 years of security experts.",
+    "highlights.subtitle":
+      "Privacy-oriented mobile devices, preferred by professionals.",
+    "highlights.secureOS": "Security-Focused OS Pre-installed",
+    "highlights.secureOS.desc":
+      "Maximum security with hardened kernel, without Google Play services.",
+    "highlights.swiss": "Swiss Quality",
+    "highlights.swiss.desc":
+      "Swiss-based, strictest data protection laws, reliable delivery.",
+    "highlights.zero": "Zero Tracking",
+    "highlights.zero.desc":
+      "No telemetry, no location tracking, no advertising ID. Complete anonymity.",
+    "highlights.boot": "Verified Boot",
+    "highlights.boot.desc":
+      "Signature verification on every boot. Rootkit and bootkit protection active.",
+    "highlights.sandbox": "App Sandboxing",
+    "highlights.sandbox.desc":
+      "Every app runs isolated. Even if one is hacked, the others stay secure.",
+    "highlights.updates": "1 Year Updates",
+    "highlights.updates.desc":
+      "For Pixel 9 and 10: 1 year of security patches and system updates.",
+    "cta.title": "Secure Your Communication",
+    "cta.limited": "Limited Stock Offer",
+    "cta.guarantee": "14 day return right • Free Swiss shipping",
+    "cta.subtitle":
+      "Order your Pixel phone with security-focused special operating system today and take control of your privacy.",
+    "cta.button": "Order Now",
+    "products.subtitle":
+      "Google Pixel phones with pre-installed security-focused special operating system, fully configured for maximum privacy.",
+    "products.shipping": "Free Swiss Shipping",
+    "products.sealedBox": "Full Control in Your Hands",
+    "products.warrantySupport": "Premium Technical Support",
+    "products.popular": "Bestseller",
+    "products.bestvalue": "Best Value",
+    "products.flagship": "Flagship",
+    "products.features.secureOS":
+      "Security-focused operating system pre-installed",
+    "products.features.titan": "Titan M2 security chip",
+    "products.features.updates5": "1 year update support",
+    "products.features.updates7": "1 year update support",
+    "products.features.sealed": "Full Control in Your Hands",
+    "products.features.ai": "Google AI / Gemini disabled",
+    "products.features.titan3": "Titan M3 security chip",
+    "products.features.support": "Premium technical support",
     "products.secureOSBadge": "Security-Focused OS Pre-installed",
     "products.qprivateBadge": "Qprivat Pre-installed",
     "products.title": "Secure Pixel Phones",
@@ -1721,12 +2429,85 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "products.features.faradayPouch.milStd": "MIL-STD compliant",
     "products.features.faradayPouch.emp": "EMP protected",
     "products.faradayPouch": "Q Faraday Pouch Signal Blocker",
+    "products.faradayBox": "Q Faraday Box",
     "products.faradayBadge": "Faraday Protection",
     "products.pixel8": "Google Pixel 8",
     "products.pixel9": "Google Pixel 9",
     "products.pixel10": "Google Pixel 10",
     "products.price": "Price",
     "products.order": "Order Now →",
+    "products.whyQmobileButton": "Why Qmobile",
+    "products.techSpecsButton": "Technical Specs",
+    "products.security.selfDestruct": "Offline Self-Destruct",
+    "products.security.killPin": "Kill PIN",
+    "products.security.bfuProtection": "BFU Protection",
+    "products.security.scrambledPin": "Scrambled PIN",
+    "products.security.hardwareVerification": "Hardware Verification",
+    "products.security.antiTracking": "Zero Tracking",
+    "products.security.e2eEncryption": "Secure encryption (E2EE) Messaging",
+    "products.security.appEncryption": "App Encryption",
+    "products.security.multiProfile": "Multiple Profile Management",
+    "products.security.networkSecurity": "Network and Connection Security",
+    "products.security.usbSecurity": "USB Connection Security",
+    "products.security.hiddenLocation": "Hidden Location Setting",
+    "products.security.fakeCellTower": "Fake Cell Tower Prevention",
+    "products.security.categories.physical": "Physical Security",
+    "products.security.categories.pinAccess": "PIN and Access Security",
+    "products.security.categories.network": "Connection and Network Security",
+    "products.security.categories.privacy": "Privacy and Data Protection",
+    "products.security.categoriesDesc.physical":
+      "The phone protects itself and destroys its data upon threat.",
+    "products.security.categoriesDesc.pinAccess":
+      "Access is controlled through layered PIN and profile protection.",
+    "products.security.categoriesDesc.network":
+      "Network and physical connection points are locked down.",
+    "products.security.categoriesDesc.privacy":
+      "Tracking and data leakage are prevented.",
+    "techSpecs.title": "{phone} Technical Specs",
+    "techSpecs.backToProducts": "Back to Products",
+    "techSpecs.sections.technical": "Technical Features",
+    "techSpecs.sections.display": "Display",
+    "techSpecs.sections.safety": "General Product Safety",
+    "techSpecs.fields.productType": "Product Type",
+    "techSpecs.fields.os": "Operating System",
+    "techSpecs.fields.processor": "Processor",
+    "techSpecs.fields.clockSpeed": "Clock Speed",
+    "techSpecs.fields.storage": "Storage",
+    "techSpecs.fields.sdSlot": "SD Card Slot",
+    "techSpecs.fields.ram": "RAM",
+    "techSpecs.fields.frequencyBand": "Frequency Band",
+    "techSpecs.fields.sarHead": "SAR Value (Head)",
+    "techSpecs.fields.sarBody": "SAR Value (Body)",
+    "techSpecs.fields.sensors": "Sensors",
+    "techSpecs.fields.simLockFree": "SIM Lock Free",
+    "techSpecs.fields.simSize": "SIM Size",
+    "techSpecs.fields.sarCategory": "SAR Category",
+    "techSpecs.fields.screenDiagonalCm": "Screen Diagonal (cm)",
+    "techSpecs.fields.screenDiagonalInch": "Screen Diagonal (inch)",
+    "techSpecs.fields.resolution": "Resolution",
+    "techSpecs.fields.displayDetails": "Display Details",
+    "techSpecs.fields.numDisplays": "Number of Displays",
+    "techSpecs.fields.resolutionWidth": "Resolution Width",
+    "techSpecs.fields.resolutionHeight": "Resolution Height",
+    "techSpecs.fields.pixelDensity": "Pixel Density",
+    "techSpecs.fields.aspectRatio": "Aspect Ratio",
+    "techSpecs.fields.colorDisplay": "Color Display",
+    "techSpecs.fields.antiScratch": "Anti-Scratch",
+    "techSpecs.fields.curvedDisplay": "Curved Display",
+    "techSpecs.fields.touchscreen": "Touchscreen",
+    "techSpecs.fields.gtin": "GTIN",
+    "techSpecs.fields.manufacturer": "Manufacturer",
+    "techSpecs.values.yes": "Yes",
+    "techSpecs.values.no": "No",
+    "techSpecs.values.os": "Security-focused custom operating system",
+    "techSpecs.values.sensors":
+      "Proximity sensor, Ambient light sensor, Accelerometer, Gyroscope, Magnetometer, Barometer",
+    "techSpecs.values.displayDetailsPixel8":
+      '6.2" Actua-Display, OLED, 60-120 Hz Smooth Display, Corning Gorilla Glass Victus',
+    "techSpecs.values.displayDetailsPixel9":
+      '6.3" Actua-Display, pOLED, 60-120 Hz Smooth Display, Corning Gorilla Glass Victus 2',
+    "techSpecs.values.displayDetailsPixel10":
+      '6.3" (160 mm) Actua-Display, pOLED, 422.2 ppi, Smooth Display 60-120 Hz, Corning Gorilla Glass 7i, 2000 cd/m² HDR, 3000 cd/m² peak, >2,000,000:1 contrast, HDR, 24-bit',
     "why.title": "Why a Security-Focused OS?",
     "why.subtitle":
       "The world's most secure mobile operating system approach. Your data belongs to you, and no one else.",
@@ -1746,15 +2527,15 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "why.sandbox": "App Sandboxing",
     "why.boot": "Verified Boot",
     "why.network": "Network Control",
-    "why.qpwa.e2e": "Q-PWA End-to-End Encryption",
+    "why.qpwa.e2e": "Secure encryption (E2EE)",
     "why.qpwa.e2e.desc":
-      "With AES-256-GCM and ChaCha20-Poly1305, your messages stay only between you and the recipient. No one, including servers, can see the content.",
+      "With secure encryption (E2EE), your messages stay only between you and the recipient. No one, including servers, can see the content.",
     "why.qpwa.server": "Q-PWA No Central Server",
     "why.qpwa.server.desc":
       "Blockchain-based distributed network. No metadata, no single point of failure. Censorship-resistant, independent communication.",
     "why.bfu": "BFU Protection",
     "why.bfu.desc":
-      "Encryption keys are protected even when the device is off. Data cannot be accessed without unlocking. Hardware-level security.",
+      "Secure encryption (E2EE) keys are protected even when the device is off. Data cannot be accessed without unlocking. Hardware-level security.",
     "why.scrambledPin": "Scrambled PIN",
     "why.scrambledPin.desc":
       "Digits on the PIN screen appear in different positions each time. Protection from shoulder surfers.",
@@ -1820,10 +2601,10 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.hero.badge": "Privacy by Design",
     "security.hero.feature1": "Titan M2 Security Chip",
     "security.hero.feature2": "GrapheneOS-based Operating System",
-    "security.hero.feature3": "End-to-End Encryption",
+    "security.hero.feature3": "Secure encryption (E2EE)",
     "security.trust.title": "Security Standards",
     "security.trust.desc":
-      "QMOBILE devices are built on Google Pixel 8/9/10 hardware. Hardware security is provided by the Titan M2 chip and verified boot. Software security is provided by a GrapheneOS-based security-focused custom operating system. Messaging security is provided by the Q-PWA and Session apps with end-to-end encryption. Note: Hardware security features belong to Pixel devices. Software security features belong to the GrapheneOS-based operating system. Messaging features are provided by the Q-PWA and Session apps. We have no official affiliation with Google or GrapheneOS. The entire system complies with Swiss privacy laws (FADP) and GDPR.",
+      "QMOBILE devices are built on Google Pixel 8/9/10 hardware. Hardware security is provided by the Titan M2 chip and verified boot. Software security is provided by a GrapheneOS-based security-focused custom operating system. Messaging security is provided by Secure encryption (E2EE) for messaging. Note: Hardware security features belong to Pixel devices. Software security features belong to the GrapheneOS-based operating system. Messaging features are provided by the Q-PWA and Session apps. We have no official affiliation with Google or GrapheneOS. The entire system complies with Swiss privacy laws (FADP) and GDPR.",
     "security.tables.title": "Hardware and Software Security Features",
     "security.tables.subtitle":
       "Review your device's security layers in detail. Hardware-based protections and software-based encryption methods are listed separately.",
@@ -1845,9 +2626,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.hardwareTable.rows.5.feature": "StrongBox (Secure Key Store)",
     "security.hardwareTable.rows.5.desc":
       "Secure area running on the Titan M2. Payment apps and FIDO authentication keys are stored here.",
-    "security.hardwareTable.rows.6.feature": "7-Year Update Guarantee",
+    "security.hardwareTable.rows.6.feature": "1-Year Update Guarantee",
     "security.hardwareTable.rows.6.desc":
-      "Minimum 7 years of security updates for Pixel 8/9/10 (Pixel 8: ~2030, Pixel 9: ~2031, Pixel 10: ~2032).",
+      "Minimum 1 year of security updates for Pixel 8/9/10 (Pixel 8: ~2030, Pixel 9: ~2031, Pixel 10: ~2032).",
     "security.softwareTable.title": "Software Security Features",
     "security.softwareTable.col.feature": "Feature",
     "security.softwareTable.col.desc": "Description",
@@ -1894,7 +2675,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.qpwaTable.title": "Q-PWA Secure Messaging Features",
     "security.qpwaTable.col.feature": "Feature",
     "security.qpwaTable.col.desc": "Description",
-    "security.qpwaTable.rows.1.feature": "End-to-End Encryption",
+    "security.qpwaTable.rows.1.feature": "Secure encryption (E2EE)",
     "security.qpwaTable.rows.1.desc":
       "Messages are encrypted between sender and receiver devices. Servers cannot see the content.",
     "security.qpwaTable.rows.2.feature": "No Central Server",
@@ -1914,21 +2695,21 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "security.sessionTable.title": "Session Messaging Features",
     "security.sessionTable.col.feature": "Feature",
     "security.sessionTable.col.desc": "Description",
-    "security.sessionTable.rows.1.feature": "End-to-End Encryption",
+    "security.sessionTable.rows.1.feature": "Secure encryption (E2EE)",
     "security.sessionTable.rows.1.desc":
-      "1-1 messages are encrypted with Session Protocol (libsodium-based).",
+      "1-1 messages are encrypted with Secure encryption (E2EE).",
     "security.sessionTable.rows.2.feature": "No Central Server",
     "security.sessionTable.rows.2.desc":
       "Distributed network called Session Nodes. No single entity can read or censor traffic.",
     "security.sessionTable.rows.3.feature": "No Phone Number Required",
     "security.sessionTable.rows.3.desc":
-      "No personal info requested for registration. Identity via Session ID (Ed25519 public key).",
+      "No personal info requested for registration. Identity via Secure identity authentication.",
     "security.sessionTable.rows.4.feature": "Onion Routing",
     "security.sessionTable.rows.4.desc":
       "3-hop onion routing hides the IP address. No node knows both sender and receiver.",
-    "security.sessionTable.rows.5.feature": "Forward Secrecy (V2)",
+    "security.sessionTable.rows.5.feature": "Forward Secrecy",
     "security.sessionTable.rows.5.desc":
-      "Rotating keys with Session Protocol V2. Even if the device is compromised, old messages cannot be decrypted.",
+      "Rotating keys with Forward Secrecy. Even if the device is compromised, old messages cannot be decrypted.",
     "security.sessionTable.rows.6.feature": "Open Source",
     "security.sessionTable.rows.6.desc":
       "Fully open source, independently auditable.",
@@ -1963,9 +2744,9 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "services.online.desc":
       "Web-based secure messaging, email encryption, VPN setup, and online identity protection consulting.",
     "services.online.price": "250 CHF/hour",
-    "services.encryption": "Encryption Methods & Solutions",
+    "services.encryption": "Secure encryption (E2EE) Solutions",
     "services.encryption.desc":
-      "End-to-end encryption setup, post-quantum cryptography consulting, key management, and data encryption strategies.",
+      "End-to-end encryption setup, secure encryption consulting, key management, and data encryption strategies.",
     "services.encryption.price": "400 CHF/hour",
     "services.process.title": "How It Works",
     "services.process.subtitle": "Boost your security in 3 simple steps.",
@@ -1992,7 +2773,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Our security-focused custom operating system does not include Google Play Services by default. You can use sandboxed Google Play or alternative stores like F-Droid and Aurora Store. Access apps without compromising your security.",
     "faq.q4": "How long is update support?",
     "faq.a4":
-      "Pixel 8 receives 5 years, Pixel 9 and 10 receive 4 years of security and OS updates from Google, plus security-focused OS-specific patches. Long-term investment protection.",
+      "Pixel 8 receives 5 years, Pixel 9 and 10 receive 4 years of security and OS updates from Google, plus security-focused OS-specific patches. Qmobile offers 1 year software support. Long-term investment protection.",
     "faq.q5": "Are devices new and sealed?",
     "faq.a5":
       "Yes. All devices are brand new. Full control is yours — we install a security-focused custom operating system with full transparency and provide complete documentation.",
@@ -2001,22 +2782,22 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "We ship from Switzerland to most European countries. Contact us for specific destinations. Fast and insured shipping.",
     "faq.q7": "What is your return policy?",
     "faq.a7":
-      "30-day return guarantee for unopened devices. Opened devices may be returned within 14 days if defective. Customer satisfaction is our priority.",
+      "14 day return right for unopened devices. Opened devices may be returned within 14 days if defective. Customer satisfaction is our priority.",
     "faq.q8": "How is the support?",
     "faq.a8":
       "We provide technical support and post-installation consulting for the security-focused custom operating system. Contact us by email for assistance.",
     "faq.q9": "What is Q secure messaging?",
     "faq.a9":
-      "Q-PWA is a secure messaging app developed by Qmobile with end-to-end encryption. It protects your messages with AES-256-GCM and ChaCha20-Poly1305. This app is installed separately on your Pixel phone.",
+      "Your messages are protected with secure encryption (E2EE). Messages are encrypted between sender and recipient devices, no server can see the content.",
     "faq.q10": "How does Q-PWA encryption work?",
     "faq.a10":
-      "The Q-PWA app uses modern encryption standards such as AES-256-GCM and ChaCha20-Poly1305. These algorithms ensure the security of your messages and provide future-proof security.",
+      "Our app uses secure encryption (E2EE) standards. Your messages are end-to-end encrypted and can only be read by you and the recipient.",
     "faq.q11": "Is Q messaging E2E encrypted?",
     "faq.a11":
-      "Yes, the Q-PWA app uses end-to-end encryption. Your messages can only be read by you and the recipient. No third party, including servers, can see the content. Unique keys are generated per session.",
+      "Yes, our app uses secure encryption (E2EE). Messages are encrypted on the sender device and only decrypted on the recipient device.",
     "faq.q12": "How is Q messaging different from WhatsApp/Signal?",
     "faq.a12":
-      "Q-PWA uses no central servers (blockchain/P2P architecture), offers post-quantum encryption, and leaves no metadata. WhatsApp and Signal rely on central servers and store metadata. Q-PWA also offers anonymous login.",
+      "Yes, we offer secure encryption (E2EE) solutions. Messaging and data transfer are protected with the highest security standards.",
     "faq.q13": "Do banking apps work?",
     "faq.a13":
       "Yes, most banking apps work on our security-focused custom operating system with sandboxed Google Play. Some apps check SafetyNet/Play Integrity; in that case we recommend alternative access methods (web browser, QR code login). We can test specific apps before installation.",
@@ -2026,22 +2807,46 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "faq.q15": "What do consulting services cover?",
     "faq.a15":
       "Technical consulting: device setup, security-focused OS configuration, app permissions, and network security. Security consulting: threat modeling, incident response planning. Secure communication: end-to-end encrypted messaging and email setup. All services are tailored to your threat profile.",
+    "faq.q16": "Why is the withdrawal right excluded?",
+    "faq.a16":
+      "Because the product is personalized — configured with security software — the withdrawal right is excluded under Swiss OR Art. 40a ff.",
+    "faq.q17": "What are the return conditions?",
+    "faq.a17":
+      "The product can be returned within 3 days. No scratches, cracks, or signs of use. A return form and an identity form must be filled out.",
+    "faq.q18": "How long is the warranty period?",
+    "faq.a18":
+      "1 year software support and 2 years legal warranty for hardware (OR Art. 210).",
+    "faq.q19": "Which court has jurisdiction?",
+    "faq.a19": "The courts of Basel-Stadt have jurisdiction.",
+    "faq.q20": "Is the product personalized?",
+    "faq.a20":
+      "Yes, the product is configured with security software and is personalized.",
+    "faq.q21": "Is the Google warranty valid?",
+    "faq.a21":
+      "No, due to the modification, the Google manufacturer warranty is not valid.",
+    "faq.q22": "Is third-party app compatibility guaranteed?",
+    "faq.a22": "No, third-party app compatibility is not guaranteed.",
+    "faq.q23": "Is there data collection?",
+    "faq.a23": "No, Qmobile does not collect data.",
+    "faq.q24": "What are the liability limits?",
+    "faq.a24":
+      "Liability is limited under Swiss law. See the AGB page for details.",
     "about.title": "About Us",
-    "about.subtitle": "Swiss-based security and privacy technology experts",
+    "about.subtitle": "Swiss-based privacy and secure communication technology",
     "about.intro":
-      "Qmobile is a Swiss-based privacy technology company. We provide security-focused custom operating system installation on Google Pixel phones, technical security consulting, and secure communication solutions.",
+      "Qmobile is a Switzerland-based privacy and secure communication technology company. Our purpose is to give users full control in the digital world and to protect their communications to the highest security standards. Privacy is not a feature for us — it is a necessity. This approach is fully compliant with Switzerland's strict data protection laws.",
     "about.swiss.title": "Swiss-Based Security",
     "about.swiss.text":
-      "Switzerland's strict data protection laws and neutral position provide our customers with the highest level of privacy assurance. Our headquarters are in BASEL.",
-    "about.tech.title": "Technical Consulting",
+      "This approach is fully compliant with Switzerland's strict data protection laws. Our headquarters are in BASEL.",
+    "about.tech.title": "Independence",
     "about.tech.text":
-      "Our expert team provides corporate and individual consulting on device hardening, network security, app sandboxing, and system optimization.",
-    "about.security.title": "Security Consulting",
+      "We have no official affiliation with Google or the operating system providers. All of our security technologies are developed and modified independently.",
+    "about.security.title": "Transparency",
     "about.security.text":
-      "We develop comprehensive security audits, threat analysis, and custom security strategies to protect your digital assets.",
-    "about.comm.title": "Secure Communication Consulting",
+      "We believe in open-source software and oppose data mining. Our privacy policy is clear, understandable, and user-focused.",
+    "about.comm.title": "Privacy",
     "about.comm.text":
-      "We secure your communications with end-to-end encryption, secure email, anonymous messaging, and post-quantum encryption solutions.",
+      "Customer data is never shared with third parties in any way. Devices are modified in Switzerland and delivered in compliance with privacy standards.",
     "about.lang.title": "Multilingual Support",
     "about.lang.text":
       "We provide support in Turkish, German, and English, serving customers in Switzerland, Europe, and worldwide.",
@@ -2050,10 +2855,10 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "A passionate, experienced team in privacy technology.",
     "about.expertise.title": "Expertise",
     "about.expertise.text":
-      "Our team has 10+ years of industry experience in mobile security, OS hardening, and secure communication.",
+      "Guided by the principles of transparency, independence, and privacy, we deliver solutions that are fully compliant with Switzerland's strict data protection laws.",
     "about.values.title": "Our Values",
     "about.values.text":
-      "Transparency, independence, and customer privacy are our core principles. We believe in open-source software and oppose data mining.",
+      "Transparency, independence, and privacy are our core principles.",
     "about.credentials.title": "Certifications & Expertise",
     "about.credentials.subtitle":
       "We serve with internationally standardized, certified experts.",
@@ -2100,7 +2905,6 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "compare.legend.no": "No - Feature not available",
     "services.title": "Our Services",
     "contact.no247": "No 24/7 phone support. Email only.",
-    "products.warrantySupport": "Warranty & Support",
     "security.feature1.desc":
       "Protection against heap corruption attacks via custom memory allocator. Active by default.",
     "security.feature2.title": "Sandbox Isolation",
@@ -2152,7 +2956,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "When a special PIN is entered, the device appears to boot normally but silently wipes all data.",
     "home.top5.feature2.title": "BFU Protection",
     "home.top5.feature2.desc":
-      "Encryption keys are protected even when the device is off. Data cannot be accessed without unlocking.",
+      "Secure encryption (E2EE) keys are protected even when the device is off. Data cannot be accessed without unlocking.",
     "home.top5.feature3.title": "Scrambled PIN",
     "home.top5.feature3.desc":
       "Digits on the PIN screen appear in different positions each time. Protection from shoulder surfers.",
@@ -2169,14 +2973,93 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "contact.successMessage":
       "Your message has been received. We will get back to you as soon as possible.",
     "contact.email.value": "qmobile.ch@proton.me",
-    "contact.phone.value": "+41 44 123 45 67",
+    "contact.phone.value": "+41 61 123 45 67",
+    "contact.salesContractAccept": "I have read and accept the sales contract.",
+    "contact.salesContractViewLink": "View sales contract",
+    "order.title": "Order Summary",
+    "order.subtitle":
+      "Order your secure Qmobile device with custom configuration.",
+    "order.product": "Product",
+    "order.model": "Model",
+    "order.price": "Price",
+    "order.deliveryTime": "Delivery Time",
+    "order.deliveryValue": "7–14 days (due to custom security configuration)",
+    "order.quantity": "Quantity",
+    "order.customerInfo": "Customer Information",
+    "order.fullName": "Full Name",
+    "order.fullNamePlaceholder": "Your full name",
+    "order.email": "Email",
+    "order.phone": "Phone (optional)",
+    "order.phonePlaceholder": "+41...",
+    "order.streetNo": "Street + No.",
+    "order.streetNoPlaceholder": "Bahnhofstrasse 1",
+    "order.postalCode": "Postal Code",
+    "order.postalCodePlaceholder": "8001",
+    "order.city": "City",
+    "order.cityPlaceholder": "Zürich",
+    "order.securityConfig": "Security Configuration",
+    "order.securityProfile": "Security Profile",
+    "order.securityProfileSelect": "Select…",
+    "order.securityStandard": "Standard Security Profile",
+    "order.securityStandardDesc":
+      "Basic security certificates and hardened OS configuration.",
+    "order.securityHigh": "High Security Profile",
+    "order.securityHighDesc":
+      "Advanced network isolation, app locking and tracking protection.",
+    "order.securityCustom": "Fully Customized Security Profile",
+    "order.securityCustomDesc":
+      "Fully customized configuration — individual requirements discussed with us.",
+    "order.securityNotes": "Special Security Notes (optional)",
+    "order.securityNotesPlaceholder": "Additional security requirements...",
+    "order.legalConsent": "Legal Consent",
+    "order.contractAccept": "I have read and accept the sales contract.",
+    "order.contractViewLink": "(View sales contract)",
+    "order.privacyAccept": "I have read and accept the privacy policy.",
+    "order.privacyViewLink": "(View privacy policy)",
+    "order.withdrawalNotice":
+      "The Qmobile device is a modified product delivered with a customized security software configuration. Therefore, the right of withdrawal is excluded in accordance with the Swiss Code of Obligations (OR 40a).",
+    "order.placeOrder": "Place Order",
+    "order.sending": "Sending...",
+    "order.successMessage":
+      "Thank you! The form has been submitted. We will reply to the email address you provided as soon as possible.",
+    "order.errorMessage": "Order could not be sent. Please try again.",
+    "order.total": "Total",
+    "order.captcha": "Security verification",
+    "order.captchaPlaceholder": "Enter answer",
+    "order.requiredField": "This field is required",
+    "order.invalidEmail": "Enter a valid email",
+    "orderConfirm.title": "Order Confirmation",
+    "orderConfirm.subtitle":
+      "Please review the summary below and confirm your order.",
+    "orderConfirm.summaryHeading": "Order Summary",
+    "orderConfirm.product": "Product",
+    "orderConfirm.quantity": "Quantity",
+    "orderConfirm.name": "Name",
+    "orderConfirm.email": "Email",
+    "orderConfirm.phone": "Phone",
+    "orderConfirm.address": "Address",
+    "orderConfirm.securityProfile": "Security profile",
+    "orderConfirm.confirmButton": "Confirm Order",
+    "orderConfirm.confirming": "Confirming...",
+    "orderConfirm.successTitle": "Your Order Has Been Confirmed",
+    "orderConfirm.successMessage":
+      "Your order has been confirmed. We will contact you shortly.",
+    "orderConfirm.errorNotFound":
+      "Order not found. Confirmation link is invalid.",
+    "orderConfirm.errorExpired":
+      "The confirmation link has expired. The link is valid for 7 days.",
+    "orderConfirm.errorAlreadyConfirmed":
+      "This order has already been confirmed.",
+    "orderConfirm.errorGeneric":
+      "An error occurred during confirmation. Please try again.",
+    "orderConfirm.backHome": "Back to Home",
     "header.swissBadge": "CH",
     "theme.light": "Light theme",
     "theme.dark": "Dark theme",
     "home.problems.title": "Three Problems Standard Messaging Can't Solve",
     "home.problems.subtitle":
       "Today's messaging apps have serious security and privacy gaps.",
-    "home.problems.sms.title": "SMS: Zero Encryption",
+    "home.problems.sms.title": "SMS: Zero Secure encryption (E2EE)",
     "home.problems.sms.desc":
       "SMS messages are sent as plain text. Carriers, governments, and malicious actors can easily read, record, and manipulate them.",
     "home.problems.whatsapp.title": "WhatsApp & Telegram: Metadata Collection",
@@ -2187,7 +3070,7 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Signal is secure but relies on centralized servers. Servers are vulnerable to censorship and technical failures. Central authority requires trust.",
     "home.problems.solution.title": "Qprivate Solves All Three",
     "home.problems.solution.desc":
-      "Post-quantum encryption + Zero metadata + Blockchain infrastructure. Qprivate Web Message is installed on your phone.",
+      "Secure encryption (E2EE) + Zero metadata + Blockchain infrastructure. Qprivate Web Message is installed on your phone.",
     "home.problems.install": "Qprivate Web Message is installed on your phone",
     "header.toggleMenu": "Toggle menu",
     "blog.badge": "Blog",
@@ -2209,9 +3092,8 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "compare.sources.1.title": "AOSP Official Documentation",
     "compare.sources.1.desc":
       "Official documents and security guidelines from the Android Open Source Project.",
-    "compare.sources.2.title": "NIST FIPS 205/206 Standards",
-    "compare.sources.2.desc":
-      "NIST standards for post-quantum cryptography algorithms.",
+    "compare.sources.2.title": "Security Standards",
+    "compare.sources.2.desc": "Reference for secure encryption standards.",
     "compare.sources.3.title": "Swiss FADP Law",
     "compare.sources.3.desc":
       "Swiss Federal Act on Data Protection and compliance requirements.",
@@ -2223,6 +3105,132 @@ const dictionaries: Record<Lang, Record<string, string>> = {
       "Audit reports from third-party security research organizations.",
     "contact.captchaPlaceholder": "Complete the security verification",
     "legalNotice.title": "Legal Notice",
+    "agb.title": "AGB & Sales Contract",
+    "agb.intro":
+      "These General Terms and Conditions of Sale (AGB) apply to all purchases from Qmobile and are governed by the Swiss Code of Obligations (OR), Swiss federal law, and the Swiss Data Protection Act (DSG). The following sections cover contract formation, payment, delivery, warranty, liability, right of withdrawal, data protection, and applicable law. For the detailed contract terms, please see the Sales Contract page. By placing an order, you accept these terms.",
+    "agb.viewSalesContract": "View Sales Contract",
+    "agb.sections.scope.title": "Scope",
+    "agb.sections.scope.body":
+      "These General Terms and Conditions (AGB) apply to all products and services offered by Qmobile; in particular to the sale, delivery, and use of devices built on Google Pixel hardware with a security-focused custom operating system.\n\nThese terms apply to both consumers and businesses; mandatory consumer protection provisions remain reserved.\n\nBy placing an order or using the product, you accept these terms. If you do not agree to these terms, please do not place an order.\n\nQmobile is not in any official partnership, authorization, or business relationship with Google LLC or the GrapheneOS Project. The device is provided by Qmobile as a security product under the Qmobile brand. All copyrights and intellectual property rights to the special applications and other software components belong to Qmobile.\n\nThe buyer shall not reverse-engineer, copy, distribute, or resell the software to third parties.",
+    "agb.sections.contractFormation.title": "Contract Formation",
+    "agb.sections.contractFormation.body":
+      "Orders placed through our website constitute an offer to conclude a sales contract. Acceptance of the offer is confirmed by an automatic order confirmation email.\n\nThe contract is fully concluded upon a separate shipping confirmation. Until that point, you reserve the right to cancel your order.\n\nShould we be unable to fulfill your order due to stock depletion or technical reasons, we will inform you immediately and refund any amount paid.",
+    "agb.sections.pricesPayment.title": "Prices and Payment",
+    "agb.sections.pricesPayment.body":
+      "All stated prices are in Swiss Francs (CHF) and include value-added tax (VAT); unless otherwise stated, shipping costs are billed separately.\n\nWe accept credit card, bank transfer, and other payment methods specified on the website. All payments are due immediately upon order confirmation.\n\nLate payment may delay or cancel the processing of your order. In such cases, you will be informed separately.\n\nIn the event of pricing errors or typographical mistakes, we reserve the right to cancel the order; in such cases, you will be informed immediately and the amount paid will be refunded.",
+    "agb.sections.delivery.title": "Delivery",
+    "agb.sections.delivery.body":
+      "Delivery times are valid from order confirmation within the specified business days. Depending on stock availability, delivery times may vary; in such cases, you will be informed separately.\n\nWe reserve the right to make partial deliveries. In the case of partial deliveries, the corresponding shipping costs are borne by us.\n\nDelivery is made by the shipping company to your address. If you are not present at the time of delivery, the shipping company will contact you.\n\nThe accuracy and completeness of the delivery address is the customer's responsibility. Qmobile is not liable for delays caused by incorrect addresses.\n\nThe device is delivered with modified software.",
+    "agb.sections.warranty.title": "Warranty and Defect Liability",
+    "agb.sections.warranty.body":
+      "The statutory warranty rights under the Swiss Code of Obligations apply in full. You may assert claims for defects in products within the statutory period.\n\nUpon defect identification, you initially have the right to request free repair or replacement. If this is not possible, you may withdraw from the contract or demand a price reduction.\n\nPlease contact us for warranty claims. You may be required to return the product in its original packaging.\n\nDue to the security-focused custom operating system modifications made on the device, Google's official manufacturer warranty becomes void; hardware defects are subject to Qmobile's own warranty conditions.\n\nQmobile offers 1 year of software support for the device. Qmobile is not liable for compatibility issues with third-party services due to the software modifications.",
+    "agb.sections.liability.title": "Liability",
+    "agb.sections.liability.body":
+      "Qmobile is not liable for any indirect, incidental, or consequential damages arising from the use of our products. Maximum liability is limited to the purchase price of the product in question.\n\nThis limitation applies to the extent permitted by law. Your mandatory statutory rights (e.g., consumer rights) are not affected by this limitation.\n\nQmobile is not liable for data loss, security breaches, attacks by third parties, or user errors. Safe use of the products and data backup are your responsibility.\n\nQmobile is not liable for errors arising from open source components. Qmobile is not liable for damages caused by official access requests or technical interventions by third parties.",
+    "agb.sections.withdrawalRight.title": "Returns and Right of Withdrawal",
+    "agb.sections.withdrawalRight.body":
+      "Hassle-free return guarantee. Unopened devices with intact original packaging may be returned within 14 days. To request a return, you must first contact us via the contact form. Scratches, drop damage, breakage, physical damage, or problems caused by user error are not covered by returns. Opened or configured devices may be returned within 3 days only in case of manufacturing defects. Once the return is approved, the payment is refunded within 14 business days via the same method. Shipping costs are not refunded.\n\nThe QMOBILE device is a Google Pixel device equipped with security software configured specifically for the customer. Once the device is unboxed, switched on, and the security software configuration is completed, the device is considered used and individualized; the right of withdrawal is therefore excluded under the Swiss OR exception for personalized goods in Art. 40a ff. OR.\n\nThe exclusion above does not affect your statutory warranty rights in the event of manufacturing defects; these rights remain reserved.\n\nUnlocking the bootloader, installing another operating system, rooting, or changes to security configurations void any remaining warranty rights.",
+    "agb.sections.dataProtection.title": "Data Protection",
+    "agb.sections.dataProtection.body":
+      "The customer's personal data (name, address, phone number, email, etc.) is processed solely for the purpose of delivering the order and fulfilling legal obligations; it is not used for advertising and is not shared with third parties.\n\nData processing is carried out in accordance with the Swiss Data Protection Act (DSG) and the European Union General Data Protection Regulation (GDPR).\n\nApplications installed for private communication use secure encryption (E2EE); access to older message content may not be possible.\n\nYou have the right to view your data at any time, request corrections, or ask for it to be deleted. To exercise these rights, simply contact us.\n\nThe security of personal data on the device is the user's responsibility; correct encryption, VPN use, and other security settings are the user's responsibility.",
+    "agb.sections.applicableLaw.title": "Applicable Law and Jurisdiction",
+    "agb.sections.applicableLaw.body":
+      "This contract is governed by Swiss federal law and the Swiss Code of Obligations (OR). Mandatory provisions of Swiss law remain reserved.\n\nFor disputes between the parties, the Zivilgericht Basel-Stadt (Switzerland) is designated as the exclusive competent court. The mandatory jurisdiction for consumers remains reserved.",
+    "agb.sections.severability.title": "Severability",
+    "agb.sections.severability.body":
+      "Should any provision of this contract be invalid or unenforceable, the validity of the remaining provisions shall remain unaffected.\n\nThe parties shall be deemed to have agreed to accept a valid provision in place of the invalid one that comes closest to its purpose and economic meaning. The same applies in the event of a gap in the contract.",
+    "salesContract.title":
+      "Qmobile – Service and Product Sales Contract (Swiss Law)",
+    "salesContract.subtitle":
+      "Contract for the sale and use of a modified security device",
+    "salesContract.parties.seller": "Seller:",
+    "salesContract.parties.sellerName": "Qmobile",
+    "salesContract.parties.sellerAddress": "Basel – Switzerland",
+    "salesContract.parties.sellerPhone": "Tel: +41 61 123 45 67",
+    "salesContract.parties.sellerWebsite": "https://qmobile.ch",
+    "salesContract.parties.buyer": "Buyer:",
+    "salesContract.parties.buyerDesc":
+      "The natural or legal person who acquires the device.",
+    "salesContract.articles.1.title": "Subject of the Contract",
+    "salesContract.articles.1.body":
+      "This contract governs the sale, delivery, and terms of use of a security device modified by the seller, consisting of a Google Pixel hardware device with GrapheneOS, as well as the special applications and other software components developed by the seller.",
+    "salesContract.articles.2.title": "Legal Status and Trademark Notice",
+    "salesContract.articles.2.clauses.1":
+      "The seller is not in any official partnership, authorization, or business relationship with Google LLC or the GrapheneOS Project.",
+    "salesContract.articles.2.clauses.2":
+      "The device is provided by the seller as a security product under the Qmobile brand.",
+    "salesContract.articles.2.clauses.3":
+      "All copyrights and intellectual property rights to the special applications and other software components belong to the seller.",
+    "salesContract.articles.2.clauses.4":
+      "The buyer shall not reverse-engineer, copy, distribute, or resell the software to third parties.",
+    "salesContract.articles.3.title":
+      "Product Adaptation and Technical Responsibility",
+    "salesContract.articles.3.clauses.1":
+      "The seller makes security-relevant software adaptations to the device.",
+    "salesContract.articles.3.clauses.2":
+      "Google's official warranty becomes void due to the system changes, modifications, and settings made on the device.",
+    "salesContract.articles.3.clauses.3":
+      "Hardware defects are subject to the warranty conditions defined by the seller.",
+    "salesContract.articles.3.clauses.4":
+      "Compatibility with third-party apps (e.g., banking apps, Google Play Services, etc.) is not guaranteed.",
+    "salesContract.articles.4.title": "Terms of Use",
+    "salesContract.articles.4.clauses.1":
+      "The buyer undertakes to use the device exclusively for lawful purposes.",
+    "salesContract.articles.4.clauses.2":
+      "Responsibility for the use of the security software lies entirely with the buyer.",
+    "salesContract.articles.4.clauses.3":
+      "Software changes made by the buyer (unlocking the bootloader, installing other operating systems, rooting, etc.) completely void the warranty and technical support.",
+    "salesContract.articles.4.clauses.4":
+      "The seller is not liable for damages caused by user errors or attacks by third parties.",
+    "salesContract.articles.5.title": "Disclaimer of Liability",
+    "salesContract.articles.5.clauses.1":
+      "The seller is not liable for data loss, security breaches, decryption, attacks by third parties, or user errors.",
+    "salesContract.articles.5.clauses.2":
+      "The seller is not liable for errors arising from open source components.",
+    "salesContract.articles.5.clauses.3":
+      "The seller is not liable for damages caused by official access requests or technical interventions by third parties.",
+    "salesContract.articles.5.clauses.4":
+      "The seller's total liability is limited to the purchase price paid for the affected product. This limitation applies to the extent permitted by law; your mandatory statutory rights (e.g., consumer rights) are not affected by this limitation.",
+    "salesContract.articles.5.clauses.5":
+      "By purchasing the device, the buyer accepts this disclaimer of liability.",
+    "salesContract.articles.6.title": "Warranty and Support",
+    "salesContract.articles.6.clauses.1":
+      "The seller offers 1 year of software support for the device.",
+    "salesContract.articles.6.clauses.2":
+      "The seller is not liable for compatibility issues with third-party services due to the software modifications.",
+    "salesContract.articles.7.title":
+      "Delivery, Returns, and Exclusion of the Right of Withdrawal",
+    "salesContract.articles.7.clauses.1":
+      "The QMOBILE device is delivered with an individualized security software configuration tailored to the customer.",
+    "salesContract.articles.7.clauses.2":
+      "Hassle-free return guarantee. Unopened devices with original packaging intact can be returned within 14 days. To request a return, you must first contact us via the contact form. Issues caused by scratches, drops, breakage, physical damage, or user error are not covered by returns. Opened or configured devices can only be returned within 3 days if there is a manufacturing defect. Once the return is approved, the payment is refunded using the same method within 14 business days. Shipping costs are not refunded.",
+    "salesContract.articles.7.clauses.3":
+      "Unboxing, switching on, and completing the security software configuration individualizes the device and causes it to be considered used; the right of withdrawal is therefore excluded under the Swiss OR exception for personalized goods in Art. 40a ff. OR.",
+    "salesContract.articles.7.clauses.4":
+      "In the event of manufacturing defects, the statutory warranty rights remain reserved.",
+    "salesContract.articles.7.softwareChanges":
+      "Unlocking the bootloader or rooting voids any remaining warranty.",
+    "salesContract.articles.8.title": "Data Protection",
+    "salesContract.articles.8.clauses.1":
+      "The seller processes the buyer's personal data (name, address, phone number, email, etc.) only for the purpose of fulfilling the order and complying with legal obligations; the data is not used for advertising and is not shared with third parties.",
+    "salesContract.articles.8.clauses.2":
+      "Applications installed for private communication use secure encryption (E2EE); access to older message content may not be possible.",
+    "salesContract.articles.8.clauses.3":
+      "The buyer is responsible for the security of their personal data on the device. Correct encryption, VPN use, and other security settings are the buyer's responsibility.",
+    "salesContract.articles.9.title": "Applicable Law and Jurisdiction",
+    "salesContract.articles.9.clauses.1":
+      "This contract is subject to Swiss federal law (Bundesrecht) and the Swiss Code of Obligations (OR).",
+    "salesContract.articles.9.clauses.2":
+      "For all disputes, the courts of the Canton of Basel-Stadt (Zivilgericht Basel-Stadt) shall have exclusive jurisdiction.",
+    "salesContract.articles.9.clauses.3":
+      "Mandatory statutory consumer-protection jurisdiction remains reserved.",
+    "salesContract.articles.10.title": "Legal Compliance",
+    "salesContract.articles.10.body":
+      "This contract has been prepared in accordance with Swiss federal law (Bundesrecht), the Swiss Code of Obligations (OR), the Swiss Data Protection Act (DSG), and Swiss consumer protection / UWG.",
+    "salesContract.articles.11.title": "Entry into Force",
+    "salesContract.articles.11.body":
+      "By purchasing the device, the buyer accepts the terms of this contract.",
+    "salesContract.backToAgb": "Back to AGB",
     "legalNotice.p1":
       "Qmobile is a security phone built on Google Pixel hardware with a security-focused custom operating system. Custom security settings are configured per user request.",
     "legalNotice.p2":
@@ -2230,26 +3238,28 @@ const dictionaries: Record<Lang, Record<string, string>> = {
     "legalNotice.p3":
       "We have no official affiliation with Google or the operating system provider.",
     "legalNotice.p4":
-      "All encryption technology complies with Swiss privacy laws.",
-    "swissCompliance.title": "Swiss Privacy Standards",
+      "All secure encryption (E2EE) technology complies with Swiss privacy laws.",
+    "swissCompliance.title": "Swiss Privacy Laws",
     "swissCompliance.intro":
-      "Switzerland is one of the countries with the strictest privacy regulations in the world. These regulations require the following:",
-    "swissCompliance.rule1": "Your phone must not send any data abroad",
+      "Switzerland is one of the countries with the strictest privacy laws in the world. These laws require the following:",
+    "swissCompliance.rule1": "Phones must not send any data abroad",
     "swissCompliance.rule2":
-      "Metadata (who, when, and where a conversation took place) must not be collected",
+      "Metadata (who, when, where) must not be collected",
     "swissCompliance.rule3":
       "Applications must not collect data in the background",
     "swissCompliance.rule4":
-      "Information stored on the device must not be accessible from the outside",
-    "swissCompliance.rule5": "Encryption must be at the highest level",
+      "Information on the device must not be accessible from the outside",
+    "swissCompliance.rule5":
+      "End-to-end encryption (E2EE) must be at the highest level",
     "swissCompliance.rule6":
       "User data must not be viewable even by the company",
     "swissCompliance.rule7":
       "When the government or third parties request data, access must not be possible",
     "swissCompliance.market":
-      "Because most security phones on the market were not designed according to these rules, they are not considered fully privacy-compliant in Switzerland.",
+      "These standards form the foundation of all of Qmobile's software and security settings.",
     "swissCompliance.qmobile":
-      "Qmobile programs the phone settings and software specifically according to Swiss privacy standards. That is why it is preferred by people who want privacy and security.",
+      "Privacy is not a feature for us — it is a necessity.",
+    "footer.latestPost": "Latest Blog Post",
     "footer.disclaimer":
       "No official affiliation with Google or the operating system provider.",
   },

@@ -8,23 +8,157 @@
 
 import { IDL } from '@icp-sdk/core/candid';
 
+export const OrderMessage = IDL.Record({
+  'city' : IDL.Text,
+  'postalCode' : IDL.Text,
+  'lang' : IDL.Text,
+  'privacyAccepted' : IDL.Bool,
+  'fullName' : IDL.Text,
+  'securityProfile' : IDL.Text,
+  'productId' : IDL.Text,
+  'productName' : IDL.Text,
+  'email' : IDL.Text,
+  'streetNo' : IDL.Text,
+  'contractAccepted' : IDL.Bool,
+  'quantity' : IDL.Nat,
+  'phone' : IDL.Text,
+  'securityNotes' : IDL.Text,
+});
+export const OrderRecord = IDL.Record({
+  'status' : IDL.Text,
+  'token' : IDL.Text,
+  'order' : OrderMessage,
+  'createdAt' : IDL.Int,
+});
+export const OrderSummary = IDL.Record({
+  'city' : IDL.Text,
+  'postalCode' : IDL.Text,
+  'lang' : IDL.Text,
+  'fullName' : IDL.Text,
+  'securityProfile' : IDL.Text,
+  'productName' : IDL.Text,
+  'email' : IDL.Text,
+  'streetNo' : IDL.Text,
+  'quantity' : IDL.Nat,
+  'phone' : IDL.Text,
+  'price' : IDL.Text,
+});
+export const ConfirmError = IDL.Variant({
+  'alreadyConfirmed' : IDL.Null,
+  'expired' : IDL.Null,
+  'notFound' : IDL.Null,
+});
+export const ConfirmResult = IDL.Variant({
+  'ok' : OrderSummary,
+  'err' : ConfirmError,
+});
+export const Value = IDL.Variant({
+  'int' : IDL.Int,
+  'nat' : IDL.Nat,
+  'float' : IDL.Float64,
+  'bool' : IDL.Bool,
+  'null' : IDL.Null,
+  'text' : IDL.Text,
+});
+export const Cell = IDL.Record({ 'value' : Value, 'name' : IDL.Text });
+export const Result = IDL.Record({
+  'hasMore' : IDL.Bool,
+  'rows' : IDL.Vec(IDL.Vec(Cell)),
+});
+
 export const idlService = IDL.Service({
+  '__orders' : IDL.Func(
+      [IDL.Opt(IDL.Text), IDL.Opt(IDL.Nat)],
+      [IDL.Vec(IDL.Tuple(IDL.Text, OrderRecord))],
+      ['query'],
+    ),
+  'confirm_order' : IDL.Func([IDL.Text], [ConfirmResult], []),
+  'execute' : IDL.Func([IDL.Text], [Result], ['query']),
+  'schema' : IDL.Func([], [IDL.Text], ['query']),
   'send_contact_email' : IDL.Func(
       [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
       [IDL.Text],
       [],
     ),
+  'send_order_email' : IDL.Func([OrderMessage], [IDL.Text], []),
 });
 
 export const idlInitArgs = [];
 
 export const idlFactory = ({ IDL }) => {
+  const OrderMessage = IDL.Record({
+    'city' : IDL.Text,
+    'postalCode' : IDL.Text,
+    'lang' : IDL.Text,
+    'privacyAccepted' : IDL.Bool,
+    'fullName' : IDL.Text,
+    'securityProfile' : IDL.Text,
+    'productId' : IDL.Text,
+    'productName' : IDL.Text,
+    'email' : IDL.Text,
+    'streetNo' : IDL.Text,
+    'contractAccepted' : IDL.Bool,
+    'quantity' : IDL.Nat,
+    'phone' : IDL.Text,
+    'securityNotes' : IDL.Text,
+  });
+  const OrderRecord = IDL.Record({
+    'status' : IDL.Text,
+    'token' : IDL.Text,
+    'order' : OrderMessage,
+    'createdAt' : IDL.Int,
+  });
+  const OrderSummary = IDL.Record({
+    'city' : IDL.Text,
+    'postalCode' : IDL.Text,
+    'lang' : IDL.Text,
+    'fullName' : IDL.Text,
+    'securityProfile' : IDL.Text,
+    'productName' : IDL.Text,
+    'email' : IDL.Text,
+    'streetNo' : IDL.Text,
+    'quantity' : IDL.Nat,
+    'phone' : IDL.Text,
+    'price' : IDL.Text,
+  });
+  const ConfirmError = IDL.Variant({
+    'alreadyConfirmed' : IDL.Null,
+    'expired' : IDL.Null,
+    'notFound' : IDL.Null,
+  });
+  const ConfirmResult = IDL.Variant({
+    'ok' : OrderSummary,
+    'err' : ConfirmError,
+  });
+  const Value = IDL.Variant({
+    'int' : IDL.Int,
+    'nat' : IDL.Nat,
+    'float' : IDL.Float64,
+    'bool' : IDL.Bool,
+    'null' : IDL.Null,
+    'text' : IDL.Text,
+  });
+  const Cell = IDL.Record({ 'value' : Value, 'name' : IDL.Text });
+  const Result = IDL.Record({
+    'hasMore' : IDL.Bool,
+    'rows' : IDL.Vec(IDL.Vec(Cell)),
+  });
+  
   return IDL.Service({
+    '__orders' : IDL.Func(
+        [IDL.Opt(IDL.Text), IDL.Opt(IDL.Nat)],
+        [IDL.Vec(IDL.Tuple(IDL.Text, OrderRecord))],
+        ['query'],
+      ),
+    'confirm_order' : IDL.Func([IDL.Text], [ConfirmResult], []),
+    'execute' : IDL.Func([IDL.Text], [Result], ['query']),
+    'schema' : IDL.Func([], [IDL.Text], ['query']),
     'send_contact_email' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
         [IDL.Text],
         [],
       ),
+    'send_order_email' : IDL.Func([OrderMessage], [IDL.Text], []),
   });
 };
 

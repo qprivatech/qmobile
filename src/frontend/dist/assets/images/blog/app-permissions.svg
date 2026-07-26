@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgPerm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="appPerm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgPerm)"/>
+  <rect x="320" y="110" width="160" height="220" rx="16" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.6"/>
+  <rect x="335" y="125" width="130" height="190" rx="6" fill="#0a1628" opacity="0.85"/>
+  <rect x="385" y="118" width="30" height="5" rx="2.5" fill="#00d4aa" opacity="0.4"/>
+  <rect x="350" y="145" width="100" height="30" rx="6" fill="url(#appPerm)" opacity="0.7"/>
+  <circle cx="365" cy="160" r="8" fill="#0a1628" opacity="0.8"/>
+  <rect x="380" y="155" width="60" height="10" rx="3" fill="#0a1628" opacity="0.6"/>
+  <rect x="350" y="190" width="100" height="3" rx="1.5" fill="#00d4aa" opacity="0.3"/>
+  <rect x="350" y="205" width="20" height="20" rx="4" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.6"/>
+  <path d="M355 215 L362 222 L372 208" stroke="#00d4aa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <rect x="380" y="210" width="70" height="8" rx="3" fill="#00d4aa" opacity="0.4"/>
+  <rect x="380" y="222" width="50" height="6" rx="2" fill="#00d4aa" opacity="0.25"/>
+  <rect x="350" y="240" width="20" height="20" rx="4" fill="none" stroke="#ff5f57" stroke-width="2" opacity="0.6"/>
+  <path d="M355 250 L365 250" stroke="#ff5f57" stroke-width="2" opacity="0.7"/>
+  <rect x="380" y="245" width="70" height="8" rx="3" fill="#ff5f57" opacity="0.4"/>
+  <rect x="380" y="257" width="40" height="6" rx="2" fill="#ff5f57" opacity="0.25"/>
+  <rect x="350" y="275" width="20" height="20" rx="4" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.6"/>
+  <path d="M355 285 L362 292 L372 278" stroke="#00d4aa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <rect x="380" y="280" width="70" height="8" rx="3" fill="#00d4aa" opacity="0.4"/>
+  <rect x="380" y="292" width="55" height="6" rx="2" fill="#00d4aa" opacity="0.25"/>
+  <text x="400" y="380" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Uygulama İzinleri Yönetimi</text>
+  <text x="400" y="405" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Kontrolü Elinde Tut</text>
+</svg>

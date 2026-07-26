@@ -53,11 +53,147 @@ function record_opt_to_undefined<T>(arg: T | null): T | undefined {
 }
 import { ExternalBlob } from "@caffeineai/object-storage";
 export { ExternalBlob } from "@caffeineai/object-storage";
-export interface backendInterface {
-    send_contact_email(name: string, email: string, subject: string, message: string): Promise<string>;
+export interface OrderSummary {
+    city: string;
+    postalCode: string;
+    lang: string;
+    fullName: string;
+    securityProfile: string;
+    productName: string;
+    email: string;
+    streetNo: string;
+    quantity: bigint;
+    phone: string;
+    price: string;
 }
+export interface Result {
+    hasMore: boolean;
+    rows: Array<Array<Cell>>;
+}
+export interface OrderRecord {
+    status: string;
+    token: string;
+    order: OrderMessage;
+    createdAt: bigint;
+}
+export type ConfirmResult = {
+    __kind__: "ok";
+    ok: OrderSummary;
+} | {
+    __kind__: "err";
+    err: ConfirmError;
+};
+export interface Cell {
+    value: Value;
+    name: string;
+}
+export interface OrderMessage {
+    city: string;
+    postalCode: string;
+    lang: string;
+    privacyAccepted: boolean;
+    fullName: string;
+    securityProfile: string;
+    productId: string;
+    productName: string;
+    email: string;
+    streetNo: string;
+    contractAccepted: boolean;
+    quantity: bigint;
+    phone: string;
+    securityNotes: string;
+}
+export type Value = {
+    __kind__: "int";
+    int: bigint;
+} | {
+    __kind__: "nat";
+    nat: bigint;
+} | {
+    __kind__: "float";
+    float: number;
+} | {
+    __kind__: "bool";
+    bool: boolean;
+} | {
+    __kind__: "null";
+    null: null;
+} | {
+    __kind__: "text";
+    text: string;
+};
+export enum ConfirmError {
+    alreadyConfirmed = "alreadyConfirmed",
+    expired = "expired",
+    notFound = "notFound"
+}
+export interface backendInterface {
+    __orders(ko: string | null, count: bigint | null): Promise<Array<[string, OrderRecord]>>;
+    confirm_order(token: string): Promise<ConfirmResult>;
+    execute(qJson: string): Promise<Result>;
+    schema(): Promise<string>;
+    send_contact_email(name: string, email: string, subject: string, message: string): Promise<string>;
+    send_order_email(order: OrderMessage): Promise<string>;
+}
+import type { Cell as _Cell, ConfirmError as _ConfirmError, ConfirmResult as _ConfirmResult, OrderSummary as _OrderSummary, Result as _Result, Value as _Value } from "./declarations/backend.did.d.ts";
 export class Backend implements backendInterface {
     constructor(private actor: ActorSubclass<_SERVICE>, private _uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, private _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, private processError?: (error: unknown) => never){}
+    async __orders(arg0: string | null, arg1: bigint | null): Promise<Array<[string, OrderRecord]>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.__orders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.__orders(to_candid_opt_n1(this._uploadFile, this._downloadFile, arg0), to_candid_opt_n2(this._uploadFile, this._downloadFile, arg1));
+            return result;
+        }
+    }
+    async confirm_order(arg0: string): Promise<ConfirmResult> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.confirm_order(arg0);
+                return from_candid_ConfirmResult_n3(this._uploadFile, this._downloadFile, result);
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.confirm_order(arg0);
+            return from_candid_ConfirmResult_n3(this._uploadFile, this._downloadFile, result);
+        }
+    }
+    async execute(arg0: string): Promise<Result> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.execute(arg0);
+                return from_candid_Result_n7(this._uploadFile, this._downloadFile, result);
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.execute(arg0);
+            return from_candid_Result_n7(this._uploadFile, this._downloadFile, result);
+        }
+    }
+    async schema(): Promise<string> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.schema();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.schema();
+            return result;
+        }
+    }
     async send_contact_email(arg0: string, arg1: string, arg2: string, arg3: string): Promise<string> {
         if (this.processError) {
             try {
@@ -72,6 +208,150 @@ export class Backend implements backendInterface {
             return result;
         }
     }
+    async send_order_email(arg0: OrderMessage): Promise<string> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.send_order_email(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.send_order_email(arg0);
+            return result;
+        }
+    }
+}
+function from_candid_Cell_n11(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: _Cell): Cell {
+    return from_candid_record_n12(_uploadFile, _downloadFile, value);
+}
+function from_candid_ConfirmError_n5(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: _ConfirmError): ConfirmError {
+    return from_candid_variant_n6(_uploadFile, _downloadFile, value);
+}
+function from_candid_ConfirmResult_n3(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: _ConfirmResult): ConfirmResult {
+    return from_candid_variant_n4(_uploadFile, _downloadFile, value);
+}
+function from_candid_Result_n7(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: _Result): Result {
+    return from_candid_record_n8(_uploadFile, _downloadFile, value);
+}
+function from_candid_Value_n13(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: _Value): Value {
+    return from_candid_variant_n14(_uploadFile, _downloadFile, value);
+}
+function from_candid_record_n12(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
+    value: _Value;
+    name: string;
+}): {
+    value: Value;
+    name: string;
+} {
+    return {
+        value: from_candid_Value_n13(_uploadFile, _downloadFile, value.value),
+        name: value.name
+    };
+}
+function from_candid_record_n8(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
+    hasMore: boolean;
+    rows: Array<Array<_Cell>>;
+}): {
+    hasMore: boolean;
+    rows: Array<Array<Cell>>;
+} {
+    return {
+        hasMore: value.hasMore,
+        rows: from_candid_vec_n9(_uploadFile, _downloadFile, value.rows)
+    };
+}
+function from_candid_variant_n14(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
+    int: bigint;
+} | {
+    nat: bigint;
+} | {
+    float: number;
+} | {
+    bool: boolean;
+} | {
+    null: null;
+} | {
+    text: string;
+}): {
+    __kind__: "int";
+    int: bigint;
+} | {
+    __kind__: "nat";
+    nat: bigint;
+} | {
+    __kind__: "float";
+    float: number;
+} | {
+    __kind__: "bool";
+    bool: boolean;
+} | {
+    __kind__: "null";
+    null: null;
+} | {
+    __kind__: "text";
+    text: string;
+} {
+    return "int" in value ? {
+        __kind__: "int",
+        int: value.int
+    } : "nat" in value ? {
+        __kind__: "nat",
+        nat: value.nat
+    } : "float" in value ? {
+        __kind__: "float",
+        float: value.float
+    } : "bool" in value ? {
+        __kind__: "bool",
+        bool: value.bool
+    } : "null" in value ? {
+        __kind__: "null",
+        null: value.null
+    } : "text" in value ? {
+        __kind__: "text",
+        text: value.text
+    } : value;
+}
+function from_candid_variant_n4(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
+    ok: _OrderSummary;
+} | {
+    err: _ConfirmError;
+}): {
+    __kind__: "ok";
+    ok: OrderSummary;
+} | {
+    __kind__: "err";
+    err: ConfirmError;
+} {
+    return "ok" in value ? {
+        __kind__: "ok",
+        ok: value.ok
+    } : "err" in value ? {
+        __kind__: "err",
+        err: from_candid_ConfirmError_n5(_uploadFile, _downloadFile, value.err)
+    } : value;
+}
+function from_candid_variant_n6(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: {
+    alreadyConfirmed: null;
+} | {
+    expired: null;
+} | {
+    notFound: null;
+}): ConfirmError {
+    return "alreadyConfirmed" in value ? ConfirmError.alreadyConfirmed : "expired" in value ? ConfirmError.expired : "notFound" in value ? ConfirmError.notFound : value;
+}
+function from_candid_vec_n10(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Array<_Cell>): Array<Cell> {
+    return value.map((x)=>from_candid_Cell_n11(_uploadFile, _downloadFile, x));
+}
+function from_candid_vec_n9(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: Array<Array<_Cell>>): Array<Array<Cell>> {
+    return value.map((x)=>from_candid_vec_n10(_uploadFile, _downloadFile, x));
+}
+function to_candid_opt_n1(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: string | null): [] | [string] {
+    return value === null ? candid_none() : candid_some(value);
+}
+function to_candid_opt_n2(_uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, value: bigint | null): [] | [bigint] {
+    return value === null ? candid_none() : candid_some(value);
 }
 export interface CreateActorOptions {
     agent?: Agent;

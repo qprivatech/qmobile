@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgAndroid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="shieldAndroid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgAndroid)"/>
+  <circle cx="400" cy="225" r="180" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.1"/>
+  <circle cx="400" cy="225" r="140" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.15"/>
+  <path d="M340 180 Q340 150 400 150 Q460 150 460 180 L460 240 L340 240 Z" fill="#00d4aa" opacity="0.7"/>
+  <rect x="360" y="240" width="20" height="50" rx="4" fill="#00d4aa" opacity="0.6"/>
+  <rect x="420" y="240" width="20" height="50" rx="4" fill="#00d4aa" opacity="0.6"/>
+  <path d="M370 150 L360 130 M430 150 L440 130" stroke="#00d4aa" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="360" cy="125" r="6" fill="#00d4aa" opacity="0.6"/>
+  <circle cx="440" cy="125" r="6" fill="#00d4aa" opacity="0.6"/>
+  <circle cx="380" cy="190" r="8" fill="#0a1628" opacity="0.9"/>
+  <circle cx="420" cy="190" r="8" fill="#0a1628" opacity="0.9"/>
+  <path d="M400 140 L460 170 L460 240 L400 290 L340 240 L340 170 Z" fill="url(#shieldAndroid)" opacity="0.85"/>
+  <path d="M400 160 L440 180 L440 235 L400 270 L360 235 L360 180 Z" fill="#0a1628"/>
+  <rect x="385" y="190" width="30" height="45" rx="4" fill="#00d4aa" opacity="0.8"/>
+  <circle cx="400" cy="180" r="8" fill="#00d4aa" opacity="0.6"/>
+  <path d="M395 210 L400 215 L410 200" stroke="#00d4aa" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="360" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">Android Güvenlik Rehberi</text>
+  <text x="400" y="385" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Cihazınızı Sıkılaştırın</text>
+</svg>

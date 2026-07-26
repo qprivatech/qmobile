@@ -114,140 +114,23 @@ function getProductSchema(): Record<string, unknown> {
   };
 }
 
-function getFAQPageSchema(lang: Lang): Record<string, unknown> {
-  const faqItems: Record<Lang, Array<Record<string, unknown>>> = {
-    tr: [
-      {
-        "@type": "Question",
-        name: "Güvenlik odaklı özel işletim sistemi nedir?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Güvenlik odaklı özel işletim sistemimiz, Android Açık Kaynak Projesi tabanlı, gizlilik ve güvenlik odaklı bir mobil işletim sistemidir.",
-        },
+function getFAQPageSchema(t: (key: string) => string): Record<string, unknown> {
+  const faqItems = Array.from({ length: 24 }, (_, i) => {
+    const n = i + 1;
+    return {
+      "@type": "Question",
+      name: t(`faq.q${n}`),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: t(`faq.a${n}`),
       },
-      {
-        "@type": "Question",
-        name: "Hangi Pixel modelleri mevcut?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Google Pixel 8, Pixel 9 ve Pixel 10 modellerini güvenlik odaklı özel işletim sistemi ön yüklü olarak sunuyoruz.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Google Play uygulamaları çalışır mı?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Kumlanmış Google Play veya F-Droid, Aurora Store gibi alternatif mağazaları kullanabilirsiniz.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Güncelleme desteği ne kadar sürer?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Pixel 8 için 5 yıl, Pixel 9 ve 10 için 4 yıl güvenlik ve işletim sistemi güncellemesi.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Cihazlar sıfır ve kapalı kutu mu?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Evet. Tüm cihazlar sıfır, orijinal ambalajında kapalı kutudur.",
-        },
-      },
-    ],
-    de: [
-      {
-        "@type": "Question",
-        name: "Was ist ein sicherheitsorientiertes spezielles Betriebssystem?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Unser sicherheitsorientiertes spezielles Betriebssystem ist ein auf dem Android Open Source Project basierendes mobiles Betriebssystem mit Fokus auf Privatsphäre und Sicherheit.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Welche Pixel-Modelle sind verfügbar?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Wir bieten Google Pixel 8, Pixel 9 und Pixel 10 mit vorinstalliertem sicherheitsorientiertem speziellem Betriebssystem an.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Funktionieren Google Play-Apps?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Sie können Sandboxed Google Play oder alternative Stores wie F-Droid und Aurora Store verwenden.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Wie lange dauert der Update-Support?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "5 Jahre für Pixel 8, 4 Jahre für Pixel 9 und 10 für Sicherheits- und Betriebssystem-Updates.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Sind die Geräte neu und originalverpackt?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Ja. Alle Geräte sind neu und in Originalverpackung.",
-        },
-      },
-    ],
-    en: [
-      {
-        "@type": "Question",
-        name: "What is a security-focused custom operating system?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our security-focused custom operating system is a mobile operating system based on the Android Open Source Project, focused on privacy and security.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Which Pixel models are available?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We offer Google Pixel 8, Pixel 9 and Pixel 10 pre-installed with our security-focused custom operating system.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do Google Play apps work?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "You can use Sandboxed Google Play or alternative stores like F-Droid and Aurora Store.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How long does update support last?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "5 years for Pixel 8, 4 years for Pixel 9 and 10 for security and operating system updates.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Are the devices new and sealed?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. All devices are brand new and in original sealed packaging.",
-        },
-      },
-    ],
-  };
+    };
+  });
 
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqItems[lang] ?? faqItems.en,
+    mainEntity: faqItems,
   };
 }
 
@@ -316,6 +199,7 @@ function getArticleSchema(
 function getSchema(
   type: SchemaOrgProps["type"],
   lang: Lang,
+  t: (key: string) => string,
   data?: Record<string, unknown>,
 ): Record<string, unknown> | null {
   switch (type) {
@@ -326,7 +210,7 @@ function getSchema(
     case "Product":
       return getProductSchema();
     case "FAQPage":
-      return getFAQPageSchema(lang);
+      return getFAQPageSchema(t);
     case "BlogPosting":
       return getBlogPostingSchema(data);
     case "Article":
@@ -337,10 +221,10 @@ function getSchema(
 }
 
 export function SchemaOrg({ type, data }: SchemaOrgProps) {
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
 
   useEffect(() => {
-    const schema = getSchema(type, lang, data);
+    const schema = getSchema(type, lang, t, data);
     if (!schema) return;
 
     const id = `schema-org-${type}`;
@@ -359,7 +243,7 @@ export function SchemaOrg({ type, data }: SchemaOrgProps) {
         document.head.removeChild(existing);
       }
     };
-  }, [type, lang, data]);
+  }, [type, lang, t, data]);
 
   return null;
 }

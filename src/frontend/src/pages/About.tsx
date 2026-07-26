@@ -273,7 +273,8 @@ export default function About() {
 
       {/* Legal disclaimer */}
       <Section variant="muted">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <SwissCompliance />
           <LegalNotice />
         </div>
       </Section>

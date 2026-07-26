@@ -4,12 +4,29 @@ import { LegalNotice } from "@/components/LegalNotice";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Section } from "@/components/Section";
+import { SwissCompliance } from "@/components/SwissCompliance";
+import {
+  AntiTrackingIcon,
+  AppSandboxIcon,
+  BfuProtectionIcon,
+  EndToEndEncryptionIcon,
+  HardwareVerificationIcon,
+  KillPinIcon,
+  LockdownModeIcon,
+  MultipleProfilesIcon,
+  NetworkSecurityIcon,
+  ScrambledPinIcon,
+  SelfDestructIcon,
+  TopFiveIcon,
+  UsbLockdownIcon,
+} from "@/components/icons/SecurityIcons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useI18n } from "@/lib/i18n";
 import { Link } from "@tanstack/react-router";
 import { Check, CheckCircle2, Clock, Star, Zap } from "lucide-react";
+import type { ComponentType } from "react";
 
 const titleColors = [
   "text-accent-blue",
@@ -17,6 +34,125 @@ const titleColors = [
   "text-accent-purple",
   "text-foreground",
 ] as const;
+
+// 13 security features grouped into 4 categories, shown identically across
+// all Pixel 8/9/10 cards. Each feature maps to a dedicated SVG icon from
+// SecurityIcons.tsx.
+type SecurityFeature = {
+  key: string;
+  Icon: ComponentType<{ className?: string }>;
+  fallback: boolean;
+};
+
+type SecurityCategory = {
+  categoryKey: string;
+  descKey: string;
+  features: SecurityFeature[];
+};
+
+const securityCategories: SecurityCategory[] = [
+  {
+    categoryKey: "products.security.categories.physical",
+    descKey: "products.security.categoriesDesc.physical",
+    features: [
+      {
+        key: "products.security.selfDestruct",
+        Icon: SelfDestructIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.killPin",
+        Icon: KillPinIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.bfuProtection",
+        Icon: BfuProtectionIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.hardwareVerification",
+        Icon: HardwareVerificationIcon,
+        fallback: false,
+      },
+    ],
+  },
+  {
+    categoryKey: "products.security.categories.pinAccess",
+    descKey: "products.security.categoriesDesc.pinAccess",
+    features: [
+      {
+        key: "products.security.scrambledPin",
+        Icon: ScrambledPinIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.appEncryption",
+        Icon: AppSandboxIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.multiProfile",
+        Icon: MultipleProfilesIcon,
+        fallback: false,
+      },
+    ],
+  },
+  {
+    categoryKey: "products.security.categories.network",
+    descKey: "products.security.categoriesDesc.network",
+    features: [
+      {
+        key: "products.security.networkSecurity",
+        Icon: NetworkSecurityIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.usbSecurity",
+        Icon: UsbLockdownIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.fakeCellTower",
+        Icon: LockdownModeIcon,
+        fallback: false,
+      },
+    ],
+  },
+  {
+    categoryKey: "products.security.categories.privacy",
+    descKey: "products.security.categoriesDesc.privacy",
+    features: [
+      {
+        key: "products.security.antiTracking",
+        Icon: AntiTrackingIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.e2eEncryption",
+        Icon: EndToEndEncryptionIcon,
+        fallback: false,
+      },
+      {
+        key: "products.security.hiddenLocation",
+        Icon: TopFiveIcon,
+        fallback: false,
+      },
+    ],
+  },
+];
+
+// Tech specs route per Pixel model. Routes are owned by another task; we only
+// link to them here.
+const techSpecsRoutes: Record<string, string> = {
+  pixel8: "/googlepixel8/teknik-ozellikleri",
+  pixel9: "/googlepixel9/teknik-ozellikleri",
+  pixel10: "/googlepixel10/teknik-ozellikleri",
+};
+
+// Pixel product ids that get the 13-feature security list + 3-button row.
+// Faraday Box and Faraday Pouch keep their original layout.
+const pixelIds = new Set(["pixel8", "pixel9", "pixel10"]);
 
 const products = [
   {
@@ -152,68 +288,147 @@ export default function Products() {
               </div>
 
               <h3
-                className={`text-xl font-display font-semibold mb-1 ${titleColors[i % 4]}`}
+                className={`text-xl font-display font-semibold ${titleColors[i % titleColors.length]} mb-3`}
               >
                 {t(product.nameKey)}
               </h3>
-              <p className="text-xs text-muted-foreground mb-2">
-                {t("products.trust")}
-              </p>
-
-              <div className="flex items-center gap-2 mb-3 flex-wrap">
-                <Badge
-                  variant="outline"
-                  className="text-xs bg-success/10 text-success border-success/20"
-                >
-                  <Check className="w-3 h-3 mr-1" />
-                  {t("products.secureOSBadge")}
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="text-xs bg-primary/10 text-primary border-primary/20"
-                >
-                  <Check className="w-3 h-3 mr-1" />
-                  {t("products.qprivateBadge")}
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="text-xs bg-warning/10 text-warning border-warning/20"
-                >
-                  <Clock className="w-3 h-3 mr-1" />
-                  {t("products.fastdispatch")}
-                </Badge>
-              </div>
 
               <p className="text-2xl font-bold text-primary mb-4">
                 {product.price}
               </p>
 
-              <ul className="space-y-2 mb-6 flex-1">
-                {product.features.map((featKey) => (
-                  <li
-                    key={featKey}
-                    className="flex items-center gap-2 text-sm text-foreground"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-success shrink-0" />
-                    <span>{t(featKey)}</span>
-                  </li>
-                ))}
-              </ul>
+              {pixelIds.has(product.id) ? (
+                <>
+                  <div className="flex flex-col gap-4 mb-6 flex-1">
+                    {securityCategories.map((category) => (
+                      <div
+                        key={category.categoryKey}
+                        className="border-t border-border pt-3 first:border-t-0 first:pt-0"
+                      >
+                        <h4 className="text-xs font-display font-semibold uppercase tracking-wide text-accent-blue mb-1">
+                          {t(category.categoryKey)}
+                        </h4>
+                        <p className="text-[11px] text-muted-foreground mb-2 leading-tight">
+                          {t(category.descKey)}
+                        </p>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-2">
+                          {category.features.map((feature) => {
+                            const Icon = feature.Icon;
+                            return (
+                              <li
+                                key={feature.key}
+                                className="flex items-center gap-2 text-xs text-foreground"
+                              >
+                                <Icon
+                                  className={`w-4 h-4 shrink-0 ${feature.fallback ? "text-success" : "text-accent-blue"}`}
+                                />
+                                <span className="leading-tight">
+                                  {t(feature.key)}
+                                </span>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
 
-              <div className="space-y-2">
-                <Link
-                  to="/contact"
-                  data-ocid={`products.order_button.${i + 1}`}
-                >
-                  <Button variant="default" className="w-full shadow-elevated">
-                    <Zap className="w-4 h-4 mr-2" />
-                    {t("products.order")}
-                  </Button>
-                </Link>
-                <p className="text-xs text-center text-muted-foreground">
-                  {t("products.ordertext")}
-                </p>
-              </div>
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      to="/order"
+                      search={{ product: product.id }}
+                      data-ocid={`products.order_button.${i + 1}`}
+                    >
+                      <Button
+                        variant="default"
+                        className="w-full shadow-elevated"
+                      >
+                        <Zap className="w-4 h-4 mr-2" />
+                        {t("products.order")}
+                      </Button>
+                    </Link>
+                    <div className="grid grid-cols-2 gap-2">
+                      <Link
+                        to="/why"
+                        data-ocid={`products.why_button.${i + 1}`}
+                      >
+                        <Button variant="outline" className="w-full">
+                          {t("products.whyQmobileButton")}
+                        </Button>
+                      </Link>
+                      <Link
+                        to={techSpecsRoutes[product.id]}
+                        data-ocid={`products.techspecs_button.${i + 1}`}
+                      >
+                        <Button variant="outline" className="w-full">
+                          {t("products.techSpecsButton")}
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="text-xs text-muted-foreground mb-2">
+                    {t("products.trust")}
+                  </p>
+
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <Badge
+                      variant="outline"
+                      className="text-xs bg-success/10 text-success border-success/20"
+                    >
+                      <Check className="w-3 h-3 mr-1" />
+                      {t("products.secureOSBadge")}
+                    </Badge>
+                    <Badge
+                      variant="outline"
+                      className="text-xs bg-primary/10 text-primary border-primary/20"
+                    >
+                      <Check className="w-3 h-3 mr-1" />
+                      {t("products.qprivateBadge")}
+                    </Badge>
+                    <Badge
+                      variant="outline"
+                      className="text-xs bg-warning/10 text-warning border-warning/20"
+                    >
+                      <Clock className="w-3 h-3 mr-1" />
+                      {t("products.fastdispatch")}
+                    </Badge>
+                  </div>
+
+                  <ul className="space-y-2 mb-6 flex-1">
+                    {product.features.map((featKey) => (
+                      <li
+                        key={featKey}
+                        className="flex items-center gap-2 text-sm text-foreground"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-success shrink-0" />
+                        <span>{t(featKey)}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="space-y-2">
+                    <Link
+                      to="/order"
+                      search={{ product: product.id }}
+                      data-ocid={`products.order_button.${i + 1}`}
+                    >
+                      <Button
+                        variant="default"
+                        className="w-full shadow-elevated"
+                      >
+                        <Zap className="w-4 h-4 mr-2" />
+                        {t("products.order")}
+                      </Button>
+                    </Link>
+                    <p className="text-xs text-center text-muted-foreground">
+                      {t("products.ordertext")}
+                    </p>
+                  </div>
+                </>
+              )}
             </Card>
           ))}
         </div>
@@ -221,7 +436,8 @@ export default function Products() {
 
       {/* Legal disclaimer */}
       <Section variant="muted">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <SwissCompliance />
           <LegalNotice />
         </div>
       </Section>

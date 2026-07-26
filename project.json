@@ -1,18 +1,15 @@
 {
-  "overview": "Privacy-focused multilingual e-commerce showcase site on Internet Computer with hardened HTTP security headers.",
+  "overview": "QMOBILE Swiss privacy-tech showcase site with TR/DE/EN content, Swiss Privacy Laws section on all pages, and Sales Contract-aligned legal pages.",
   "features": [
-    "Multilingual content (TR/DE/EN)",
-    "Blog with structured data",
-    "Contact form with math CAPTCHA",
-    "Hardened security headers (HSTS preload, CSP hash-based, CORP)",
-    "PWA with service worker"
+    "Swiss Privacy Laws section on all pages",
+    "Sales Contract-aligned AGB and Terms pages",
+    "Updated refund and return policy"
   ],
   "category": "showcase",
   "tags": [
-    "security",
-    "ecommerce",
-    "multilingual",
-    "pwa"
+    "legal-content",
+    "i18n",
+    "privacy"
   ],
-  "last_updated": "2026-07-07T23:20:14.200Z"
+  "last_updated": "2026-07-24T10:12:46.244Z"
 }

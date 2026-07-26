@@ -1,4 +1,8 @@
 // Version: 4.0.0
+type Data__552063367<K, V> = {var count : Nat__93962160; kvs : [var ?(K, V)]};
+type Internal__455405067<K, V> =
+  {children : [var ?Node__279997185<K, V>]; data : Data__552063367<K, V>};
+type Leaf__114713147<K, V> = {data : Data__552063367<K, V>};
 type List__716101829<T> =
   {
     var blockIndex : Nat__93962160;
@@ -6,9 +10,40 @@ type List__716101829<T> =
     var elementIndex : Nat__93962160
   };
 type List__852723865<T> = List__716101829<T>;
+type Map__190625089<K, V> = Map__719753394<K, V>;
+type Map__246123559<K, V> = Map__190625089<K, V>;
+type Map__719753394<K, V> =
+  {var root : Node__279997185<K, V>; var size : Nat__93962160};
 type Nat__920180692 = Nat;
 type Nat__93962160 = Nat__920180692;
 type NewActor__717625262 = {};
+type NewActor__843856202 =
+  {
+    var orders :
+      Map__246123559<Text,
+                      {
+                        createdAt : Int;
+                        order :
+                          {
+                            city : Text;
+                            contractAccepted : Bool;
+                            email : Text;
+                            fullName : Text;
+                            lang : Text;
+                            phone : Text;
+                            postalCode : Text;
+                            privacyAccepted : Bool;
+                            productId : Text;
+                            productName : Text;
+                            quantity : Nat;
+                            securityNotes : Text;
+                            securityProfile : Text;
+                            streetNo : Text
+                          };
+                        status : Text;
+                        token : Text
+                      }>
+  };
 type NewActor__935237298 =
   {
     var contacts :
@@ -22,6 +57,9 @@ type NewActor__935237298 =
                       }>;
     var nextId : {var nextId : Nat}
   };
+type Node__279997185<K, V> =
+  {#internal : Internal__455405067<K, V>; #leaf : Leaf__114713147<K, V>};
+type OldActor__423355138 = {};
 type OldActor__657050695 = {};
 type OldActor__684827262 =
   {
@@ -36,12 +74,42 @@ type OldActor__684827262 =
                       }>;
     var nextId : {var nextId : Nat}
   };
+type OrderMessage__205608165 =
+  {
+    city : Text;
+    contractAccepted : Bool;
+    email : Text;
+    fullName : Text;
+    lang : Text;
+    phone : Text;
+    postalCode : Text;
+    privacyAccepted : Bool;
+    productId : Text;
+    productName : Text;
+    quantity : Nat;
+    securityNotes : Text;
+    securityProfile : Text;
+    streetNo : Text
+  };
+type OrderRecord__558696240 = OrderRecord__930459451;
+type OrderRecord__930459451 =
+  {
+    createdAt : Int;
+    order : OrderMessage__205608165;
+    status : Text;
+    token : Text
+  };
 {
   "20260620_000000_InitialContacts" :
     (old : OldActor__657050695) -> NewActor__935237298;
   "20260620_000001_DropContacts" :
-    (old : OldActor__684827262) -> NewActor__717625262
+    (old : OldActor__684827262) -> NewActor__717625262;
+  "20260724_000000" : (old : OldActor__423355138) -> NewActor__843856202
 }
 actor  {
-  
+  stable orders :
+    {
+      var root : Node__279997185<Text, OrderRecord__558696240>;
+      var size : Nat__93962160
+    }
 };

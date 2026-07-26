@@ -3,6 +3,7 @@ import { LegalNotice } from "@/components/LegalNotice";
 import { SEO } from "@/components/SEO";
 import { SchemaOrg } from "@/components/SchemaOrg";
 import { Section } from "@/components/Section";
+import { SwissCompliance } from "@/components/SwissCompliance";
 import { useI18n } from "@/lib/i18n";
 import { Eye, FileText, Lock, Scale, Shield } from "lucide-react";
 
@@ -107,7 +108,8 @@ export default function Privacy() {
 
       {/* Legal disclaimer */}
       <Section variant="muted" className="py-12">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <SwissCompliance />
           <LegalNotice />
         </div>
       </Section>

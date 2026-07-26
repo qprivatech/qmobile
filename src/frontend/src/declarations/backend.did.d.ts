@@ -10,8 +10,64 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
+export interface Cell { 'value' : Value, 'name' : string }
+export type ConfirmError = { 'alreadyConfirmed' : null } |
+  { 'expired' : null } |
+  { 'notFound' : null };
+export type ConfirmResult = { 'ok' : OrderSummary } |
+  { 'err' : ConfirmError };
+export interface OrderMessage {
+  'city' : string,
+  'postalCode' : string,
+  'lang' : string,
+  'privacyAccepted' : boolean,
+  'fullName' : string,
+  'securityProfile' : string,
+  'productId' : string,
+  'productName' : string,
+  'email' : string,
+  'streetNo' : string,
+  'contractAccepted' : boolean,
+  'quantity' : bigint,
+  'phone' : string,
+  'securityNotes' : string,
+}
+export interface OrderRecord {
+  'status' : string,
+  'token' : string,
+  'order' : OrderMessage,
+  'createdAt' : bigint,
+}
+export interface OrderSummary {
+  'city' : string,
+  'postalCode' : string,
+  'lang' : string,
+  'fullName' : string,
+  'securityProfile' : string,
+  'productName' : string,
+  'email' : string,
+  'streetNo' : string,
+  'quantity' : bigint,
+  'phone' : string,
+  'price' : string,
+}
+export interface Result { 'hasMore' : boolean, 'rows' : Array<Array<Cell>> }
+export type Value = { 'int' : bigint } |
+  { 'nat' : bigint } |
+  { 'float' : number } |
+  { 'bool' : boolean } |
+  { 'null' : null } |
+  { 'text' : string };
 export interface _SERVICE {
+  '__orders' : ActorMethod<
+    [[] | [string], [] | [bigint]],
+    Array<[string, OrderRecord]>
+  >,
+  'confirm_order' : ActorMethod<[string], ConfirmResult>,
+  'execute' : ActorMethod<[string], Result>,
+  'schema' : ActorMethod<[], string>,
   'send_contact_email' : ActorMethod<[string, string, string, string], string>,
+  'send_order_email' : ActorMethod<[OrderMessage], string>,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];

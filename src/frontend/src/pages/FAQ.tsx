@@ -23,6 +23,15 @@ const faqKeys = [
   { id: "banking", q: "faq.q13", a: "faq.a13" },
   { id: "migrate", q: "faq.q14", a: "faq.a14" },
   { id: "consulting", q: "faq.q15", a: "faq.a15" },
+  { id: "q16", q: "faq.q16", a: "faq.a16" },
+  { id: "q17", q: "faq.q17", a: "faq.a17" },
+  { id: "q18", q: "faq.q18", a: "faq.a18" },
+  { id: "q19", q: "faq.q19", a: "faq.a19" },
+  { id: "q20", q: "faq.q20", a: "faq.a20" },
+  { id: "q21", q: "faq.q21", a: "faq.a21" },
+  { id: "q22", q: "faq.q22", a: "faq.a22" },
+  { id: "q23", q: "faq.q23", a: "faq.a23" },
+  { id: "q24", q: "faq.q24", a: "faq.a24" },
 ];
 
 const titleColors = [

@@ -271,7 +271,8 @@ export default function Why() {
 
       {/* Legal disclaimer */}
       <Section variant="default">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <SwissCompliance />
           <LegalNotice />
         </div>
       </Section>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgVpn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a2e"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <linearGradient id="shieldVpn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgVpn)"/>
+  <circle cx="400" cy="225" r="180" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.1"/>
+  <circle cx="400" cy="225" r="140" fill="none" stroke="#00d4aa" stroke-width="1" opacity="0.15"/>
+  <path d="M400 140 L460 170 L460 240 L400 290 L340 240 L340 170 Z" fill="url(#shieldVpn)" opacity="0.9"/>
+  <path d="M400 160 L440 180 L440 235 L400 270 L360 235 L360 180 Z" fill="#0a1628"/>
+  <rect x="385" y="190" width="30" height="45" rx="4" fill="#00d4aa" opacity="0.8"/>
+  <circle cx="400" cy="180" r="8" fill="#00d4aa" opacity="0.6"/>
+  <path d="M395 210 L400 215 L410 200" stroke="#00d4aa" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M180 225 L320 225" stroke="#00d4aa" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="6 6"/>
+  <path d="M480 225 L620 225" stroke="#00d4aa" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="6 6"/>
+  <rect x="140" y="200" width="50" height="50" rx="8" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.5"/>
+  <circle cx="165" cy="225" r="10" fill="#00d4aa" opacity="0.4"/>
+  <rect x="610" y="200" width="50" height="50" rx="8" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.5"/>
+  <circle cx="635" cy="225" r="10" fill="#00d4aa" opacity="0.4"/>
+  <path d="M150 215 L160 215 M170 230 L180 230" stroke="#0a1628" stroke-width="2" opacity="0.6"/>
+  <path d="M620 215 L630 215 M640 230 L650 230" stroke="#0a1628" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="360" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="600">VPN Güvenliği</text>
+  <text x="400" y="385" text-anchor="middle" fill="#00d4aa" font-family="system-ui, sans-serif" font-size="14" opacity="0.8">Şifreli Tünel Koruması</text>
+</svg>

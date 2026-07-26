@@ -12,32 +12,38 @@
 # This file leaves style-src 'self' (no unsafe-inline) and a separate
 # style-src-attr directive; the plugin fills in the 'sha256-...' tokens.
 
+# Per-path Content-Type rules for crawlable metadata files.
+# More specific paths override the /* block below (Cloudflare Pages /
+# asset canister _headers syntax). Without these, the asset canister
+# serves sitemap.xml and robots.txt with a guessed default MIME
+# (text/plain), which prevents Google from parsing the sitemap as XML.
+
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+
 /*
   # Strict-Transport-Security — enforce HTTPS for one year, cover subdomains,
   # and opt into the HSTS preload list.
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-
   # Clickjacking protection — never allow this site to be framed.
   # (CSP frame-ancestors 'none' is the modern equivalent; this covers
   # legacy browsers that do not understand frame-ancestors.)
   X-Frame-Options: DENY
-
   # Permissions-Policy — disable sensitive capabilities by default.
   # The QMOBILE site does not use camera, microphone, geolocation, or
   # payment APIs, so deny them everywhere.
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
-
   # MIME sniffing protection — browsers must respect declared Content-Type.
   X-Content-Type-Options: nosniff
-
   # Referrer-Policy — send full referrer same-origin, origin-only cross-origin.
   Referrer-Policy: strict-origin-when-cross-origin
-
   # Cross-Origin-Resource-Policy — restrict resource loading to same origin.
   # Prevents cross-origin pages from loading this site's resources via
   # <img>, <script>, <link>, fetch, etc. Complements frame-ancestors 'none'.
   Cross-Origin-Resource-Policy: same-origin
-
   # Content-Security-Policy — restrict every fetch directive.
   #   script-src:  'self' + cdn.caffeine.ai allowlist — no inline, no eval.
   #   style-src:   'self' only — inline style hashes are appended by the
